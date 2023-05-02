@@ -1,0 +1,126 @@
+[2023-03-20 15:22:19.1376] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-03-20 15:22:32.7621] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-03-20 15:22:32.7892] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-03-20 15:22:32.7892] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-03-20 15:22:32.7892] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-03-20 15:27:12.3359] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-03-20 15:27:23.0348] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-03-20 15:27:23.0568] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-03-20 15:27:23.0568] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-03-20 15:27:23.0568] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-03-20 15:53:25.1696] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-03-20 15:53:41.6833] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-03-20 15:53:41.7241] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-03-20 15:53:41.7241] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-03-20 15:53:41.7241] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-03-20 16:02:02.0293] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.TagParamsDevices' with unique index 'IX_TagParamsDevices_TagParamId_DeviceId'. The duplicate key value is (1, 17).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:4a85c9cd-3392-480e-891e-b71175018499
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.DeviceRepository.AddTagParam(Int32 deviceId, TagParam tagParam) in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\DeviceRepository.cs:line 61
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.DeviceService.AddTagParamsToDevice(Int32 deviceExternalId, List`1 tagparamsExternalId) in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\DeviceService.cs:line 65
+   at BreadCommunityWeb.Blz.Server.Controllers.DeviceController.AddTagParamsToDevice(Int32 deviceExternalId, List`1 tagparamsExternalId) in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server\Controllers\DeviceController.cs:line 180
+   at lambda_method441(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2023-03-20 16:10:06.8606] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-03-20 16:10:19.5229] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-03-20 16:10:19.5634] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-03-20 16:10:19.5662] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-03-20 16:10:19.5662] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-03-20 16:10:54.0816] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.TagParamsDevices' with unique index 'IX_TagParamsDevices_TagParamId_DeviceId'. The duplicate key value is (1, 17).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:7d0f2323-3fdb-4571-8ae9-745c625157d7
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.DeviceRepository.AddTagParam(Int32 deviceId, TagParam tagParam) in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\DeviceRepository.cs:line 67
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.DeviceService.AddTagParamsToDevice(Int32 deviceExternalId, List`1 tagparamsExternalId) in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\DeviceService.cs:line 65
+   at BreadCommunityWeb.Blz.Server.Controllers.DeviceController.AddTagParamsToDevice(Int32 deviceExternalId, List`1 tagparamsExternalId) in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server\Controllers\DeviceController.cs:line 180
+   at lambda_method86(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2023-03-20 16:11:34.3982] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-03-20 16:11:45.3389] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-03-20 16:11:45.3658] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-03-20 16:11:45.3658] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-03-20 16:11:45.3954] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-03-20 16:31:36.4160] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-03-20 16:31:58.5625] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-03-20 16:31:58.5814] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-03-20 16:31:58.5814] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-03-20 16:31:58.5814] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 

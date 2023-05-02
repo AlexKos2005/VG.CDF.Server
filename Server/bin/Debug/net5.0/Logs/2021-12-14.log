@@ -1,0 +1,15 @@
+[2021-12-14 13:11:16.6757] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-12-14 13:11:24.7391] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-12-14 13:11:24.7551] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-12-14 13:11:24.7620] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-12-14 13:11:24.7620] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-12-14 13:15:14.6506] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-12-14 13:15:19.6778] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-12-14 13:15:19.6778] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-12-14 13:15:19.6778] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-12-14 13:15:19.6938] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-12-14 13:17:17.2409] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-12-14 13:17:24.8178] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-12-14 13:17:24.8638] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-12-14 13:17:24.8658] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-12-14 13:17:24.8658] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 

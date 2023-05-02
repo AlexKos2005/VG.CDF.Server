@@ -1,0 +1,10 @@
+[2023-04-17 14:44:51.8219] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-17 14:45:04.5059] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-17 14:45:04.5345] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-17 14:45:04.5703] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-17 14:45:04.5703] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-17 22:50:14.3406] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-17 22:50:33.8489] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-17 22:50:33.8858] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-17 22:50:33.8858] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-17 22:50:33.8858] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 

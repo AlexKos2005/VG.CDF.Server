@@ -1,0 +1,14 @@
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\obj\Debug\net5.0\Infrastructure.csprojAssemblyReference.cache
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\bin\Debug\net5.0\Application.dll
+C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure\bin\Debug\net5.0\Domain.dll

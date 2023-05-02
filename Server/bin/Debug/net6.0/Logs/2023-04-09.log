@@ -1,0 +1,78 @@
+[2023-04-09 21:17:05.1605] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:17:17.3422] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 21:17:17.3686] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 21:17:17.3686] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 21:17:17.3736] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-09 21:41:09.9566] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:42:09.9547] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:45:41.9957] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:48:08.7793] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:51:06.9362] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:53:02.2949] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:54:09.2497] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:54:15.5576] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 21:54:15.5737] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 21:54:15.5737] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 21:54:15.5762] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-09 21:55:22.9864] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:56:53.7100] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:56:59.5192] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 21:56:59.5331] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 21:56:59.5331] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 21:56:59.5331] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-09 21:58:29.4181] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:58:34.9165] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 21:58:34.9362] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 21:58:34.9417] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 21:58:34.9417] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-09 21:58:45.8801] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.InvalidOperationException: Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'BreadCommunityWeb.Blz.Server.Controllers.TagReportTaskController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method242(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2023-04-09 21:59:12.7415] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 21:59:19.2448] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 21:59:19.2603] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 21:59:19.2603] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 21:59:19.2603] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-09 22:00:49.4408] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 22:00:54.4656] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 22:00:54.4779] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 22:00:54.4779] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 22:00:54.4779] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-09 22:05:14.9505] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 22:05:20.5453] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 22:05:20.5576] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 22:05:20.5576] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 22:05:20.5576] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-09 22:06:28.7251] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 22:06:33.8672] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 22:06:33.8787] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 22:06:33.8787] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 22:06:33.8787] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-09 22:09:09.6581] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 22:09:15.1042] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 22:09:15.1166] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 22:09:15.1166] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 22:09:15.1166] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-09 22:10:42.0904] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-09 22:10:48.7537] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-09 22:10:48.7672] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-09 22:10:48.7672] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-09 22:10:48.7672] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 

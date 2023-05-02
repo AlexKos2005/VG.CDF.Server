@@ -1,0 +1,109 @@
+[2023-04-02 21:34:03.9534] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:36:04.5885] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:37:09.6136] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:38:53.3834] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:39:41.2261] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:42:00.2497] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:42:05.3619] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-02 21:42:05.3619] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-02 21:42:05.3754] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-02 21:42:05.3754] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-02 21:42:52.6568] [INFO] [Microsoft.Hosting.Lifetime] Application is shutting down... 
+[2023-04-02 21:48:12.0321] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:48:53.8624] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:49:08.3132] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-02 21:49:08.3132] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-02 21:49:08.3132] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-02 21:49:08.3132] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-02 21:50:21.7131] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:50:22.4326] [FATAL] [Microsoft.AspNetCore.Hosting.Diagnostics] Application startup exception System.InvalidOperationException: No database provider has been configured for this DbContext. A provider can be configured by overriding the 'DbContext.OnConfiguring' method or by using 'AddDbContext' on the application service provider. If 'AddDbContext' is used, then also ensure that your DbContext type accepts a DbContextOptions<TContext> object in its constructor and passes it to the base constructor for DbContext.
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.Initialize(IServiceProvider scopedProvider, IDbContextOptions contextOptions, DbContext context)
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>.get_Instance()
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.InfrastructureExtensions.GetService[TService](IInfrastructure`1 accessor)
+   at Microsoft.EntityFrameworkCore.Infrastructure.AccessorExtensions.GetService[TService](IInfrastructure`1 accessor)
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.get_Dependencies()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at BreadCommunityWeb.Blz.Infrastructure.Server.DataContext.SqlDataContext..ctor(IDbConnectionConfig dbConnection) in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Infrastructure.Server\DbContext\SqlDataContext.cs:line 68
+   at BreadCommunityWeb.Blz.Server.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, DbConnectionConfig dbConnectionConfig) in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server\Startup.cs:line 118
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+[2023-04-02 21:54:16.4540] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 21:54:21.0232] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-02 21:54:21.0357] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-02 21:54:21.0357] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-02 21:54:21.0357] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-02 21:56:04.3491] [INFO] [Microsoft.Hosting.Lifetime] Application is shutting down... 
+[2023-04-02 22:24:07.9242] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 22:24:22.2779] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-02 22:24:22.2890] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-02 22:24:22.2890] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-02 22:24:22.2890] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-02 22:40:56.2420] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 22:41:06.4905] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-02 22:41:06.5010] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-02 22:41:06.5010] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-02 22:41:06.5010] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-02 22:44:02.1466] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 22:44:05.6497] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-02 22:44:05.6596] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-02 22:44:05.6596] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-02 22:44:05.6596] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 
+[2023-04-02 22:44:10.3397] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Npgsql.PostgresException (0x80004005): 42P01: relation "TagLiveReports" does not exist
+   at Npgsql.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|194_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.FactoryService.GetAllFactories() in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\FactoryService.cs:line 46
+   at BreadCommunityWeb.Blz.Server.Controllers.FactoryController.GetAllFactories() in C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server\Controllers\FactoryController.cs:line 40
+   at lambda_method240(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "TagLiveReports" does not exist
+    Position: 83
+    File: parse_relation.c
+    Line: 1392
+    Routine: parserOpenTable
+[2023-04-02 22:44:20.4361] [INFO] [Microsoft.Hosting.Lifetime] Application is shutting down... 
+[2023-04-02 22:46:39.5833] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2023-04-02 22:46:50.9236] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2023-04-02 22:46:50.9236] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2023-04-02 22:46:50.9236] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2023-04-02 22:46:50.9236] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\Volgor\BreadCommunity\Work\BreadCommunityWeb.Blz\Server 

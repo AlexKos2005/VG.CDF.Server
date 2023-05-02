@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d1a43909-efbb-4163-bc2f-9c30bef8847c": {
+      "ProjectGuid": "d1a43909-efbb-4163-bc2f-9c30bef8847c",
+      "DisplayName": "Client",
+      "ColorIndex": 0
+    },
+    "0720189b-8cf0-46ba-a6ea-577fcdb9713a": {
+      "ProjectGuid": "0720189b-8cf0-46ba-a6ea-577fcdb9713a",
+      "DisplayName": "Server",
+      "ColorIndex": 1
+    },
+    "19f7cc91-6843-41af-b084-ff840e95fb91": {
+      "ProjectGuid": "19f7cc91-6843-41af-b084-ff840e95fb91",
+      "DisplayName": "Infrastructure.Client",
+      "ColorIndex": 2
+    },
+    "b7d30348-9df0-47d3-b760-9fb23be5d48e": {
+      "ProjectGuid": "b7d30348-9df0-47d3-b760-9fb23be5d48e",
+      "DisplayName": "Infrastructure.Server",
+      "ColorIndex": 3
+    },
+    "548a4edd-b9fd-4646-abda-330ffb22c0cb": {
+      "ProjectGuid": "548a4edd-b9fd-4646-abda-330ffb22c0cb",
+      "DisplayName": "Domain",
+      "ColorIndex": 4
+    },
+    "1a40d314-26e9-45fd-b813-85ef12e10b84": {
+      "ProjectGuid": "1a40d314-26e9-45fd-b813-85ef12e10b84",
+      "DisplayName": "Application",
+      "ColorIndex": 5
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "e3a2ef54-8184-40fe-a9f0-9fab09957547": {
+      "ProjectGuid": "e3a2ef54-8184-40fe-a9f0-9fab09957547",
+      "DisplayName": "Shared",
+      "ColorIndex": 6
+    },
+    "919fd655-f067-4ba2-b932-d926e85dd6b4": {
+      "ProjectGuid": "919fd655-f067-4ba2-b932-d926e85dd6b4",
+      "DisplayName": "Документы скриптов",
+      "ColorIndex": 7
+    }
+  },
+  "NextColorIndex": 8
+}

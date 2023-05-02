@@ -1,0 +1,1305 @@
+[2021-11-21 00:00:21.2823] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 00:00:26.5582] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 00:00:26.5582] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 00:00:26.5582] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 00:00:26.5741] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 00:06:06.3152] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 00:06:11.8984] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 00:06:11.9092] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 00:06:11.9092] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 00:06:11.9092] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 00:06:58.6958] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.TagParams' with unique index 'IX_TagParams_ExternalId'. The duplicate key value is (2).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:21af9b5d-7dd8-485b-8ded-7d680620e296
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.TagParamRepository.Save(TagParam entity) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\TagParamRepository.cs:line 70
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.TagParamService.Save(TagParamRequestDto entity) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\TagParamService.cs:line 82
+   at BreadCommunityWeb.Blz.Server.Controllers.TagParamController.SaveTagParam(TagParamRequestDto tagParam) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\TagParamController.cs:line 104
+   at lambda_method86(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 00:07:37.7007] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 00:07:40.6605] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 00:07:40.6733] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 00:07:40.6733] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 00:07:40.6733] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 00:08:06.8706] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 00:08:11.8881] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 00:08:11.8881] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 00:08:11.8881] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 00:08:11.9040] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 08:27:05.2676] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 08:27:12.0211] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 08:27:12.0338] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 08:27:12.0338] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 08:27:12.0338] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 08:37:29.1796] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 08:37:31.9522] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 08:37:31.9657] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 08:37:31.9657] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 08:37:31.9657] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 08:39:55.7040] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 08:40:00.1111] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 08:40:00.1263] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 08:40:00.1263] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 08:40:00.1263] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 08:40:41.6410] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 08:40:46.3523] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 08:40:46.3653] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 08:40:46.3653] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 08:40:46.3653] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 08:50:43.7286] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The MERGE statement conflicted with the FOREIGN KEY constraint "FK_TagParams_ParameterGroups_ParameterGroupId". The conflict occurred in database "Volgor_ASUD", table "dbo.ParameterGroups", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:195bf817-1d8e-42ef-abf7-04300b5cfa16
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.TagParamRepository.Save(List`1 tagDescriptions) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\TagParamRepository.cs:line 76
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.TagParamService.Save(List`1 tags) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\TagParamService.cs:line 75
+   at BreadCommunityWeb.Blz.Server.Controllers.TagParamController.SaveTagParams(List`1 tagsParams) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\TagParamController.cs:line 91
+   at lambda_method86(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 08:59:39.3399] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 08:59:44.2529] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 08:59:44.2628] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 08:59:44.2628] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 08:59:44.2628] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 09:00:40.1607] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 09:00:45.1952] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 09:00:45.2052] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 09:00:45.2052] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 09:00:45.2052] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 09:00:57.3579] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 09:01:02.4934] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 09:01:02.5052] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 09:01:02.5052] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 09:01:02.5052] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 09:11:37.5891] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 09:11:42.4825] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 09:11:42.4825] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 09:11:42.4825] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 09:11:42.4958] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 09:36:58.5072] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 09:37:03.6709] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 09:37:03.6846] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 09:37:03.6846] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 09:37:03.6846] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 09:37:13.9382] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_TagParamDescriptions_DescriptionsLanguages_DescriptionsLanguageId". The conflict occurred in database "Volgor_ASUD", table "dbo.DescriptionsLanguages", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:4991530c-a421-4842-86f4-d964f42956bf
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.TagParamRepository.AddDescriptionByExternalId(Int32 tagParamExternalId, TagParamDescription taglangDescription) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\TagParamRepository.cs:line 31
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.TagParamService.AddDescriptionByExternalId(Int32 tagParamExternalId, TagParamDescriptionRequestDto tagDescription) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\TagParamService.cs:line 33
+   at BreadCommunityWeb.Blz.Server.Controllers.TagParamController.AddTagParamDescriptionByExternalId(Int32 tagParamExternalId, TagParamDescriptionRequestDto tagDescription) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\TagParamController.cs:line 50
+   at lambda_method86(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 09:37:32.7554] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_TagParamDescriptions_DescriptionsLanguages_DescriptionsLanguageId". The conflict occurred in database "Volgor_ASUD", table "dbo.DescriptionsLanguages", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:4991530c-a421-4842-86f4-d964f42956bf
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.TagParamRepository.AddDescriptionByExternalId(Int32 tagParamExternalId, TagParamDescription taglangDescription) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\TagParamRepository.cs:line 31
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.TagParamService.AddDescriptionByExternalId(Int32 tagParamExternalId, TagParamDescriptionRequestDto tagDescription) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\TagParamService.cs:line 33
+   at BreadCommunityWeb.Blz.Server.Controllers.TagParamController.AddTagParamDescriptionByExternalId(Int32 tagParamExternalId, TagParamDescriptionRequestDto tagDescription) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\TagParamController.cs:line 50
+   at lambda_method86(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 09:50:09.6236] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 09:50:15.2741] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 09:50:15.2905] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 09:50:15.2905] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 09:50:15.2931] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:07:56.9605] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:08:01.4386] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:08:01.4508] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:08:01.4508] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:08:01.4508] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:08:40.5616] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Devices_Factories_FactoryId". The conflict occurred in database "Volgor_ASUD", table "dbo.Factories", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:a5ea9b6f-c5fc-4e59-8843-b180495e97e8
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.DeviceRepository.Save(List`1 devices) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\DeviceRepository.cs:line 82
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.DeviceService.Save(List`1 devices) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\DeviceService.cs:line 100
+   at BreadCommunityWeb.Blz.Server.Controllers.DeviceController.SaveDevices(List`1 devices) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\DeviceController.cs:line 79
+   at lambda_method97(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 11:08:47.2364] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Devices_Factories_FactoryId". The conflict occurred in database "Volgor_ASUD", table "dbo.Factories", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:a5ea9b6f-c5fc-4e59-8843-b180495e97e8
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.DeviceRepository.Save(List`1 devices) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\DeviceRepository.cs:line 82
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.DeviceService.Save(List`1 devices) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\DeviceService.cs:line 100
+   at BreadCommunityWeb.Blz.Server.Controllers.DeviceController.SaveDevices(List`1 devices) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\DeviceController.cs:line 79
+   at lambda_method97(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 11:10:13.6018] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_DeviceDescriptions_Devices_DeviceId". The conflict occurred in database "Volgor_ASUD", table "dbo.Devices", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:a5ea9b6f-c5fc-4e59-8843-b180495e97e8
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.DeviceDescriptionRepository.Save(DeviceDescription entity) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\DeviceDescriptionRepository.cs:line 53
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.DeviceDescriptionService.Save(DeviceDescriptionRequestDto entity) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\DeviceDescriptionService.cs:line 71
+   at BreadCommunityWeb.Blz.Server.Controllers.DescriptionControllers.DeviceDescriptionController.SaveDeviceDescription(DeviceDescriptionRequestDto deviceDescriptionRequestDto) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\DescriptionControllers\DeviceDescriptionController.cs:line 76
+   at lambda_method316(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 11:13:19.2168] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:13:24.7295] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:13:24.7295] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:13:24.7295] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:13:24.7295] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:13:34.8938] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.ReportDataService.GetExcelReportData(Int32 factoryExternalId, Int32 deviceExternalId, DateTime startReportDate, DateTime endReportDate, Int32 languageId) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\ReportDataService.cs:line 43
+   at BreadCommunityWeb.Blz.Server.Controllers.ReportController.CreateReport(Int32 factoryExternalId, Int32 deviceExternalId, DateTime startDate, DateTime endDate) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\ReportController.cs:line 51
+   at lambda_method86(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 11:14:33.7119] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:14:41.9937] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:14:42.0628] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:14:42.0628] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:14:42.0746] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:15:42.9457] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.TagsLiveGroupsController] Was save 9 tagsLiveGroups from 10101 Factory 
+[2021-11-21 11:15:43.0608] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.AlarmEventLiveController] Was save 9 alarmEventsLive from 10101 Factory 
+[2021-11-21 11:16:06.8271] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.ReportDataService.GetExcelReportData(Int32 factoryExternalId, Int32 deviceExternalId, DateTime startReportDate, DateTime endReportDate, Int32 languageId) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\ReportDataService.cs:line 43
+   at BreadCommunityWeb.Blz.Server.Controllers.ReportController.CreateReport(Int32 factoryExternalId, Int32 deviceExternalId, DateTime startDate, DateTime endDate) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\ReportController.cs:line 51
+   at lambda_method298(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 11:16:42.1877] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.TagsLiveGroupsController] Was save 9 tagsLiveGroups from 10101 Factory 
+[2021-11-21 11:16:42.2121] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.AlarmEventLiveController] Was save 3 alarmEventsLive from 10101 Factory 
+[2021-11-21 11:17:42.1888] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.TagsLiveGroupsController] Was save 9 tagsLiveGroups from 10101 Factory 
+[2021-11-21 11:17:42.2170] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.AlarmEventLiveController] Was save 6 alarmEventsLive from 10101 Factory 
+[2021-11-21 11:18:13.9478] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:18:19.1065] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:18:19.1065] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:18:19.1065] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:18:19.1065] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:19:31.5928] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:19:36.6109] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:19:36.6224] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:19:36.6224] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:19:36.6224] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:22:30.7279] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:22:36.3550] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:22:36.3550] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:22:36.3550] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:22:36.3550] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:24:41.1006] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:24:46.1458] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:24:46.1575] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:24:46.1575] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:24:46.1575] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:25:16.6255] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:25:21.8181] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:25:21.8321] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:25:21.8321] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:25:21.8321] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:25:39.5238] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.ReportDataService.GetExcelReportData(Int32 factoryExternalId, Int32 deviceExternalId, DateTime startReportDate, DateTime endReportDate, Int32 languageId) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\ReportDataService.cs:line 43
+   at BreadCommunityWeb.Blz.Server.Controllers.ReportController.CreateReport(Int32 factoryExternalId, Int32 deviceExternalId, DateTime startDate, DateTime endDate) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\ReportController.cs:line 51
+   at lambda_method86(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 11:30:16.4958] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:30:20.8437] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:30:20.8608] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:30:20.8608] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:30:20.8608] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:32:50.4448] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:32:56.0747] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:32:56.0747] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:32:56.0747] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:32:56.0747] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 11:33:05.4083] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.ArgumentException: Must specify valid information for parsing in the string. (Parameter 'value')
+   at System.Enum.TryParse(Type enumType, String value, Boolean ignoreCase, Boolean throwOnFailure, Object& result)
+   at System.Enum.Parse(Type enumType, String value, Boolean ignoreCase)
+   at OfficeOpenXml.ExcelPrinterSettings.get_Orientation()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 11:38:08.4935] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 11:38:13.9662] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 11:38:13.9807] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 11:38:13.9807] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 11:38:13.9807] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 12:12:40.9625] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 12:12:46.0098] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 12:12:46.0200] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 12:12:46.0200] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 12:12:46.0200] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 12:17:30.2634] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 12:17:35.3347] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 12:17:35.3488] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 12:17:35.3488] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 12:17:35.3488] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 12:48:43.6399] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 12:48:48.0394] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 12:48:48.0516] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 12:48:48.0516] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 12:48:48.0516] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 12:51:11.5746] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 12:51:16.0186] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 12:51:16.0294] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 12:51:16.0294] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 12:51:16.0294] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 13:03:04.4013] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 13:03:07.8944] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 13:03:07.9088] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 13:03:07.9088] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 13:03:07.9088] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 13:05:33.4656] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Devices_Factories_FactoryId". The conflict occurred in database "Volgor_ASUD", table "dbo.Factories", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c1d28ca8-f6ec-44b2-9046-ca029fdf647e
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.DeviceRepository.Save(Device entity) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\DeviceRepository.cs:line 76
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.DeviceService.Save(DeviceRequestDto entity) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\DeviceService.cs:line 107
+   at BreadCommunityWeb.Blz.Server.Controllers.DeviceController.SaveDevice(DeviceRequestDto device) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\DeviceController.cs:line 91
+   at lambda_method229(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 13:28:03.8503] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 13:28:09.2007] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 13:28:09.2007] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 13:28:09.2153] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 13:28:09.2153] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 13:29:09.1313] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 13:29:14.9231] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 13:29:14.9370] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 13:29:14.9370] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 13:29:14.9370] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 13:30:15.4653] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 13:30:19.7750] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 13:30:19.7871] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 13:30:19.7871] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 13:30:19.7871] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 13:31:30.8362] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 13:31:35.6032] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 13:31:35.6300] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 13:31:35.6495] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 13:31:35.6557] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 13:32:49.0104] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 13:32:54.1935] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 13:32:54.2115] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 13:32:54.2115] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 13:32:54.2159] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 13:33:43.7827] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 13:33:48.2935] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 13:33:48.3140] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 13:33:48.3140] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 13:33:48.3140] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 13:37:30.5545] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 13:37:35.7563] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 13:37:35.7681] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 13:37:35.7681] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 13:37:35.7681] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 14:00:45.0098] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 14:00:50.8740] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 14:00:50.8920] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 14:00:50.8920] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 14:00:50.8920] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 14:20:20.1140] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 14:20:25.9487] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 14:20:25.9487] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 14:20:25.9487] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 14:20:25.9653] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 14:22:23.7270] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.TagsLiveGroupsController] Was save 9 tagsLiveGroups from 10101 Factory 
+[2021-11-21 14:22:25.5052] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.AlarmEventLiveController] Was save 3 alarmEventsLive from 10101 Factory 
+[2021-11-21 14:24:14.3913] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.TagsLiveGroupsController] Was save 9 tagsLiveGroups from 10101 Factory 
+[2021-11-21 14:24:16.0362] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.AlarmEventLiveController] Was save 6 alarmEventsLive from 10101 Factory 
+[2021-11-21 14:25:52.0803] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.TagsLiveGroupsController] Was save 9 tagsLiveGroups from 10101 Factory 
+[2021-11-21 15:28:59.7788] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:29:06.8932] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:29:06.9102] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:29:06.9102] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:29:06.9102] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:29:26.4351] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:29:26.4701] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-21 15:29:26.5094] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:29:40.2597] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:29:40.2848] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-21 15:29:40.3096] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:31:36.7930] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:31:36.8171] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-21 15:31:36.8363] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:31:54.3163] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:31:54.3399] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-21 15:31:54.3640] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:32:05.9422] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:32:05.9650] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-21 15:32:05.9920] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:33:16.5951] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:33:22.9493] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:33:22.9493] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:33:22.9649] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:33:22.9649] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:33:47.7283] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Users_Roles_RoleId". The conflict occurred in database "Volgor_ASUD", table "dbo.Roles", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:7e449a44-d1dd-4390-93ce-7ad9c64fd934
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.UserRepository.SetUserWithResult(User user) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\UserRepository.cs:line 47
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.UserService.SaveUser(UserRequestDto userDto) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\UserService.cs:line 72
+   at BreadCommunityWeb.Blz.Server.Controllers.Registration.RegistrationController.Registrate(UserRegistrationRequestDto userRegistrationRequestDto) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\Registration\RegistrationController.cs:line 46
+   at lambda_method86(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:35:54.0719] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Users' with unique index 'IX_Users_Email'. The duplicate key value is (Po@yandex.ru).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:7e449a44-d1dd-4390-93ce-7ad9c64fd934
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.UserRepository.SetUserWithResult(User user) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\UserRepository.cs:line 47
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.UserService.SaveUser(UserRequestDto userDto) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Infrastructure.Server\Services\UserService.cs:line 72
+   at BreadCommunityWeb.Blz.Server.Controllers.Registration.RegistrationController.Registrate(UserRegistrationRequestDto userRegistrationRequestDto) in C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server\Controllers\Registration\RegistrationController.cs:line 46
+   at lambda_method86(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-21 15:40:00.1948] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:40:06.7891] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:40:06.8021] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:40:06.8021] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:40:06.8021] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:40:58.6017] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:41:04.2286] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:41:04.2408] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:41:04.2408] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:41:04.2408] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:46:10.9258] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:46:16.9575] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:46:16.9680] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:46:16.9680] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:46:16.9680] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:47:52.2894] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:47:58.3628] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:47:58.3724] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:47:58.3724] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:47:58.3724] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:49:24.6108] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:49:30.5880] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:49:30.5986] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:49:30.5986] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:49:30.5986] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:50:28.5007] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:50:34.4151] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:50:34.4282] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:50:34.4282] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:50:34.4282] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:51:49.2176] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:51:55.1554] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:51:55.1675] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:51:55.1675] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:51:55.1675] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:55:09.3840] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:55:15.4706] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:55:15.4850] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:55:15.4850] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:55:15.4850] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:56:20.0423] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:56:25.8090] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:56:25.8090] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:56:25.8090] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:56:25.8090] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:57:15.0278] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:57:21.5429] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:57:21.5429] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:57:21.5429] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:57:21.5429] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 15:58:38.5492] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 15:58:44.6039] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 15:58:44.6166] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 15:58:44.6166] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 15:58:44.6166] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 16:01:43.8634] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 16:01:49.2128] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 16:01:49.2254] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 16:01:49.2254] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 16:01:49.2254] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 16:02:27.3871] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 16:02:32.9444] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 16:02:32.9559] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 16:02:32.9559] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 16:02:32.9559] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 16:07:38.8325] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 16:07:44.1579] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 16:07:44.1742] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 16:07:44.1742] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 16:07:44.1742] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 17:49:42.8486] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 17:49:51.6354] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 17:49:51.6548] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 17:49:51.6548] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 17:49:51.6548] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 17:52:06.6166] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 17:52:15.8971] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 17:52:15.9192] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 17:52:15.9192] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 17:52:15.9192] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 17:59:56.6571] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:00:04.3473] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:00:04.3606] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:00:04.3606] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:00:04.3606] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:02:48.6865] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:02:55.5279] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:02:55.5451] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:02:55.5451] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:02:55.5451] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:04:42.5240] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:04:51.5345] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:04:51.5489] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:04:51.5489] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:04:51.5489] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:07:49.2850] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:07:57.0290] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:07:57.0290] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:07:57.0437] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:07:57.0437] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:09:13.6424] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:09:20.0856] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:09:20.1048] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:09:20.1048] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:09:20.1048] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:09:56.9083] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:10:05.0087] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:10:05.0268] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:10:05.0285] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:10:05.0285] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:21:36.5985] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:21:40.1082] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:21:40.1082] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:21:40.1210] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:21:40.1210] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:43:02.5858] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:43:10.9347] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:43:10.9574] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:43:10.9574] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:43:10.9574] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:44:50.5911] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:44:58.6188] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:44:58.6353] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:44:58.6372] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:44:58.6372] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:46:08.3059] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:46:13.5673] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:46:13.5908] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:46:13.5908] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:46:13.5908] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:49:20.2319] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:49:25.2285] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:49:25.2494] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:49:25.2494] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:49:25.2494] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:53:31.5849] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:53:42.2984] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:53:42.3321] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:53:42.3321] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:53:42.3466] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:54:48.1934] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:55:00.1804] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:55:00.2035] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:55:00.2035] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:55:00.2035] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:55:29.0120] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:55:37.8269] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:55:37.8460] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:55:37.8460] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:55:37.8460] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:56:27.4048] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:56:37.1999] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:56:37.2187] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:56:37.2187] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:56:37.2187] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 18:59:46.2016] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 18:59:56.8633] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 18:59:56.8859] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 18:59:56.8881] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 18:59:56.8881] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 19:01:37.1665] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 19:01:46.8029] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 19:01:46.8229] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 19:01:46.8248] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 19:01:46.8248] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 
+[2021-11-21 19:07:21.4245] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-21 19:07:29.3688] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-21 19:07:29.3877] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-21 19:07:29.3877] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-21 19:07:29.3877] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Users\Алексей\Documents\Проекты\BreadComm\BreadCommunityWeb.Blz\Server 

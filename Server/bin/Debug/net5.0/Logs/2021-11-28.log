@@ -1,0 +1,1466 @@
+[2021-11-28 10:27:22.2764] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 10:27:34.5523] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 10:27:34.5889] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 10:27:34.5889] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 10:27:34.5889] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 10:28:46.2183] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 10:28:54.4752] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 10:28:54.4926] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 10:28:54.4926] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 10:28:54.4926] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 10:50:27.6902] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 10:50:35.2538] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 10:50:35.2703] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 10:50:35.2703] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 10:50:35.2735] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 10:51:15.1335] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.TagsLiveReportDataService.GetExcelReportData(Int32 factoryExternalId, Int32 deviceExternalId, DateTime startReportDate, DateTime endReportDate, Int32 languageId) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\TagsLiveReportDataService.cs:line 55
+   at BreadCommunityWeb.Blz.Server.Controllers.ReportController.GetReport() in C:\Prj\Work\BreadCommunityWeb.Blz\Server\Controllers\ReportController.cs:line 61
+   at lambda_method369(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 10:52:33.0994] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.TagsLiveReportDataService.GetExcelReportData(Int32 factoryExternalId, Int32 deviceExternalId, DateTime startReportDate, DateTime endReportDate, Int32 languageId) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\TagsLiveReportDataService.cs:line 55
+   at BreadCommunityWeb.Blz.Server.Controllers.ReportController.GetReport() in C:\Prj\Work\BreadCommunityWeb.Blz\Server\Controllers\ReportController.cs:line 61
+   at lambda_method369(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 11:04:39.0909] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:04:46.1074] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:04:46.1215] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:04:46.1215] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:04:46.1215] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:13:26.0221] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:13:29.5307] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:13:29.5409] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:13:29.5409] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:13:29.5409] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:14:22.8876] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:14:30.8625] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:14:30.8772] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:14:30.8772] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:14:30.8772] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:20:42.0704] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:20:49.1698] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:20:49.1905] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:20:49.1905] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:20:49.1905] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:21:29.0716] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:21:36.6416] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:21:36.6537] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:21:36.6537] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:21:36.6537] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:26:32.1443] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:26:39.4597] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:26:39.4798] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:26:39.4798] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:26:39.4798] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:29:03.3116] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:29:10.3958] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:29:10.4268] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:29:10.4297] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:29:10.4297] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:36:38.0735] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:36:46.2533] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:36:46.3024] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:36:46.3047] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:36:46.3047] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:38:24.9960] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:38:32.6561] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:38:32.6902] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:38:32.6902] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:38:32.6975] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:40:38.1248] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:40:45.7376] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:40:45.7546] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:40:45.7546] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:40:45.7546] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:43:14.9339] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:43:20.7660] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:43:20.7850] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:43:20.7850] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:43:20.7887] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:46:06.4179] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:46:14.1191] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:46:14.1321] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:46:14.1321] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:46:14.1321] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:47:51.5249] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:47:59.3254] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:47:59.3434] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:47:59.3434] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:47:59.3434] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 11:56:09.6643] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 11:56:16.7170] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 11:56:16.7411] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 11:56:16.7442] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 11:56:16.7442] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:37:56.5104] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:38:03.9550] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:38:03.9890] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:38:03.9935] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:38:03.9935] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:45:05.5617] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:45:26.1387] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:45:33.9546] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:45:33.9781] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:45:33.9781] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:45:33.9781] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:46:29.0087] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:46:33.8131] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:46:33.8282] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:46:33.8282] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:46:33.8282] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:47:30.6171] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:47:38.1646] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:47:38.1868] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:47:38.1868] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:47:38.1868] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:49:32.4913] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:49:37.4459] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:49:37.4686] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:49:37.4686] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:49:37.4686] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:54:40.1909] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:54:44.5343] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:54:44.5442] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:54:44.5442] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:54:44.5442] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:55:47.5213] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:55:54.8575] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:55:54.8846] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:55:54.8846] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:55:54.8846] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:56:54.4401] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:56:59.6642] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:56:59.6844] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:56:59.6844] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:56:59.6844] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:57:55.7256] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:58:01.8579] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:58:01.8803] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:58:01.8821] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:58:01.8821] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 12:59:30.3464] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 12:59:35.6086] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 12:59:35.6464] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 12:59:35.6481] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 12:59:35.6481] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 13:01:15.8330] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 13:01:21.3830] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 13:01:21.4021] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 13:01:21.4021] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 13:01:21.4021] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 13:04:48.5982] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 13:04:53.8477] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 13:04:53.8693] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 13:04:53.8693] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 13:04:53.8693] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 13:20:10.2943] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 13:20:17.2978] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 13:20:17.3194] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 13:20:17.3215] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 13:20:17.3215] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 13:24:48.4865] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 13:24:54.3788] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 13:24:54.3943] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 13:24:54.3943] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 13:24:54.3943] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 13:25:38.8409] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 13:25:45.5450] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 13:25:45.5585] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 13:25:45.5585] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 13:25:45.5585] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 13:29:32.3350] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 13:29:38.9392] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 13:29:38.9563] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 13:29:38.9563] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 13:29:38.9563] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 13:30:15.7914] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 13:30:23.8896] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 13:30:23.9076] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 13:30:23.9076] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 13:30:23.9076] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 19:58:00.6748] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 19:58:36.3430] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 19:58:41.9962] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 19:58:42.0096] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 19:58:42.0096] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 19:58:42.0096] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:01:08.4930] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:01:14.2139] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:01:14.2362] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:01:14.2362] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:01:14.2362] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:05:12.3506] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:05:19.2235] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:05:19.2351] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:05:19.2351] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:05:19.2351] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:08:11.0716] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:08:17.0436] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:08:17.0569] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:08:17.0569] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:08:17.0569] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:16:23.9604] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:16:29.9354] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:16:29.9497] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:16:29.9497] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:16:29.9497] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:19:07.9668] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:19:14.5844] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:19:14.5955] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:19:14.5955] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:19:14.5955] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:20:21.5475] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:20:27.7593] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:20:27.7745] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:20:27.7745] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:20:27.7745] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:21:51.8864] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:21:57.9972] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:21:58.0075] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:21:58.0075] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:21:58.0075] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:25:02.7265] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:25:08.8196] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:25:08.8296] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:25:08.8296] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:25:08.8296] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:30:39.7838] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:30:48.4245] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:30:48.4398] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:30:48.4398] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:30:48.4458] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:35:14.1456] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:35:20.2903] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:35:20.3265] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:35:20.3265] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:35:20.3265] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:42:00.4104] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:42:06.7339] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:42:06.7485] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:42:06.7485] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:42:06.7485] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:44:13.7615] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:44:19.2972] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:44:19.3077] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:44:19.3077] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:44:19.3077] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:45:29.5346] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:45:34.3824] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:45:34.3824] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:45:34.3824] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:45:34.3824] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 20:56:54.7956] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 20:57:00.8232] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 20:57:00.8357] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 20:57:00.8357] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 20:57:00.8357] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:22:10.7706] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:22:16.9775] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:22:16.9912] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:22:16.9912] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:22:16.9941] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:22:27.1409] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:22:27.1931] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:22:27.2350] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:23:02.2080] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:23:07.7408] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:23:07.7523] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:23:07.7523] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:23:07.7523] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:23:15.4125] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:23:15.4700] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:23:15.6335] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:23:28.3329] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:23:28.3852] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:23:28.4382] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:23:34.3901] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:23:34.4225] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:23:34.4498] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:23:41.8392] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:23:41.8855] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:23:41.9340] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:24:01.7647] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:24:01.7929] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:24:01.8225] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:24:30.8194] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:24:36.5354] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:24:36.5468] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:24:36.5468] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:24:36.5468] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:24:46.2927] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:24:46.4105] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:24:46.4966] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:25:22.9730] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:25:28.9563] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:25:28.9680] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:25:28.9680] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:25:28.9680] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:25:37.6839] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:25:37.7367] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:25:37.8112] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:26:22.6391] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:26:22.6640] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:26:22.6911] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:28:21.8126] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:28:27.8790] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:28:27.8893] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:28:27.8893] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:28:27.8893] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:28:36.0565] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:28:36.1056] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:28:36.1517] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:28:46.9694] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:28:46.9995] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:28:47.0288] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:29:58.6430] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:30:02.3222] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:30:02.3513] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:30:02.3513] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:30:02.3513] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:30:21.9463] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:30:21.9795] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:30:21.9994] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:30:22.1646] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:30:22.2100] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:30:22.2339] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:31:02.1842] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:31:02.2130] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:31:02.2346] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:31:02.3224] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:31:02.3517] [ERROR] [Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware] An exception was thrown attempting to execute the problem details middleware. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+[2021-11-28 21:31:02.3842] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.Net.Sockets.SocketException (10045): Предпринятая операция не поддерживается для выбранного типа объекта.
+   at System.Net.IPAddress.get_Address()
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, Type inputType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue& value, Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Serialize(Utf8JsonWriter writer, Object value, Type inputType, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.WriteProblemDetails(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsJsonConverter.Write(Utf8JsonWriter writer, ProblemDetails value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.WriteProblemDetails(HttpContext context, ProblemDetails details)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Hellang.Middleware.ProblemDetails.ProblemDetailsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-28 21:31:53.7671] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:31:59.5364] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:31:59.5603] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:31:59.5603] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:31:59.5736] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:34:20.7913] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:34:26.2694] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:34:26.3126] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:34:26.3126] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:34:26.3126] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:35:19.3121] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:35:25.5012] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:35:25.5162] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:35:25.5162] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:35:25.5162] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:36:56.9733] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:37:03.6534] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:37:03.6699] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:37:03.6699] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:37:03.6699] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:38:20.1578] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:38:25.0675] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:38:25.0808] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:38:25.0808] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:38:25.0808] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:41:52.4685] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:41:58.0415] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:41:58.1333] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:41:58.1387] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:41:58.1387] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:43:26.1430] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:43:31.6676] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:43:31.7205] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:43:31.7331] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:43:31.7331] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:44:46.5803] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:44:51.7458] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:44:51.7458] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:44:51.7603] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:44:51.7603] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:46:19.7553] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:46:26.0662] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:46:26.0768] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:46:26.0768] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:46:26.0768] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 21:48:06.6155] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 21:48:09.9845] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 21:48:09.9978] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 21:48:09.9978] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 21:48:09.9978] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 22:01:49.5539] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 22:01:55.5589] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 22:01:55.5589] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 22:01:55.5589] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 22:01:55.5730] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 22:03:25.0793] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 22:03:29.9289] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 22:03:29.9399] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 22:03:29.9399] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 22:03:29.9399] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 22:05:00.4066] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 22:05:06.6055] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 22:05:06.6055] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 22:05:06.6055] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 22:05:06.6055] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 22:12:50.7561] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 22:12:57.0077] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 22:12:57.0397] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 22:12:57.0420] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 22:12:57.0420] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 22:13:37.8368] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 22:13:43.6097] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 22:13:43.6455] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 22:13:43.6455] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 22:13:43.6455] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 22:14:25.1503] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 22:14:31.0931] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 22:14:31.0931] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 22:14:31.1041] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 22:14:31.1041] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 22:18:12.8556] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 22:18:18.8484] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 22:18:18.8590] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 22:18:18.8590] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 22:18:18.8590] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 22:19:35.4494] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 22:19:41.2626] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 22:19:41.2626] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 22:19:41.2626] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 22:19:41.2764] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-28 22:25:43.3392] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-28 22:25:49.2077] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-28 22:25:49.2185] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-28 22:25:49.2185] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-28 22:25:49.2185] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 

@@ -1,0 +1,270 @@
+[2022-01-30 16:56:23.1976] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 16:56:29.3530] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 16:56:29.3671] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 16:56:29.3671] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 16:56:29.4643] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 16:57:17.6214] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 16:57:22.6095] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 16:57:22.6244] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 16:57:22.6244] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 16:57:22.6244] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:13:24.2464] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:13:30.4407] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:13:30.4578] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:13:30.4578] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:13:30.4578] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:15:00.6662] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:15:09.8008] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:15:09.8226] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:15:09.8226] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:15:09.8226] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:21:03.7627] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:21:08.9984] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:21:09.0101] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:21:09.0101] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:21:09.0101] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:23:03.7825] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:23:08.8500] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:23:08.8500] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:23:08.8500] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:23:08.8650] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:25:27.4320] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:25:34.6343] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:25:34.6741] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:25:34.6848] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:25:34.6848] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:26:26.6496] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:26:32.2587] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:26:32.2829] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:26:32.2829] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:26:32.2867] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:27:53.3703] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:27:57.1180] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:27:57.1180] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:27:57.1180] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:27:57.1180] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:30:23.8518] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:30:28.8244] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:30:28.8348] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:30:28.8348] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:30:28.8348] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:30:53.9737] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:30:59.9382] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:30:59.9867] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:31:00.0055] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:31:00.0240] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:31:42.2894] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:31:47.9475] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:31:47.9619] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:31:47.9619] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:31:47.9756] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:33:01.0058] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:33:06.0764] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:33:06.0868] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:33:06.0868] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:33:06.0868] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:34:29.9811] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:34:34.3927] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:34:34.4013] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:34:34.4013] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:34:34.4013] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:35:13.9278] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:35:19.0701] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:35:19.0882] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:35:19.0882] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:35:19.0882] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:36:36.4214] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:36:40.9178] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:36:40.9301] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:36:40.9301] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:36:40.9301] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:51:43.6804] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:51:49.2739] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:51:49.3194] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:51:49.3194] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:51:49.3194] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:53:06.8486] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:53:11.3111] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:53:11.3414] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:53:11.3414] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:53:11.3414] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:54:12.9499] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:54:18.5945] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:54:18.6071] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:54:18.6071] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:54:18.6113] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:54:32.6497] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.InvalidOperationException: Cannot apply the 'Include' operation with argument 'c => c.FactoryActionsInfo'. Either the source is not a queryable of a known entity type or 'Include' has been applied after 'Select' method which projects a different entity type through navigation. Consider applying 'Include' before 'Select' method call.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.FactoryRepository.GetAllFactories(Int32 userId) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\FactoryRepository.cs:line 82
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.FactoryService.GetAllFactories(Int32 userId) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\FactoryService.cs:line 54
+   at BreadCommunityWeb.Blz.Server.Controllers.UserDataController.GetUserFactories(Int32 userId) in C:\Prj\Work\BreadCommunityWeb.Blz\Server\Controllers\UserDataController.cs:line 44
+   at lambda_method90(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-01-30 17:54:50.9739] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.InvalidOperationException: Cannot apply the 'Include' operation with argument 'c => c.FactoryActionsInfo'. Either the source is not a queryable of a known entity type or 'Include' has been applied after 'Select' method which projects a different entity type through navigation. Consider applying 'Include' before 'Select' method call.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Repositories.FactoryRepository.GetAllFactories(Int32 userId) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Repositories\FactoryRepository.cs:line 82
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.FactoryService.GetAllFactories(Int32 userId) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\FactoryService.cs:line 54
+   at BreadCommunityWeb.Blz.Server.Controllers.UserDataController.GetUserFactories(Int32 userId) in C:\Prj\Work\BreadCommunityWeb.Blz\Server\Controllers\UserDataController.cs:line 44
+   at lambda_method90(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-01-30 17:56:41.0787] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:56:44.8866] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:56:44.8951] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:56:44.8951] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:56:44.8951] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 17:58:55.5592] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 17:59:00.6417] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 17:59:00.6578] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 17:59:00.6578] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 17:59:00.6578] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 18:00:44.9940] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 18:00:50.6019] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 18:00:50.6253] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 18:00:50.6377] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 18:00:50.6428] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 18:07:16.9774] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 18:07:22.1646] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 18:07:22.1786] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 18:07:22.1786] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 18:07:22.1786] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 18:09:10.0873] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 18:09:19.6223] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 18:09:19.6409] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 18:09:19.6425] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 18:09:19.6425] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 18:10:06.8317] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 18:10:16.4983] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 18:10:16.5304] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 18:10:16.5440] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 18:10:16.5602] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 18:11:49.1334] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 18:11:58.3987] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 18:11:58.4313] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 18:11:58.4476] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 18:11:58.4631] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 18:13:01.2061] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 18:13:05.8333] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 18:13:05.8506] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 18:13:05.8506] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 18:13:05.8672] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 18:16:19.7645] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 18:16:26.1221] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 18:16:26.1511] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 18:16:26.1653] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 18:16:26.1817] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 20:59:56.1017] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 21:07:32.6959] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 21:07:47.8882] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 21:07:47.9354] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 21:07:47.9568] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 21:07:47.9872] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 21:13:21.3143] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 21:13:31.6794] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 21:13:31.7195] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 21:13:31.7400] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 21:13:31.7602] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 21:25:29.8618] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 21:25:43.8953] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 21:25:43.9475] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 21:25:43.9877] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 21:25:44.0098] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 21:30:25.7295] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 21:30:33.1352] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 21:30:33.2125] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 21:30:33.2470] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 21:30:33.2935] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 21:45:12.2890] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 21:45:23.4465] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 21:45:23.4789] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 21:45:23.4947] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 21:45:23.5103] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 21:50:42.8259] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 21:50:56.2875] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 21:50:56.5264] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 21:50:56.5584] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 21:50:56.5907] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 21:53:03.0876] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 21:53:13.7842] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 21:53:13.8311] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 21:53:13.8537] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 21:53:13.8767] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 22:00:50.0862] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 22:00:59.5375] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 22:00:59.5738] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 22:00:59.5857] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 22:00:59.5978] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2022-01-30 22:03:53.9758] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2022-01-30 22:04:01.8974] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2022-01-30 22:04:01.9480] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2022-01-30 22:04:01.9727] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2022-01-30 22:04:01.9974] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 

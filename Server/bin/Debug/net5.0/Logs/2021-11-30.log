@@ -1,0 +1,166 @@
+[2021-11-30 01:05:55.9390] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 01:08:24.6731] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 01:08:30.8185] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 01:08:30.8407] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 01:08:30.8407] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 01:08:30.8407] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 01:09:24.3529] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 01:09:30.1602] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 01:09:30.1720] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 01:09:30.1720] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 01:09:30.1720] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 01:10:58.5881] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 01:11:04.8418] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 01:11:04.8823] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 01:11:04.8823] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 01:11:04.8823] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 19:52:37.1984] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 19:52:46.7138] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 19:52:46.7282] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 19:52:46.7282] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 19:52:46.7282] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 19:53:19.2112] [TRACE] [BreadCommunityWeb.Blz.Server.Controllers.AlarmEventLiveController] Was save 10 alarmEventsLive from 10101 Factory 
+[2021-11-30 19:54:22.9529] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 19:54:29.0134] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 19:54:29.0255] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 19:54:29.0255] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 19:54:29.0255] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 19:56:19.3281] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.ArgumentException: The worksheet can not have an empty name
+   at OfficeOpenXml.ExcelWorksheets.ValidateFixSheetName(String Name)
+   at OfficeOpenXml.ExcelWorksheets.AddSheet(String Name, Boolean isChart, Nullable`1 chartType, ExcelPivotTable pivotTableSource, XmlElement sheetElement)
+   at OfficeOpenXml.ExcelWorksheets.Add(String Name)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.ExcelReportService.MakeReport() in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\ExcelReportService.cs:line 28
+   at BreadCommunityWeb.Blz.Server.Controllers.ReportController.GetAlarmEventsLiveReport(AlarmEventsReportDataInfo reportDataInfo) in C:\Prj\Work\BreadCommunityWeb.Blz\Server\Controllers\ReportController.cs:line 111
+   at lambda_method430(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-30 19:57:39.2179] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 19:57:45.1213] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 19:57:45.1315] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 19:57:45.1315] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 19:57:45.1315] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 20:08:20.5502] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 20:08:27.2433] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 20:08:27.2605] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 20:08:27.2605] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 20:08:27.2605] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 20:08:59.7857] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 20:09:08.0084] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 20:09:08.0254] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 20:09:08.0254] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 20:09:08.0254] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 20:13:28.1241] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 20:13:34.6092] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 20:13:34.6198] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 20:13:34.6198] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 20:13:34.6198] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 20:15:00.5696] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.AlarmEventLiveReportDataService.<>c__DisplayClass6_0.<GetExcelReportData>b__12(AlarmEventDescription c) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\AlarmEventLiveReportDataService.cs:line 110
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.AlarmEventLiveReportDataService.GetExcelReportData(AlarmEventsReportDataInfo reportDataInfo) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\AlarmEventLiveReportDataService.cs:line 109
+   at BreadCommunityWeb.Blz.Server.Controllers.ReportController.GetAlarmEventsLiveReport(AlarmEventsReportDataInfo reportDataInfo) in C:\Prj\Work\BreadCommunityWeb.Blz\Server\Controllers\ReportController.cs:line 108
+   at lambda_method283(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-30 20:16:22.6620] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 20:16:28.5856] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 20:16:28.5962] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 20:16:28.5962] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 20:16:28.5962] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 20:16:59.1066] [ERROR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.AlarmEventLiveReportDataService.<>c__DisplayClass6_0.<GetExcelReportData>b__9(DeviceDescription c) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\AlarmEventLiveReportDataService.cs:line 96
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at BreadCommunityWeb.Blz.Infrastructure.Server.Services.AlarmEventLiveReportDataService.GetExcelReportData(AlarmEventsReportDataInfo reportDataInfo) in C:\Prj\Work\BreadCommunityWeb.Blz\Infrastructure.Server\Services\AlarmEventLiveReportDataService.cs:line 95
+   at BreadCommunityWeb.Blz.Server.Controllers.ReportController.GetAlarmEventsLiveReport(AlarmEventsReportDataInfo reportDataInfo) in C:\Prj\Work\BreadCommunityWeb.Blz\Server\Controllers\ReportController.cs:line 108
+   at lambda_method283(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2021-11-30 20:18:11.5415] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 20:18:17.1822] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 20:18:17.1935] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 20:18:17.1935] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 20:18:17.1935] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 20:26:18.9725] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 20:26:25.2531] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 20:26:25.2531] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 20:26:25.2680] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 20:26:25.2680] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 22:24:42.4203] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 22:24:55.0949] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 22:24:55.1188] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 22:24:55.1188] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 22:24:55.1188] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 22:25:55.2007] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 22:26:05.8202] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 22:26:05.8730] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 22:26:05.9000] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 22:26:05.9000] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 22:27:40.9226] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 22:27:51.6520] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 22:27:51.7029] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 22:27:51.7062] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 22:27:51.7062] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 22:30:36.4881] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 22:30:46.7252] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 22:30:46.7500] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 22:30:46.7500] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 22:30:46.7542] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 22:32:41.7200] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 22:32:54.7314] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 22:32:54.7650] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 22:32:54.7650] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 22:32:54.7692] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
+[2021-11-30 22:35:34.2674] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
+[2021-11-30 22:35:43.8340] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
+[2021-11-30 22:35:43.8533] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
+[2021-11-30 22:35:43.8533] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
+[2021-11-30 22:35:43.8533] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 

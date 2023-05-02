@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# RS1002: Missing kind argument while registering an analyzer action.
+dotnet_diagnostic.RS1002.severity = silent
