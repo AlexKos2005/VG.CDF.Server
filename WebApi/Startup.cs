@@ -27,7 +27,6 @@ using VG.CDF.Server.Application.TagReportTask;
 using VG.CDF.Server.Infrastructure.Configurations;
 using VG.CDF.Server.Infrastructure.Mapping;
 using VG.CDF.Server.WebApi.Controllers;
-using VG.CDF.Server.WebApi.DataContext;
 
 namespace VG.CDF.Server.WebApi
 {
@@ -39,16 +38,13 @@ namespace VG.CDF.Server.WebApi
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        
         public void ConfigureServices(IServiceCollection services)
         {
             
             MapperConfiguration mapperConfig;
 
             #region MapperConfiguration
-            //mapperConfig = new MapperConfiguration(cfg => cfg.AddMaps("BreadCommunityWeb.Blz.Infrastructure"));
             mapperConfig = new MapperConfiguration(cfg => cfg.
                 AddMaps(new Assembly[]
                 {
@@ -62,11 +58,6 @@ namespace VG.CDF.Server.WebApi
             services.AddSingleton(Configuration.GetSection("JwtConfiguration").Get<JwtConfiguration>());
             services.RegistrateServices(Configuration);
             services.RegistrateValidators();
-
-
-            var connectionString = Configuration["DbConnectionConfig:ConnectionString"];
-            /*services.AddDbContext<SqlDataContext>(
-            );*/
             
             services.AddScoped(sp =>
             new HttpClient()

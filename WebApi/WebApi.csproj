@@ -23,6 +23,9 @@
 
   <ItemGroup>
     <None Remove="C:\Users\Алексей\.nuget\packages\nlog.config\4.7.11\contentFiles\any\any\NLog.config" />
+    <None Update="VG.CDF.Server.WebApi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -52,6 +55,7 @@
 
   <ItemGroup>
     <Folder Include="Controllers\Administration\" />
+    <Folder Include="DbContext" />
   </ItemGroup>
 
   <ItemGroup>

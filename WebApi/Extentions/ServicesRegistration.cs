@@ -6,8 +6,8 @@ using VG.CDF.Server.Application.Dto.ResponseDto.Authentication;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Application.Interfaces.Services;
 using VG.CDF.Server.Application.TagReportTask.Commands;
+using VG.CDF.Server.Infrastructure.DataContext;
 using VG.CDF.Server.Infrastructure.Services;
-using VG.CDF.Server.WebApi.DataContext;
 
 namespace VG.CDF.Server.WebApi.Controllers
 {
