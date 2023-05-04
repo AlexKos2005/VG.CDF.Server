@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>BreadCommunityWeb.Blz.Application</RootNamespace>
-    <AssemblyName>BreadCommunityWeb.Blz.Application</AssemblyName>
+    <RootNamespace>VG.CDF.Server.Application</RootNamespace>
+    <AssemblyName>VG.CDF.Server.Application</AssemblyName>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 

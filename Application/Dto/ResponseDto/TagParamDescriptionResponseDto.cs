@@ -1,11 +1,5 @@
-﻿using BreadCommunityWeb.Blz.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BreadCommunityWeb.Blz.Application.Dto.ResponseDto
+﻿
+namespace VG.CDF.Server.Application.Dto.ResponseDto
 {
     public class TagParamDescriptionResponseDto
     {

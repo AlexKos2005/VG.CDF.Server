@@ -1,11 +1,8 @@
-﻿using BreadCommunityWeb.Blz.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using VG.CDF.Server.Domain.Entities;
 
-namespace BreadCommunityWeb.Blz.Application.Interfaces.Repositories
+namespace VG.CDF.Server.Application.Interfaces.Repositories
 {
     public interface IParameterGroupRepository : ICrud<ParameterGroup,int>
     {

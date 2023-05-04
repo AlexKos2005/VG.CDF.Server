@@ -7,7 +7,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace BreadCommunityWeb.Blz.Application.Extentions
+namespace VG.CDF.Server.Application.Extentions
 {
     public static class HttpResultsExtension
     {

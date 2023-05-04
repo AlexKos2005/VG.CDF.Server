@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace BreadCommunityWeb.Blz.Domain.Entities
+namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(TagParamId), nameof(DeviceId), IsUnique = true)]
     public class TagParamDevice

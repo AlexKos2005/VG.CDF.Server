@@ -1,11 +1,11 @@
-﻿using BreadCommunityWeb.Blz.Application.Dto.RequestDto;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VG.CDF.Server.Application.Dto.RequestDto;
 
-namespace BreadCommunityWeb.Blz.Application.Interfaces.Services
+namespace VG.CDF.Server.Application.Interfaces.Services
 {
     public interface IUserFactoryService
     {

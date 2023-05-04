@@ -1,11 +1,11 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using BreadCommunityWeb.Blz.Application.Interfaces;
 using FluentValidation;
 using MediatR;
+using VG.CDF.Server.Application.Interfaces;
 
-namespace BreadCommunityWeb.Blz.Application.HandlerBase;
+namespace VG.CDF.Server.Application.HandlerBase;
 
 public class DeleteHandlerBase<TRequest,TResponse,TEntity>  : IRequestHandler<TRequest,TResponse>
 where TRequest : IRequest<TResponse>

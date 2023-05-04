@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BreadCommunityWeb.Blz.Domain.Enums
+namespace VG.CDF.Server.Domain.Entities
 {
     public enum RoleCodes
     {

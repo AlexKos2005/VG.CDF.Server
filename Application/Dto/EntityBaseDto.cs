@@ -1,4 +1,4 @@
-﻿namespace BreadCommunityWeb.Blz.Application.Dto;
+﻿namespace VG.CDF.Server.Application.Dto;
 
 public class EntityBaseDto
 {

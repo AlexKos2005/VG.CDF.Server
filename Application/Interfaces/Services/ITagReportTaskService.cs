@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using BreadCommunityWeb.Blz.Application.Dto;
-using BreadCommunityWeb.Blz.Application.TagReportTask.Commands;
-using BreadCommunityWeb.Blz.Application.TagReportTask.Queries;
-using BreadCommunityWeb.Blz.Application.WorkEmail.Commands;
+using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.TagReportTask.Commands;
+using VG.CDF.Server.Application.TagReportTask.Queries;
+using VG.CDF.Server.Application.WorkEmail.Commands;
 
-namespace BreadCommunityWeb.Blz.Application.Interfaces.Services;
+
+namespace VG.CDF.Server.Application.Interfaces.Services;
 
 public interface ITagReportTaskService
 {

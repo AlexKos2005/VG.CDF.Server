@@ -1,15 +1,15 @@
-﻿using BreadCommunityWeb.Blz.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using VG.CDF.Server.Domain.Entities;
 
-namespace BreadCommunityWeb.Blz.Application.Interfaces
+namespace VG.CDF.Server.Application.Interfaces
 {
-    public interface ISqlDataContext
+    public interface ISqlDataContext : IDisposable
     {
         public DbSet<Factory> Factories { get; set; }
         public DbSet<FactoryActionsInfo> FactoryActionsInfos { get; set; }

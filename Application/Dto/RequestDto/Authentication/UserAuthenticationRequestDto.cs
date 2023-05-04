@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BreadCommunityWeb.Blz.Application.Dto.RequestDto.Authentication
+namespace VG.CDF.Server.Dto.RequestDto.Authentication
 {
     public class UserAuthenticationRequestDto
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace BreadCommunityWeb.Blz.Domain.Entities
+namespace VG.CDF.Server.Domain.Entities
 {
    public class DoseWa
     {

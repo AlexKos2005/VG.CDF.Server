@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using BreadCommunityWeb.Blz.Application.Dto;
-using BreadCommunityWeb.Blz.Application.WorkEmail.Commands;
+using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.WorkEmail.Commands;
 
-namespace BreadCommunityWeb.Blz.Application.WorkEmail;
+namespace VG.CDF.Server.Application.WorkEmail;
 
 public class WorkEmailMappingProfiler : Profile
 {

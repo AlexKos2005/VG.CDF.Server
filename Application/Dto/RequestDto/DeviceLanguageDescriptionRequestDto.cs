@@ -1,13 +1,7 @@
-﻿using BreadCommunityWeb.Blz.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace BreadCommunityWeb.Blz.Application.Dto.RequestDto
+
+namespace VG.CDF.Server.Application.Dto.RequestDto
 {
     public class DeviceLanguageDescriptionRequestDto
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BreadCommunityWeb.Blz.Application.Dto.RequestDto
+namespace VG.CDF.Server.Application.Dto.RequestDto
 {
     public class ParameterGroupRequestDto
     {

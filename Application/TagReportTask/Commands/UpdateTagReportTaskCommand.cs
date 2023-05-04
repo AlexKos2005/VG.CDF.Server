@@ -2,14 +2,13 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using BreadCommunityWeb.Blz.Application.Dto;
-using BreadCommunityWeb.Blz.Application.Interfaces;
-using BreadCommunityWeb.Blz.Domain.Enums;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using VG.CDF.Server.Application.Interfaces;
+using VG.CDF.Server.Domain.Entities;
 
-namespace BreadCommunityWeb.Blz.Application.TagReportTask.Commands;
+namespace VG.CDF.Server.Application.TagReportTask.Commands;
 
 public class UpdateTagReportTaskCommand
 {

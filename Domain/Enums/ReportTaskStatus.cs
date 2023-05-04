@@ -1,4 +1,4 @@
-﻿namespace BreadCommunityWeb.Blz.Domain.Enums;
+﻿namespace VG.CDF.Server.Domain.Entities;
 
 public enum ReportTaskStatus
 {

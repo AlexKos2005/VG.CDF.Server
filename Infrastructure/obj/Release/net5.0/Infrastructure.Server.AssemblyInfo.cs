@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Infrastructure.Server")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("BreadCommunityWeb.Blz.Infrastructure.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Infrastructure.Server")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Infrastructure.Server")]
+[assembly: System.Reflection.AssemblyProductAttribute("BreadCommunityWeb.Blz.Infrastructure.Server")]
+[assembly: System.Reflection.AssemblyTitleAttribute("BreadCommunityWeb.Blz.Infrastructure.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

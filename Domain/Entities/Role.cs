@@ -1,5 +1,4 @@
-﻿using BreadCommunityWeb.Blz.Domain.Enums;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace BreadCommunityWeb.Blz.Domain.Entities
+namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(RoleCode), IsUnique = true)]
     public class Role

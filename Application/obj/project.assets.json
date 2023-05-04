@@ -379,17 +379,17 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "BreadCommunityWeb.Blz.Domain/1.0.0": {
+      "VG.CDF.Server.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.10"
         },
         "compile": {
-          "bin/placeholder/BreadCommunityWeb.Blz.Domain.dll": {}
+          "bin/placeholder/VG.CDF.Server.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BreadCommunityWeb.Blz.Domain.dll": {}
+          "bin/placeholder/VG.CDF.Server.Domain.dll": {}
         }
       }
     }
@@ -1718,7 +1718,7 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "BreadCommunityWeb.Blz.Domain/1.0.0": {
+    "VG.CDF.Server.Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
@@ -1727,10 +1727,10 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper >= 10.1.1",
-      "BreadCommunityWeb.Blz.Domain >= 1.0.0",
       "FluentValidation >= 11.5.1",
       "MediatR >= 12.0.1",
-      "System.Security.Cryptography.Primitives >= 4.3.0"
+      "System.Security.Cryptography.Primitives >= 4.3.0",
+      "VG.CDF.Server.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1742,7 +1742,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Application\\Application.csproj",
-      "projectName": "BreadCommunityWeb.Blz.Application",
+      "projectName": "VG.CDF.Server.Application",
       "projectPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Алексей\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Application\\obj\\",

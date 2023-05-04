@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using BreadCommunityWeb.Blz.Application.Dto;
-using BreadCommunityWeb.Blz.Application.TagReportTask.Commands;
+using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.TagReportTask.Commands;
 
-namespace BreadCommunityWeb.Blz.Application.TagReportTask;
+namespace VG.CDF.Server.Application.TagReportTask;
 
 public class TagReportTaskMappingProfiler : Profile
 {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 
-namespace BreadCommunityWeb.Blz.Application.Extentions
+namespace VG.CDF.Server.Application.Extentions
 {
    public static class HashServiceExtention
     {

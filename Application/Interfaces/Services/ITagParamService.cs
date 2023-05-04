@@ -1,13 +1,9 @@
-﻿using BreadCommunityWeb.Blz.Application.Dto.RequestDto;
-using BreadCommunityWeb.Blz.Application.Dto.ResponseDto;
-using BreadCommunityWeb.Blz.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using VG.CDF.Server.Application.Dto.RequestDto;
+using VG.CDF.Server.Application.Dto.ResponseDto;
 
-namespace BreadCommunityWeb.Blz.Application.Interfaces.Services
+namespace VG.CDF.Server.Application.Interfaces.Services
 {
     public interface ITagParamService : ICrudService<TagParamRequestDto, TagParamResponseDto,int>
     {

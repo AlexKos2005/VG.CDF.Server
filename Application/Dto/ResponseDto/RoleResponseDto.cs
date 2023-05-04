@@ -1,12 +1,7 @@
-﻿using BreadCommunityWeb.Blz.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
+using VG.CDF.Server.Domain.Entities;
 
-
-namespace BreadCommunityWeb.Blz.Application.Dto.ResponseDto
+namespace VG.CDF.Server.Application.Dto.ResponseDto
 {
     public class RoleResponseDto
     {

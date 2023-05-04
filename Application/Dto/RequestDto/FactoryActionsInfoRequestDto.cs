@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace BreadCommunityWeb.Blz.Application.Dto.RequestDto
+namespace VG.CDF.Server.Application.Dto.RequestDto
 {
     public class FactoryActionsInfoRequestDto
     {

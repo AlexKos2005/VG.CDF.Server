@@ -1,7 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace BreadCommunityWeb.Blz.Domain.Entities;
+﻿
+namespace VG.CDF.Server.Domain.Entities;
 
 public class TagReportTaskWorkEmail
 {

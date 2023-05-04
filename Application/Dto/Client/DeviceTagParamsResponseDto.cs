@@ -1,11 +1,10 @@
-﻿using BreadCommunityWeb.Blz.Application.Dto.ResponseDto;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BreadCommunityWeb.Blz.Application.Dto.Client
+namespace VG.CDF.Server.Application.Dto.Client
 {
     public class DeviceTagParamsResponseDto
     {

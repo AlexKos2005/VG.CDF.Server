@@ -2,13 +2,12 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using BreadCommunityWeb.Blz.Application.Dto;
-using BreadCommunityWeb.Blz.Application.Interfaces;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using VG.CDF.Server.Application.Interfaces;
 
-namespace BreadCommunityWeb.Blz.Application.TagReportTask.Commands;
+namespace VG.CDF.Server.Application.TagReportTask.Commands;
 
 public class CreateTagReportTaskCommand
 {
@@ -26,7 +25,7 @@ public class CreateTagReportTaskCommandValidator : AbstractValidator<CreateTagRe
 
         RuleFor(command => command).MustAsync(async (command, cts) =>
         {
-            return !await dataContext.TagReportTasks.Where(c => c.FactoryId == command.FactoryId).AnyAsync();
+            return !await dataContext.Set<Domain.Entities.TagReportTask>().Where(c => c.FactoryId == command.FactoryId).AnyAsync();
         }).WithMessage($"Задача генерации отчетов по тегам для данного производства уже существует");
     }
 }

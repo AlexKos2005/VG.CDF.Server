@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
 
-namespace BreadCommunityWeb.Blz.Application.Dto.ResponseDto
+namespace VG.CDF.Server.Application.Dto.ResponseDto
 {
    public class FolderResponseDto
     {

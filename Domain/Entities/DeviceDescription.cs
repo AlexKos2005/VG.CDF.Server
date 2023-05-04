@@ -1,5 +1,4 @@
-﻿using BreadCommunityWeb.Blz.Domain.Enums;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BreadCommunityWeb.Blz.Domain.Entities
+namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(DeviceId), nameof(DescriptionsLanguageId), IsUnique = true)]
     public class DeviceDescription

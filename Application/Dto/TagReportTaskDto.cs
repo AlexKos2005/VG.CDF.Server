@@ -1,14 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BreadCommunityWeb.Blz.Domain.Enums;
+﻿using System;
+using VG.CDF.Server.Domain.Entities;
 
-namespace BreadCommunityWeb.Blz.Application.Dto
+namespace VG.CDF.Server.Application.Dto
 {
     public class TagReportTaskDto
     {

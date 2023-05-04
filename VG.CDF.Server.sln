@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{DFF56BDC-771F-4FDA-9341-937F918AF516}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Server", "Infrastructure.Server\Infrastructure.Server.csproj", "{B7D30348-9DF0-47D3-B760-9FB23BE5D48E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{B7D30348-9DF0-47D3-B760-9FB23BE5D48E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{0720189B-8CF0-46BA-A6EA-577FCDB9713A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{0720189B-8CF0-46BA-A6EA-577FCDB9713A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A651CAD8-8B43-4946-BC57-2E9F56CF1ADF}"
 	ProjectSection(SolutionItems) = preProject

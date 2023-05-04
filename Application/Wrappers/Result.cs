@@ -1,11 +1,11 @@
-﻿using BreadCommunityWeb.Blz.Application.Interfaces.Wrappers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VG.CDF.Server.Application.Interfaces.Wrappers;
 
-namespace BreadCommunityWeb.Blz.Application.Wrappers
+namespace VG.CDF.Server.Application.Wrappers
 {
     public class Result : IResult
     {

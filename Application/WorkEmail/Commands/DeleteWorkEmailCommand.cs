@@ -2,13 +2,12 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using BreadCommunityWeb.Blz.Application.Dto;
-using BreadCommunityWeb.Blz.Application.Interfaces;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using VG.CDF.Server.Application.Interfaces;
 
-namespace BreadCommunityWeb.Blz.Application.WorkEmail.Commands;
+namespace VG.CDF.Server.Application.WorkEmail.Commands;
 
 public class DeleteWorkEmailCommand
 {

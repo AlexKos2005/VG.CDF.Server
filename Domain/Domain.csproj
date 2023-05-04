@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>BreadCommunityWeb.Blz.Domain</RootNamespace>
-    <AssemblyName>BreadCommunityWeb.Blz.Domain</AssemblyName>
+    <RootNamespace>VG.CDF.Server.Domain</RootNamespace>
+    <AssemblyName>VG.CDF.Server.Domain</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Domain\\Domain.csproj",
-        "projectName": "BreadCommunityWeb.Blz.Domain",
+        "projectName": "VG.CDF.Server.Domain",
         "projectPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Алексей\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Domain\\obj\\",

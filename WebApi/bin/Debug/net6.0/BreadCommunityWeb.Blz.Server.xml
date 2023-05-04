@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VG.CDF.Server.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.AlarmEventController">
+            <summary>
+            Аварийные события
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.GetAlarmEvent(System.Int32)">
+            <summary>
+            Получить параметр авар.события по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.GetAlarmEventByExternalId(System.Int32)">
+            <summary>
+            Получить параметр тега по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.GetAllAlarmEvents">
+            <summary>
+            Получить все параметры всех авар.событий
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.GetAlarmEventDescriptions(System.Int32)">
+            <summary>
+            Получить описания параметра авар.события по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.GetAlarmEventDescriptionsByExternalId(System.Int32)">
+            <summary>
+            Получить описания параметра авар.события по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.AddAlarmEventDescription(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.AlarmEventDescriptionRequestDto)">
+            <summary>
+            Добавить описание авар.событию по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.AddAlarmEventDescriptionByExternalId(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.AlarmEventDescriptionRequestDto)">
+            <summary>
+            Добавить описание авар.событию по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.AddScopeAlarmEventDescriptionByExternalId(System.Collections.Generic.List{VG.CDF.Server.Application.Dto.RequestDto.AlarmEventDescriptionsWithExternalIdRequestDto})">
+            <summary>
+            Добавить описания нескольким авар.событиям по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.SaveAlarmEvent(VG.CDF.Server.Application.Dto.RequestDto.AlarmEventRequestDto)">
+            <summary>
+            Сохранить один параметр авар.события
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.SaveAlarmEvents(System.Collections.Generic.List{VG.CDF.Server.Application.Dto.RequestDto.AlarmEventRequestDto})">
+            <summary>
+            Сохранить несколько параметров авар.событий
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.DeleteAlarmEvent(System.Int32)">
+            <summary>
+            Удалить авар.событие по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventController.UpdateAlarmEvent(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.AlarmEventRequestDto)">
+            <summary>
+            Обновить параметр авар.события
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.AlarmEventLiveController">
+            <summary>
+            Реал-тайм аварийные события
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventLiveController.SaveAlarmEventsLive(System.Collections.Generic.List{VG.CDF.Server.Application.Dto.RequestDto.AlarmEventLiveRequestDto})">
+            <summary>
+            Сохранить аварийные реал-тайм события
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventLiveController.GetAlarmEventsLive(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Получить все аварийные реал-тайм события по предприятию за период
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.AlarmEventLiveController.GetAlarmEventsLiveForExternalId(System.Int32,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Получить аварийное реал-тайм событие по своему индентификатору и предприятию за период
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.Authentication.AuthenticationController">
+            <summary>
+            Авторизация
+            </summary>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.AlarmEventDescriptionController">
+            <summary>
+            Описания аварийных событий
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.AlarmEventDescriptionController.GetAllAlarmEventDescriptions">
+            <summary>
+            Получить все описания аварийных событий
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.AlarmEventDescriptionController.GetAlarmEventDescription(System.Int32)">
+            <summary>
+            Получить описание аварийного события
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.AlarmEventDescriptionController.GetLanguageAlarmEventDescription(System.Int32)">
+            <summary>
+            Получить язык описания аварийного события
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.AlarmEventDescriptionController.SaveAlarmEventDescription(VG.CDF.Server.Application.Dto.RequestDto.AlarmEventDescriptionRequestDto)">
+            <summary>
+            Сохранить описание аварийного события
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.AlarmEventDescriptionController.DeleteAlarmEventDescription(System.Int32)">
+            <summary>
+            Удалить описание аварийного события
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.AlarmEventDescriptionController.UpdateAlarmEventDescription(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.AlarmEventDescriptionRequestDto)">
+            <summary>
+            Обновить описание аварийного события
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.DeviceDescriptionController">
+            <summary>
+            Описания устройств
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.DeviceDescriptionController.GetAllDeviceDescriptions">
+            <summary>
+            Получить все описания устройств
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.DeviceDescriptionController.GetDeviceDescription(System.Int32)">
+            <summary>
+            Получить описание устройства
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.DeviceDescriptionController.GetLanguageDeviceDescription(System.Int32)">
+            <summary>
+            Получить язык описания устройства
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.DeviceDescriptionController.SaveDeviceDescription(VG.CDF.Server.Application.Dto.RequestDto.DeviceDescriptionRequestDto)">
+            <summary>
+            Сохранить описание устройства
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.DeviceDescriptionController.DeleteDeviceDescription(System.Int32)">
+            <summary>
+            Удалить описание устройства
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.DeviceDescriptionController.UpdateTagDescription(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.DeviceDescriptionRequestDto)">
+            <summary>
+            Обновить описание устройства
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.TagParamDescriptionController">
+            <summary>
+            Описания параметров тегов
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.TagParamDescriptionController.GetAllTagParamDescriptions">
+            <summary>
+            Получить все описания тегов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.TagParamDescriptionController.GetTagParamDescription(System.Int32)">
+            <summary>
+            Получить описание тега
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.TagParamDescriptionController.GetLanguageTagParamDescription(System.Int32)">
+            <summary>
+            Получить язык описания тега
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.TagParamDescriptionController.SaveTagParamDescription(VG.CDF.Server.Application.Dto.RequestDto.TagParamDescriptionRequestDto)">
+            <summary>
+            Сохранить описание тега
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.TagParamDescriptionController.DeleteTagParamDescription(System.Int32)">
+            <summary>
+            Удалить описание тега
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DescriptionControllers.TagParamDescriptionController.UpdateTagParamDescription(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.TagParamDescriptionRequestDto)">
+            <summary>
+            Обновить описание тега
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.DeviceController">
+            <summary>
+            Устройства
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.GetDevice(System.Int32)">
+            <summary>
+            Получить устройство по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.GetDeviceByExternalId(System.Int32)">
+            <summary>
+            Получить девайс по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.GetAllDevices">
+            <summary>
+            Получить все устройства
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.GetDeviceDescriptionsById(System.Int32)">
+            <summary>
+            Получить описания устройства по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.GetDeviceDescriptionsByExternalId(System.Int32)">
+            <summary>
+            Получить описания девайса по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.GetTagParamsForDevice(System.Int32)">
+            <summary>
+            Получить все параметры тегов, относящиеся к устройству по его External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.AddDeviceDescription(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.DeviceDescriptionRequestDto)">
+            <summary>
+            Добавить описание устройству по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.AddDeviceDescriptionByExternalId(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.DeviceDescriptionRequestDto)">
+            <summary>
+            Добавить описание девайсу по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.AddScopeDevicesDescriptionByExternalId(System.Collections.Generic.List{VG.CDF.Server.Application.Dto.RequestDto.DeviceDescriptionsWithExternalIdRequestDto})">
+            <summary>
+            Добавить описания нескольким девайсам по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.SaveDevice(VG.CDF.Server.Application.Dto.RequestDto.DeviceRequestDto)">
+            <summary>
+            Сохранить одно устройство
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.SaveDevices(System.Collections.Generic.List{VG.CDF.Server.Application.Dto.RequestDto.DeviceRequestDto})">
+            <summary>
+            Сохранить несколько устройств
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.AddTagParamsToDevice(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Добавить параметры тегов к устройству по его External ID
+            Одно устройство может содержать множество тегов.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.UpdateDevice(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.DeviceRequestDto)">
+            <summary>
+            Обновить устройство
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.DeleteDevice(System.Int32)">
+            <summary>
+            Удалить устройство по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.GetByFactoryExternalId(System.Int32)">
+            <summary>
+            Получить все устройства по External ID предприятия
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.DeviceController.GetByFactoryId(System.Int32)">
+            <summary>
+            Получить все устройства по ID предприятия
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.FactoryActionsInfoController">
+            <summary>
+            События предприятий
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryActionsInfoController.DeleteFactoryActionsInfo(System.Int32)">
+            <summary>
+            Удалить таблицу событий предприятия
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryActionsInfoController.GetFactoryActionsInfo(System.Int32)">
+            <summary>
+            Получить таблицу событий предприятия
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryActionsInfoController.GetByFactoryExternalId(System.Int32)">
+            <summary>
+            Получить таблицу событий предприятия по идентификатору предприятия
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryActionsInfoController.SaveFactoryActionsInfo(VG.CDF.Server.Application.Dto.RequestDto.FactoryActionsInfoRequestDto)">
+            <summary>
+            Сохранить таблицу событий предприятия
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryActionsInfoController.UpdateFactoryActionsInfo(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.FactoryActionsInfoRequestDto)">
+            <summary>
+            Обновить таблицу событий предприятия
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryActionsInfoController.ChangeLastDateTimeConnection(System.Int32)">
+            <summary>
+            Обновить время последнего подключения предприятия
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryActionsInfoController.ChangeLastDateTimeReportSending(VG.CDF.Server.Application.Dto.RequestDto.FactoryReportingInfoRequestDto)">
+            <summary>
+            Обновить время отправки отчета по определенному предприятию
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.FactoryController">
+            <summary>
+            Предприятия
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryController.GetAllFactories">
+            <summary>
+            Получить все предприятия
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:VG.CDF.Server.WebApi.Controllers.FactoryController.GetFactoryById(System.Int32)" -->
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryController.GetFactoryByExternalId(System.Int32)">
+            <summary>
+            Получить предприятие по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryController.PostFactory(VG.CDF.Server.Application.Dto.RequestDto.FactoryRequestDto)">
+            <summary>
+            Сохранить новое предприятие
+            </summary>
+            <param name="factoryDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryController.DeleteFactory(System.Int32)">
+            <summary>
+            Удалить предприятие
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FactoryController.UpdateFactory(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.FactoryRequestDto)">
+            <summary>
+            Обновить предприятие
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FolderController.CreateFolder(System.String)">
+            <summary>
+            Создать папку
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FolderController.SaveFile(System.Byte[],System.String)">
+            <summary>
+            Сохранить файл
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.FolderController.DeleteFile(System.String,System.String)">
+            <summary>
+            Удалить файл
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.LanguageController">
+            <summary>
+            Языковые описания
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.LanguageController.GetAllLanguages">
+            <summary>
+            Получить все языки
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.LanguageController.GetLanguage(System.Int32)">
+            <summary>
+            Получить язык
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.LanguageController.SaveLanguage(VG.CDF.Server.Application.Dto.RequestDto.DescriptionsLanguageRequestDto)">
+            <summary>
+            Сохранить язык
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.LanguageController.DeleteLanguage(System.Int32)">
+            <summary>
+            Удалить язык
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.LanguageController.UpdateLanguage(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.DescriptionsLanguageRequestDto)">
+            <summary>
+            Обновить язык
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.ParameterGroupController">
+            <summary>
+            Группы параметров
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ParameterGroupController.GetParameterGroup(System.Int32)">
+            <summary>
+            Получить группу параметров
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ParameterGroupController.GetAllParameterGroup">
+            <summary>
+            Получить все группы параметров
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ParameterGroupController.SaveParameterGroup(VG.CDF.Server.Application.Dto.RequestDto.ParameterGroupRequestDto)">
+            <summary>
+            Сохранить группу параметров
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ParameterGroupController.UpdateParameterGroup(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.ParameterGroupRequestDto)">
+            <summary>
+            Обновить группу параметров
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ParameterGroupController.DeleteParameterGroup(System.Int32)">
+            <summary>
+            Удалить группу параметров
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.Registration.RegistrationController">
+            <summary>
+            Регистрация
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.Registration.RegistrationController.Registrate(VG.CDF.Server.Application.Dto.RequestDto.Registration.UserRegistrationRequestDto)">
+            <summary>
+            Регистрация пользователя
+            </summary>
+            <param name="userRegistrationRequestDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.ReportController">
+            <summary>
+            Отчеты
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportController.CreateReport(System.Int32,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Сгенерировать отчет
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportController.GetTagsLiveReport(VG.CDF.Server.Application.Dto.Client.TagParamsReportDataInfo)">
+            <summary>
+            Сгенерировать отчет по реал-тайм тегам
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportController.GetAlarmEventsLiveReport(VG.CDF.Server.Application.Dto.Client.AlarmEventsReportDataInfo)">
+            <summary>
+            Сгенерировать отчет по реал-тайм аварийным сообщениям
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportController.GetTagsLiveExcelData(VG.CDF.Server.Application.Dto.Client.TagParamsReportDataInfo)">
+            <summary>
+            Сгенерировать данные по тегам за период
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.ReportSchemaController">
+            <summary>
+            Шаблоны отчетов
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportSchemaController.GetReportSchema(System.Int32)">
+            <summary>
+            Получить шаблон отчета
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportSchemaController.GetAllReportSchemas(System.Int32,System.Int32)">
+            <summary>
+            Получить все шаблоны отчетов по всем устройствам по предприятию
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportSchemaController.DeleteReportSchema(System.Int32)">
+            <summary>
+            Удалить шаблон отчета
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportSchemaController.SaveReportSchema(VG.CDF.Server.Application.Dto.RequestDto.ReportSchemaRequestDto)">
+            <summary>
+            Сохранить шаблон отчета
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportSchemaController.UpdateReportSchema(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.ReportSchemaRequestDto)">
+            <summary>
+            Обновить шаблон отчета
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.ReportSchemaController.UpdateTagsParamQueue(System.Int32,System.Collections.Generic.List{VG.CDF.Server.Application.Dto.RequestDto.TagParamReportRequestDto})">
+            <summary>
+            Обновить последовательность параметров в отчете
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.RoleController">
+            <summary>
+            Роли
+            </summary>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.TagParamController">
+            <summary>
+            Параметры тегов
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.GetTagParam(System.Int32)">
+            <summary>
+            Получить параметр тега по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.GetTagParamByExternalId(System.Int32)">
+            <summary>
+            Получить параметр тега по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.GetAllTagsParam">
+            <summary>
+            Получить все параметры всех тегов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.GetTagParamDescriptions(System.Int32)">
+            <summary>
+            Получить описания параметра тега по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.GetTagParamDescriptionsByExternalId(System.Int32)">
+            <summary>
+            Получить описания параметра тега по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.AddTagParamDescriptionById(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.TagParamDescriptionRequestDto)">
+            <summary>
+            Добавить описание параметру тега по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.AddTagParamDescriptionByExternalId(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.TagParamDescriptionRequestDto)">
+            <summary>
+            Добавить описание параметру тега по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.AddScopeTagParamDescriptionByExternalId(System.Collections.Generic.List{VG.CDF.Server.Application.Dto.RequestDto.TagParamDescriptionsWithExternalIdRequestDto})">
+            <summary>
+            Добавить описания нескольким параметрам тегов по External ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.SaveTagParam(VG.CDF.Server.Application.Dto.RequestDto.TagParamRequestDto)">
+            <summary>
+            Сохранить один параметр
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.SaveTagParams(System.Collections.Generic.List{VG.CDF.Server.Application.Dto.RequestDto.TagParamRequestDto})">
+            <summary>
+            Сохранить несколько параметров
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.UpdateTagParam(System.Int32,VG.CDF.Server.Application.Dto.RequestDto.TagParamRequestDto)">
+            <summary>
+            Обновить параметр тега
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagParamController.DeleteTagParam(System.Int32)">
+            <summary>
+            Удалить параметр тега по ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.TagReportTaskController">
+            <summary>
+            Контроллер задачи по отчетам
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagReportTaskController.Get(VG.CDF.Server.Application.TagReportTask.Queries.GetTagReportTasksListQuery,System.Threading.CancellationToken)">
+            <summary>
+            Получить задачи по отчетам
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagReportTaskController.Create(VG.CDF.Server.Application.TagReportTask.Commands.CreateTagReportTaskCommand,System.Threading.CancellationToken)">
+            <summary>
+            Создать задачу по отчетам
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagReportTaskController.Delete(VG.CDF.Server.Application.TagReportTask.Commands.DeleteTagReportTaskCommand,System.Threading.CancellationToken)">
+            <summary>
+            Удалить задачу по отчетам
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagReportTaskController.Update(VG.CDF.Server.Application.TagReportTask.Commands.UpdateTagReportTaskCommand,System.Threading.CancellationToken)">
+            <summary>
+            Обновить задачу по отчетам
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.TagsLiveGroupsController">
+            <summary>
+            Реал-тайм теги
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagsLiveGroupsController.PostTagsLiveGroups(System.Collections.Generic.List{VG.CDF.Server.Application.Dto.RequestDto.TagsGroupRequestDto})">
+            <summary>
+            Сохранить группы тегов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagsLiveGroupsController.GetGroupsAndTagLive">
+            <summary>
+            Получить кол-во хранящихся групп тегов и тегов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagsLiveGroupsController.GetTagsLive(VG.CDF.Server.Application.Dto.RequestDto.TagsGroupsGettingInfoRequestDto)">
+            <summary>
+            Получить теги за период
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.TagsLiveGroupsController.GetTagsGroups(VG.CDF.Server.Application.Dto.RequestDto.TagsGroupsGettingInfoRequestDto)">
+            <summary>
+            Получить группированные теги за период
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.UserController">
+            <summary>
+            Действия пользователя
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.UserController.GetAllUsers">
+            <summary>
+            Получить всех пользователей в системе
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.UserController.PutRoleForUser(System.Int32,System.Int32)">
+            <summary>
+            Установть роль пользователю
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            Удалить пользователя
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.UserController.AddFactoryForUser(System.Int32,System.Int32)">
+            <summary>
+            Добавить предприятие пользователю
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.UserDataController">
+            <summary>
+            Пользовательская информация
+            </summary>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.WorkEmailController">
+            <summary>
+            Контроллер элеткронной почты
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.WorkEmailController.Get(VG.CDF.Server.Application.WorkEmail.Commands.GetWorkEmailsListQuery,System.Threading.CancellationToken)">
+            <summary>
+            Получить почту
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.WorkEmailController.Create(VG.CDF.Server.Application.WorkEmail.Commands.CreateWorkEmailCommand,System.Threading.CancellationToken)">
+            <summary>
+            Создать почту
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.WorkEmailController.Delete(VG.CDF.Server.Application.WorkEmail.Commands.DeleteWorkEmailCommand,System.Threading.CancellationToken)">
+            <summary>
+            Удалить почту
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.WorkEmailController.Update(VG.CDF.Server.Application.WorkEmail.Commands.UpdateWorkEmailCommand,System.Threading.CancellationToken)">
+            <summary>
+            Обновить почту
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.WorkEmailController.PutToTagReportTask(VG.CDF.Server.Application.WorkEmail.Commands.AddWorkEmailToTagReportTaskCommand,System.Threading.CancellationToken)">
+            <summary>
+            Добавить почту в указанную задачу рассылки отчетов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.SwaggerAddEnumDescriptions">
+            <summary>
+            https://stackoverflow.com/questions/36452468/swagger-ui-web-api-documentation-present-enums-as-strings
+            </summary>
+        </member>
+    </members>
+</doc>
