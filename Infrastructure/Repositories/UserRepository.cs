@@ -82,12 +82,12 @@ namespace VG.CDF.Server.Infrastructure.Repositories
         {
             var user = await _sqlDataContext.Users.Where(c => c.Id == userId).FirstOrDefaultAsync();
             var factory = await _sqlDataContext.Factories.Where(c => c.Id == factoryId).FirstOrDefaultAsync();
-            var userFactory = new UserFactory() 
+            var userFactory = new UserProject() 
             {
                 UserId = user.Id,
                 User = user,
-                FactoryId = factory.Id,
-                Factory = factory
+                ProjectId = factory.Id,
+                Project = factory
             };
             await _sqlDataContext.UsersFactories.AddAsync(userFactory);
             await _sqlDataContext.SaveChangesAsync();

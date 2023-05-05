@@ -9,20 +9,20 @@ namespace VG.CDF.Server.Infrastructure.DataContext
     public class SqlDataContext : DbContext, ISqlDataContext
     {
         private readonly IDbConnectionConfig _dbConnection;
-        public DbSet<Factory> Factories { get; set; }
-        public DbSet<FactoryActionsInfo> FactoryActionsInfos { get; set; }
+        public DbSet<Project> Factories { get; set; }
+        public DbSet<ProjectActionsInfo> FactoryActionsInfos { get; set; }
         public DbSet<DoseWa> DosesWa { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<UserFactory> UsersFactories { get; set; }
+        public DbSet<UserProject> UsersFactories { get; set; }
 
         public DbSet<Role> Roles { get; set; }
         public DbSet<Folder> Folders { get; set; }
         public DbSet<Domain.Entities.File> Files { get; set; }
 
        
-        public DbSet<TagParamDevice> TagParamsDevices { get; set; }
+        public DbSet<ParameterProcess> TagParamsDevices { get; set; }
 
-        public DbSet<Device> Devices { get; set; }
+        public DbSet<Process> Devices { get; set; }
 
         public DbSet<AlarmEvent> AlarmEvents { get; set; }
 
@@ -30,29 +30,29 @@ namespace VG.CDF.Server.Infrastructure.DataContext
 
         public DbSet<AlarmEventDescription> AlarmEventDescriptions { get; set; }
 
-        public DbSet<TagLive> TagsLive { get; set; }
+        public DbSet<ParameterValue> TagsLive { get; set; }
 
-        public DbSet<TagParamDescription> TagParamDescriptions { get; set; }
+        public DbSet<ParameterDescription> TagParamDescriptions { get; set; }
 
-        public DbSet<TagsGroup> TagsGroups { get; set; }
+        public DbSet<ParameterValuesGroup> TagsGroups { get; set; }
 
-        public DbSet<TagParam> TagParams { get; set; }
+        public DbSet<Parameter> TagParams { get; set; }
         public DbSet<ParameterGroup> ParameterGroups { get; set; }
 
 
-        public DbSet<DeviceDescription> DeviceDescriptions { get; set; }
+        public DbSet<ProcessDescription> DeviceDescriptions { get; set; }
 
         public DbSet<DescriptionsLanguage> DescriptionsLanguages { get; set; }
 
         public DbSet<ReportSchema> ReportSchemas { get; set; }
 
-        public DbSet<TagParamReport> TagReportQueues { get; set; }
+        public DbSet<ParameterReport> TagReportQueues { get; set; }
         
-        public DbSet<TagReportTask> TagReportTasks { get; set; }
+        public DbSet<ParametersReportTask> TagReportTasks { get; set; }
         
         public DbSet<WorkEmail> WorkEmails { get; set; }
 
-       // public DbSet<TagReportTaskWorkEmail> TagReportTaskWorkEmail { get; set; }
+       // public DbSet<ParametersReportTaskWorkEmail> ParametersReportTaskWorkEmail { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -78,17 +78,17 @@ namespace VG.CDF.Server.Infrastructure.DataContext
                 .WithMany(s => s.Users)
                 .HasForeignKey(v => v.RoleId);
 
-            modelBuilder.Entity<Factory>()
-                .HasOne(sc => sc.FactoryActionsInfo)
-                .WithOne(s => s.Factory)
-                .HasForeignKey<FactoryActionsInfo>(s => s.FactoryId);
+            modelBuilder.Entity<Project>()
+                .HasOne(sc => sc.ProjectActionsInfo)
+                .WithOne(s => s.Project)
+                .HasForeignKey<ProjectActionsInfo>(s => s.FactoryId);
 
-            modelBuilder.Entity<Factory>()
-                .HasOne(sc => sc.TagReportTask)
-                .WithOne(s => s.Factory)
-                .HasForeignKey<TagReportTask>(s=>s.FactoryId);
+            modelBuilder.Entity<Project>()
+                .HasOne(sc => sc.ParametersReportTask)
+                .WithOne(s => s.Project)
+                .HasForeignKey<ParametersReportTask>(s=>s.ProjectId);
             
-            modelBuilder.Entity<TagReportTask>()
+            modelBuilder.Entity<ParametersReportTask>()
                 .Property(s => s.Status)
                 .HasConversion<int>();
 

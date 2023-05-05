@@ -19,7 +19,7 @@ namespace VG.CDF.Server.Domain.Entities
         public int FactoryId { get; set; }
 
         [ForeignKey(nameof(FactoryId))]
-        public Factory Factory { get; set; }
+        public Project Project { get; set; }
 
         public int UserId { get; set; }
 

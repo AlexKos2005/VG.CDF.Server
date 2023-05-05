@@ -17,7 +17,7 @@ namespace BreadCommunityWeb.Blz.Infrastructure.Server.Repositories
             _sqlDataContext = sqlDataContext;
         }
 
-        public async Task AddDescriptionByExternalId(int deviceExternalId, DeviceDescription deviceDescription)
+        public async Task AddDescriptionByExternalId(int deviceExternalId, ProcessDescription processDescription)
         {
             var device = await _sqlDataContext.Devices.Where(c => c.ExternalId == deviceExternalId).FirstOrDefaultAsync();
             if (device == null)
@@ -25,11 +25,11 @@ namespace BreadCommunityWeb.Blz.Infrastructure.Server.Repositories
                 return;
             }
 
-            device.DeviceDescriptions.Add(deviceDescription);
+            device.DeviceDescriptions.Add(processDescription);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task AddDescriptionById(int deviceId, DeviceDescription deviceDescription)
+        public async Task AddDescriptionById(int deviceId, ProcessDescription processDescription)
         {
             var device = await _sqlDataContext.Devices.Where(c => c.Id == deviceId).FirstOrDefaultAsync();
             if (device == null)
@@ -37,11 +37,11 @@ namespace BreadCommunityWeb.Blz.Infrastructure.Server.Repositories
                 return;
             }
 
-            device.DeviceDescriptions.Add(deviceDescription);
+            device.DeviceDescriptions.Add(processDescription);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task AddTagParam(int deviceId, TagParam tagParam)
+        public async Task AddTagParam(int deviceId, Parameter parameter)
         {
             var device = await _sqlDataContext.Devices
                 .Include(c=>c.TagsDevices)
@@ -52,16 +52,16 @@ namespace BreadCommunityWeb.Blz.Infrastructure.Server.Repositories
             }
 
             //указанный параметр уже добавлен
-            if(device.TagsDevices.Where(c => c.TagParamId == tagParam.Id).FirstOrDefault() != null)
+            if(device.TagsDevices.Where(c => c.TagParamId == parameter.Id).FirstOrDefault() != null)
             {
                 return;
             }
 
-            var tagParamDevice = new TagParamDevice();
-            tagParamDevice.TagParamId = tagParam.Id;
-            tagParamDevice.TagParam = tagParam;
-            tagParamDevice.DeviceId = device.Id;
-            tagParamDevice.Device = device;
+            var tagParamDevice = new ParameterProcess();
+            tagParamDevice.ParameterId = parameter.Id;
+            tagParamDevice.Parameter = parameter;
+            tagParamDevice.ProcessId = device.Id;
+            tagParamDevice.Process = device;
             device.TagsDevices.Add(tagParamDevice);
 
             await _sqlDataContext.SaveChangesAsync();
@@ -86,57 +86,57 @@ namespace BreadCommunityWeb.Blz.Infrastructure.Server.Repositories
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<Device> Get(int id)
+        public async Task<Process> Get(int id)
         {
             return await _sqlDataContext.Devices.Where(c => c.Id == id).FirstOrDefaultAsync();
         }
 
-        public async Task<List<Device>> GetAll()
+        public async Task<List<Process>> GetAll()
         {
             return await _sqlDataContext.Devices.ToListAsync();
         }
 
-        public async Task<List<Device>> GetAll(int factoryId)
+        public async Task<List<Process>> GetAll(int factoryId)
         {
             return await _sqlDataContext.Devices.Where(c=>c.FactoryId == factoryId).Include(c=>c.DeviceDescriptions).Include(c=>c.TagsDevices).ThenInclude(c=>c.TagParam).ToListAsync();
         }
 
-        public async Task<Device?> GetByExternalId(int deviceExternalId)
+        public async Task<Process?> GetByExternalId(int deviceExternalId)
         {
             return await _sqlDataContext.Devices.Where(c => c.ExternalId == deviceExternalId).FirstOrDefaultAsync();
         }
 
-        public async Task<List<DeviceDescription>> GetDescriptions(int deviceId)
+        public async Task<List<ProcessDescription>> GetDescriptions(int deviceId)
         {
             return await _sqlDataContext.DeviceDescriptions.Where(c => c.DeviceId == deviceId).Include(c => c.DescriptionsLanguage).ToListAsync();
         }
 
-        public async Task<List<DeviceDescription>> GetDescriptionsByExtenalId(int externalId)
+        public async Task<List<ProcessDescription>> GetDescriptionsByExtenalId(int externalId)
         {
-            var device = await _sqlDataContext.DeviceDescriptions.Where(c => c.Device.ExternalId == externalId).Include(c => c.DescriptionsLanguage).ToListAsync();
+            var device = await _sqlDataContext.DeviceDescriptions.Where(c => c.Process.ExternalId == externalId).Include(c => c.DescriptionsLanguage).ToListAsync();
             return device;
         }
 
-        public async Task<List<TagParamDevice>> GetTagParamsForDevice(int deviceId)
+        public async Task<List<ParameterProcess>> GetTagParamsForDevice(int deviceId)
         {
-            var tt =  await _sqlDataContext.TagParamsDevices.Where(c => c.DeviceId == deviceId).Include(c=>c.TagParam).ToListAsync();
+            var tt =  await _sqlDataContext.TagParamsDevices.Where(c => c.ProcessId == deviceId).Include(c=>c.Parameter).ToListAsync();
             return tt;
 
         }
 
-        public async Task Save(Device entity)
+        public async Task Save(Process entity)
         {
             _sqlDataContext.Devices.Add(entity);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task Save(List<Device> devices)
+        public async Task Save(List<Process> devices)
         {
             _sqlDataContext.Devices.AddRange(devices);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<Device> Update(int id, Device entity)
+        public async Task<Process> Update(int id, Process entity)
         {
             var device = await _sqlDataContext.Devices.Where(c => c.Id == id).FirstOrDefaultAsync();
             if (device == null)

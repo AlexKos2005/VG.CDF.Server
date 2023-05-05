@@ -46,14 +46,14 @@ public class TagReportTaskService : ITagReportTaskService
     {
         await _getValidator.ValidateAndThrowAsync(query, cts);
 
-        var queryableEntities = _dataContext.Set<TagReportTask>()
+        var queryableEntities = _dataContext.Set<ParametersReportTask>()
             .AsNoTracking()
             .AsQueryable();
 
         if (query.Id != null)
             queryableEntities = queryableEntities.Where(c => c.Id == query.Id);
         if(query.FactoryId != null)
-            queryableEntities = queryableEntities.Where(c => c.FactoryId == query.FactoryId);
+            queryableEntities = queryableEntities.Where(c => c.ProjectId == query.FactoryId);
         if(query.IsActive!=null)
             queryableEntities = queryableEntities.Where(c => c.IsActive == query.IsActive);
         if(query.LastSendDt!=null)
@@ -70,7 +70,7 @@ public class TagReportTaskService : ITagReportTaskService
     public async Task<TagReportTaskDto> Create(CreateTagReportTaskCommand command, CancellationToken cts)
     {
         await _createValidator.ValidateAndThrowAsync(command, cts);
-        var entity = _mapper.Map<TagReportTask>(command);
+        var entity = _mapper.Map<ParametersReportTask>(command);
 
         await _dataContext.TagReportTasks.AddAsync(entity,cts);
         await _dataContext.SaveChangesAsync(cts);

@@ -115,7 +115,7 @@ namespace VG.CDF.Server.WebApi.Controllers
         public async Task<ActionResult> ChangeLastDateTimeReportSending(FactoryReportingInfoRequestDto factoryReportingInfoRequestDto)
         {
             await _factoryActionsInfoService.ChangeLastDateTimeReportSending(factoryReportingInfoRequestDto.FactoryExternalId, factoryReportingInfoRequestDto.DateTime, factoryReportingInfoRequestDto.DateTimeOffset);
-            _logger.Info($"Reporting time was changed for factory {factoryReportingInfoRequestDto.FactoryExternalId}");
+            _logger.Info($"Reporting time was changed for project {factoryReportingInfoRequestDto.FactoryExternalId}");
             return Ok();
 
         }

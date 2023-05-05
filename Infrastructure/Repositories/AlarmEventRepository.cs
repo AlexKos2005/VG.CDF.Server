@@ -109,8 +109,8 @@ namespace BreadCommunityWeb.Blz.Infrastructure.Server.Repositories
             }
 
             alarmEvent.ExternalId = entity.ExternalId;
-            alarmEvent.Device = entity.Device;
-            alarmEvent.DeviceId = entity.DeviceId;
+            alarmEvent.Process = entity.Process;
+            alarmEvent.DeviceId = entity.ProcessId;
 
             _sqlDataContext.AlarmEvents.Update(alarmEvent);
             await _sqlDataContext.SaveChangesAsync();

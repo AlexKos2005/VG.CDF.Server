@@ -17,14 +17,13 @@ namespace VG.CDF.Server.Domain.Entities
             AlarmEventDescriptions = new List<AlarmEventDescription>();
         }
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public int ExternalId { get; set; }
 
-        public int DeviceId { get; set; }
-
-        [ForeignKey(nameof(DeviceId))]
-        public Device Device { get; set; }
+        public int CompanyId { get; set; }
+        [ForeignKey(nameof(CompanyId))]
+        public Company Company { get; set; }
 
         public List<AlarmEventDescription> AlarmEventDescriptions { get; set; }
 

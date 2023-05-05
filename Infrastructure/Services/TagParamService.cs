@@ -26,7 +26,7 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagRepository = new TagParamRepository(db);
-            var tagParamDesc = _mapper.Map<TagParamDescription>(tagDescription);
+            var tagParamDesc = _mapper.Map<ParameterDescription>(tagDescription);
             await tagRepository.AddDescriptionByExternalId(tagParamExternalId, tagParamDesc);
         }
 
@@ -34,8 +34,8 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagRepository = new TagParamRepository(db);
-            var tagParamDesc = _mapper.Map<TagParamDescription>(tagDescription);
-            tagParamDesc.TagParamId = tagParamId;
+            var tagParamDesc = _mapper.Map<ParameterDescription>(tagDescription);
+            tagParamDesc.ParameterId = tagParamId;
             await tagRepository.AddDescriptionById(tagParamId, tagParamDesc);
         }
 
@@ -100,21 +100,21 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagRepository = new TagParamRepository(db);
-            await tagRepository.Save(_mapper.Map<List<TagParam>>(tags));
+            await tagRepository.Save(_mapper.Map<List<Parameter>>(tags));
         }
 
         public async Task Save(TagParamRequestDto entity)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagRepository = new TagParamRepository(db);
-            await tagRepository.Save(_mapper.Map<TagParam>(entity));
+            await tagRepository.Save(_mapper.Map<Parameter>(entity));
         }
 
         public async Task<TagParamResponseDto?> Update(int id, TagParamRequestDto entity)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagRepository = new TagParamRepository(db);
-            var result = await tagRepository.Update(id, _mapper.Map<TagParam>(entity));
+            var result = await tagRepository.Update(id, _mapper.Map<Parameter>(entity));
             if (result == null)
             {
                 return null;

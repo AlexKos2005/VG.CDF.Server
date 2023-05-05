@@ -48,7 +48,7 @@ namespace VG.CDF.Server.Infrastructure.Services
             var deviceDescriptionRepository = new DeviceDescriptionRepository(db);
             var languageRepository = new LanguageRepository(db);
             var languages = await languageRepository.GetAll();
-            var language = languages.Where(c => c.LanguageExternalId == languageExternalId).FirstOrDefault();
+            var language = languages.Where(c => c.ExternalId == languageExternalId).FirstOrDefault();
             if (language == null)
             {
                 return null;
@@ -106,21 +106,21 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var deviceDescriptionRepository = new DeviceDescriptionRepository(db);
-            await deviceDescriptionRepository.Save(_mapper.Map<DeviceDescription>(entity));
+            await deviceDescriptionRepository.Save(_mapper.Map<ProcessDescription>(entity));
         }
 
         public async Task Save(List<DeviceDescriptionRequestDto> tagDescriptions)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var deviceDescriptionRepository = new DeviceDescriptionRepository(db);
-            await deviceDescriptionRepository.Save(_mapper.Map<List<DeviceDescription>>(tagDescriptions));
+            await deviceDescriptionRepository.Save(_mapper.Map<List<ProcessDescription>>(tagDescriptions));
         }
 
         public async Task<DeviceDescriptionResponseDto?> Update(int id, DeviceDescriptionRequestDto entity)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var deviceDescriptionRepository = new DeviceDescriptionRepository(db);
-            var result = await deviceDescriptionRepository.Update(id, _mapper.Map<DeviceDescription>(entity));
+            var result = await deviceDescriptionRepository.Update(id, _mapper.Map<ProcessDescription>(entity));
             if (result == null)
             {
                 return null;

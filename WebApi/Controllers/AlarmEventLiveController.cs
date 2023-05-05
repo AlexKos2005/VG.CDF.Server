@@ -39,7 +39,7 @@ namespace VG.CDF.Server.WebApi.Controllers
         public async Task<ActionResult> SaveAlarmEventsLive(List<AlarmEventLiveRequestDto> alarmEventsLive)
         {
             await _alarmEventLiveService.Save(alarmEventsLive);
-            _logger.Trace($"Was save {alarmEventsLive.Count} alarmEventsLive from {alarmEventsLive[0].FactoryExternalId} Factory");
+            _logger.Trace($"Was save {alarmEventsLive.Count} alarmEventsLive from {alarmEventsLive[0].FactoryExternalId} Project");
             return Ok();
 
         }

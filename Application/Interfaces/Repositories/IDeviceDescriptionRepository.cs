@@ -7,12 +7,12 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.Interfaces.Repositories
 {
-    public interface IDeviceDescriptionRepository : ICrud<DeviceDescription,int>
+    public interface IDeviceDescriptionRepository : ICrud<ProcessDescription,int>
     {
-        Task Save(List<DeviceDescription> deviceDescriptions);
-        Task<List<DeviceDescription>> GetAll();
+        Task Save(List<ProcessDescription> deviceDescriptions);
+        Task<List<ProcessDescription>> GetAll();
 
-        Task<List<DeviceDescription>> GetAllByExternalId(int deviceParamExternalId);
+        Task<List<ProcessDescription>> GetAllByExternalId(int deviceParamExternalId);
         Task<DescriptionsLanguage?> GetLanguage(int deviceDescriptionId);
     }
 }

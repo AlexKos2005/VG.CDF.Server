@@ -85,14 +85,14 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var factoryActionsInfoRepository = new FactoryActionsInfoRepository(db);
-            await factoryActionsInfoRepository.Save(_mapper.Map<FactoryActionsInfo>(entity));
+            await factoryActionsInfoRepository.Save(_mapper.Map<ProjectActionsInfo>(entity));
         }
 
         public async Task<FactoryActionsInfoResponseDto> Update(int id, FactoryActionsInfoRequestDto entity)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var factoryActionsInfoRepository = new FactoryActionsInfoRepository(db);
-            var result = await factoryActionsInfoRepository.Update(id, _mapper.Map<FactoryActionsInfo>(entity));
+            var result = await factoryActionsInfoRepository.Update(id, _mapper.Map<ProjectActionsInfo>(entity));
 
             return _mapper.Map<FactoryActionsInfoResponseDto>(result);
         }

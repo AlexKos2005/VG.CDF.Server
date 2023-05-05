@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(ReportSchemaId), nameof(TagParamId), IsUnique = true)]
-    public class TagParamReport
+    public class ParameterReport
     {
         [Key]
         public int Id { get; set; }
@@ -25,6 +25,6 @@ namespace VG.CDF.Server.Domain.Entities
         public int TagParamId { get; set; }
 
         [ForeignKey(nameof(TagParamId))]
-        public TagParam TagParam { get; set; }
+        public Parameter Parameter { get; set; }
     }
 }

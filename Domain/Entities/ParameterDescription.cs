@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(TagParamId), nameof(DescriptionsLanguageId), IsUnique = true)]
-    public class TagParamDescription
+    [Index(nameof(ParameterId), nameof(DescriptionsLanguageId), IsUnique = true)]
+    public class ParameterDescription
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Description { get; set; }
 
-        public int TagParamId { get; set; }
+        public int ParameterId { get; set; }
 
-        [ForeignKey(nameof(TagParamId))]
-        public TagParam TagParam { get; set; }
+        [ForeignKey(nameof(ParameterId))]
+        public Parameter Parameter { get; set; }
 
         public int DescriptionsLanguageId { get; set; }
 

@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(DeviceId), nameof(DescriptionsLanguageId), IsUnique = true)]
-    public class DeviceDescription
+    [Index(nameof(ProcessId), nameof(DescriptionsLanguageId), IsUnique = true)]
+    public class ProcessDescription
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Description { get; set; }
 
-        public int DeviceId { get; set; }
+        public int ProcessId { get; set; }
 
-        [ForeignKey(nameof(DeviceId))]
-        public Device Device { get; set; }
+        [ForeignKey(nameof(ProcessId))]
+        public Process Process { get; set; }
 
         public int DescriptionsLanguageId { get; set; }
 

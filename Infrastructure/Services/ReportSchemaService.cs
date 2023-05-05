@@ -84,14 +84,14 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var reportSchemaRepository = new ReportSchemaRepository(db);
-            return await reportSchemaRepository.SaveTagReportQueue(reportSchemaId,_mapper.Map<TagParamReport>(tagReportQueue));
+            return await reportSchemaRepository.SaveTagReportQueue(reportSchemaId,_mapper.Map<ParameterReport>(tagReportQueue));
         }
 
         public async Task<bool> SaveTagsReportQueue(int reportSchemaId, List<TagParamReportRequestDto> tagsReportQueue)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var reportSchemaRepository = new ReportSchemaRepository(db);
-            return await reportSchemaRepository.SaveTagsReportQueue(reportSchemaId, _mapper.Map<List<TagParamReport>>(tagsReportQueue));
+            return await reportSchemaRepository.SaveTagsReportQueue(reportSchemaId, _mapper.Map<List<ParameterReport>>(tagsReportQueue));
         }
 
         public async Task<ReportSchemaResponseDto?> Update(int id, ReportSchemaRequestDto entity)
@@ -112,7 +112,7 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var reportSchemaRepository = new ReportSchemaRepository(db);
-            return await reportSchemaRepository.UpdateTagReportQueue(tagReportId,reportSchemaId, _mapper.Map<TagParamReport>(tagReportQueue));
+            return await reportSchemaRepository.UpdateTagReportQueue(tagReportId,reportSchemaId, _mapper.Map<ParameterReport>(tagReportQueue));
         }
 
         public async Task<bool> UpdateTagReportQueues(int reportSchemaId, List<TagParamReportRequestDto> tagReportsQueue)
@@ -122,7 +122,7 @@ namespace VG.CDF.Server.Infrastructure.Services
 
             foreach (var tagReportQueue in tagReportsQueue)
             {
-                var result = await reportSchemaRepository.UpdateTagReportQueue(tagReportQueue.Id, reportSchemaId, _mapper.Map<TagParamReport>(tagReportQueue));
+                var result = await reportSchemaRepository.UpdateTagReportQueue(tagReportQueue.Id, reportSchemaId, _mapper.Map<ParameterReport>(tagReportQueue));
             }
 
             return true;

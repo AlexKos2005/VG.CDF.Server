@@ -28,7 +28,7 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagsLiveRepository = new TagsLiveRepository(db);
-            await tagsLiveRepository.Save(_mapper.Map<List<TagLive>>(tagsLives));
+            await tagsLiveRepository.Save(_mapper.Map<List<ParameterValue>>(tagsLives));
         }
 
         public async Task<List<TagLiveResponseDto>> GetByTagsGroup(long tagsGroupId)
@@ -57,14 +57,14 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagsLiveRepository = new TagsLiveRepository(db);
-            await tagsLiveRepository.Save(_mapper.Map<TagLive>(entity));
+            await tagsLiveRepository.Save(_mapper.Map<ParameterValue>(entity));
         }
 
         public async Task<TagLiveResponseDto> Update(long id, TagLiveRequestDto entity)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagsLiveRepository = new TagsLiveRepository(db);
-            var result = await tagsLiveRepository.Update(id, _mapper.Map<TagLive> (entity));
+            var result = await tagsLiveRepository.Update(id, _mapper.Map<ParameterValue> (entity));
 
             return _mapper.Map<TagLiveResponseDto>(result);
         }
@@ -85,7 +85,7 @@ namespace VG.CDF.Server.Infrastructure.Services
         }
         public async Task<List<TagLiveResponseDto>> Get(int factoryExternalId, int deviceExternalId, DateTime startDate, DateTime endDate)
         {
-            var tags = new List<TagLive>();
+            var tags = new List<ParameterValue>();
             using var db = new SqlDataContext(_dbConnectionConfig);
             var factoryRepository = new FactoryRepository(db);
             var deviceRepository = new DeviceRepository(db);
@@ -94,13 +94,13 @@ namespace VG.CDF.Server.Infrastructure.Services
             var tagsLive = await tagsLiveRepository.Get(factoryExternalId, deviceExternalId, startDate, endDate);
 
             return _mapper.Map<List<TagLiveResponseDto>>(tagsLive);
-            //return _mapper.Map<List<TagLiveResponseDto>>(tagsLive.OrderBy(c => c.TagsGroupId).ThenBy(s => s.TagParamExternalId).ToList());
+            //return _mapper.Map<List<TagLiveResponseDto>>(tagsLive.OrderBy(c => c.TagsGroupId).ThenBy(s => s.ParameterExternalId).ToList());
         }
 
 
         public async Task<List<TagLiveResponseDto>> Get(int factoryExternalId, int deviceExternalId, DateTime date)
         {
-            var tags = new List<TagLive>();
+            var tags = new List<ParameterValue>();
             using var db = new SqlDataContext(_dbConnectionConfig);
             var factoryRepository = new FactoryRepository(db);
             var deviceRepository = new DeviceRepository(db);
@@ -109,7 +109,7 @@ namespace VG.CDF.Server.Infrastructure.Services
             var tagsLive = await tagsLiveRepository.Get(factoryExternalId, deviceExternalId, date);
 
             return _mapper.Map<List<TagLiveResponseDto>>(tagsLive);
-            //return _mapper.Map<List<TagLiveResponseDto>>(tagsLive.OrderBy(c => c.TagsGroupId).ThenBy(s=>s.TagParamExternalId).ToList());
+            //return _mapper.Map<List<TagLiveResponseDto>>(tagsLive.OrderBy(c => c.TagsGroupId).ThenBy(s=>s.ParameterExternalId).ToList());
         }
 
     }

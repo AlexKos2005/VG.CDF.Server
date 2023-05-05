@@ -9,10 +9,10 @@ namespace VG.CDF.Server.Application.Interfaces.Repositories
         Task<List<DescriptionsLanguage>> GetAll();
 
         Task<DescriptionsLanguage?> GetByExternalId(int languageExternalId);
-        Task AddTagDescription(int languageId,TagParamDescription tagDescription);
+        Task AddTagDescription(int languageId,ParameterDescription tagDescription);
         Task DeleteTagDescription(int languageId, int tagDescriptionId);
 
-        Task AddDeviceDescription(int languageId, DeviceDescription deviceDescription);
+        Task AddDeviceDescription(int languageId, ProcessDescription processDescription);
         Task DeleteDeviceDescription(int languageId, int deviceDescriptionId);
 
         Task AddAlarmEventDescription(int languageId, AlarmEventDescription alarmEventDescription);

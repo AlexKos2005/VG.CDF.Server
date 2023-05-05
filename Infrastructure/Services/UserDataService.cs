@@ -30,7 +30,7 @@ namespace VG.CDF.Server.Infrastructure.Services
         }
         public async Task<List<DeviceWithDescriptionsDto>> GetDevicesByFactoryId(int factoryId)
         {
-            var dev = new List<Device>();
+            var dev = new List<Process>();
             using var db = new SqlDataContext(_dbConnectionConfig);
             var factoryRepository = new FactoryRepository(db);
             var factory = await factoryRepository.Get(factoryId);

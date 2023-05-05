@@ -9,28 +9,33 @@ using System.Text.Json.Serialization;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(ExternalId), IsUnique = true)]
-    public class Factory
+    public class Project
     {
-        public Factory()
+        public Project()
         {
-            UsersFactories = new List<UserFactory>();
-            Devices = new List<Device>();
+            UsersFactories = new List<UserProject>();
+            Processes = new List<Process>();
             Folders = new List<Folder>();
         }
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public int ExternalId { get; set; }
 
         public int UtcOffset { get; set; }
 
         public string Description { get; set; }
-        public List<UserFactory> UsersFactories { get; set; }
+        
+        public int CompanyId { get; set; }
 
-        public List<Device> Devices { get; set; }
+        [ForeignKey(nameof(CompanyId))]
+        public Company Company { get; set; }
+        public List<UserProject> UsersFactories { get; set; }
+
+        public List<Process> Processes { get; set; }
 
         public List<Folder> Folders { get; set; }
-        public FactoryActionsInfo FactoryActionsInfo { get; set; }
+        public ProjectActionsInfo ProjectActionsInfo { get; set; }
         
-        public TagReportTask TagReportTask { get; set; }
+        public ParametersReportTask ParametersReportTask { get; set; }
     }
 }

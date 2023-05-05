@@ -51,7 +51,7 @@ namespace VG.CDF.Server.Infrastructure.Services
 
         public async Task<List<FactoryResponseDto>> GetAllFactories(int userId)
         {
-            var factoryList = new List<Factory>();
+            var factoryList = new List<Project>();
             using var db = new SqlDataContext(_dbConnectionConfig);
             var factoryRepository = new FactoryRepository(db);
             var result = await factoryRepository.GetAllFactories(userId);
@@ -80,7 +80,7 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var factoryRepository = new FactoryRepository(db);
-            await factoryRepository.Save(_mapper.Map<Factory>(entity));
+            await factoryRepository.Save(_mapper.Map<Project>(entity));
             var factories = await factoryRepository.GetAllFactories();
             var factory = factories.Where(c => c.ExternalId == entity.ExternalId).FirstOrDefault();
             if(factory == null)
@@ -92,7 +92,7 @@ namespace VG.CDF.Server.Infrastructure.Services
             var currentFactoryActionsInfo = await factoryActionsInfoRepository.GetByFactoryExternalId(entity.ExternalId);
             if(currentFactoryActionsInfo == null)
             {
-                var factoryActionsInfo = new FactoryActionsInfo()
+                var factoryActionsInfo = new ProjectActionsInfo()
                 {
                     AlarmMessageCounter = 0,
                     LastDateTimeConnection = new DateTime(),
@@ -110,7 +110,7 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var factoryRepository = new FactoryRepository(db);
-            var result = await factoryRepository.Update(id, _mapper.Map<Factory>(entity));
+            var result = await factoryRepository.Update(id, _mapper.Map<Project>(entity));
 
             return _mapper.Map<FactoryResponseDto>(result);
         }

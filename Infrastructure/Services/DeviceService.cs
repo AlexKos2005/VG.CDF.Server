@@ -27,7 +27,7 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var deviceRepository = new DeviceRepository(db);
-            var devDesc = _mapper.Map<DeviceDescription>(deviceDescription);
+            var devDesc = _mapper.Map<ProcessDescription>(deviceDescription);
             await deviceRepository.AddDescriptionByExternalId(deviceExternalId,devDesc);
         }
 
@@ -35,7 +35,7 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var deviceRepository = new DeviceRepository(db);
-            var deviceDesc = _mapper.Map<DeviceDescription>(deviceDescription);
+            var deviceDesc = _mapper.Map<ProcessDescription>(deviceDescription);
             deviceDesc.DeviceId = deviceId;
             await deviceRepository.AddDescriptionById(deviceId, deviceDesc);
         }
@@ -151,7 +151,7 @@ namespace VG.CDF.Server.Infrastructure.Services
 
             foreach (var tagParamsDevice in tagParamsDevices)
             {
-                tagParams.Add(_mapper.Map<TagParamResponseDto>(tagParamsDevice.TagParam));
+                tagParams.Add(_mapper.Map<TagParamResponseDto>(tagParamsDevice.Parameter));
             }
 
             return tagParams;
@@ -170,21 +170,21 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var deviceRepository = new DeviceRepository(db);
-            await deviceRepository.Save(_mapper.Map<List<Device>>(devices));
+            await deviceRepository.Save(_mapper.Map<List<Process>>(devices));
         }
 
         public async Task Save(DeviceRequestDto entity)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var deviceRepository = new DeviceRepository(db);
-            await deviceRepository.Save(_mapper.Map<Device>(entity));
+            await deviceRepository.Save(_mapper.Map<Process>(entity));
         }
 
         public async Task<DeviceResponseDto> Update(int id, DeviceRequestDto entity)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var deviceRepository = new DeviceRepository(db);
-            var result = await deviceRepository.Update(id, _mapper.Map<Device>(entity));
+            var result = await deviceRepository.Update(id, _mapper.Map<Process>(entity));
 
             return _mapper.Map<DeviceResponseDto>(result);
         }

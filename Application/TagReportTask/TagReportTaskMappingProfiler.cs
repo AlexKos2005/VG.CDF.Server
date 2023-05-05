@@ -8,9 +8,9 @@ public class TagReportTaskMappingProfiler : Profile
 {
     public TagReportTaskMappingProfiler()
     {
-        CreateMap<Domain.Entities.TagReportTask, TagReportTaskDto>().ReverseMap();
-        CreateMap<CreateTagReportTaskCommand, Domain.Entities.TagReportTask>().ReverseMap();
-        CreateMap<DeleteTagReportTaskCommand, Domain.Entities.TagReportTask>().ReverseMap();
-        CreateMap<UpdateTagReportTaskCommand, Domain.Entities.TagReportTask>().ReverseMap();
+        CreateMap<Domain.Entities.ParametersReportTask, TagReportTaskDto>().ReverseMap();
+        CreateMap<CreateTagReportTaskCommand, Domain.Entities.ParametersReportTask>().ReverseMap();
+        CreateMap<DeleteTagReportTaskCommand, Domain.Entities.ParametersReportTask>().ReverseMap();
+        CreateMap<UpdateTagReportTaskCommand, Domain.Entities.ParametersReportTask>().ReverseMap();
     }
 }

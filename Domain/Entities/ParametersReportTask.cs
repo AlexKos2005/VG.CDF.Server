@@ -6,19 +6,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(FactoryId), IsUnique = true)]
-    public class TagReportTask
+    [Index(nameof(ProjectId), IsUnique = true)]
+    public class ParametersReportTask
     {
-        public TagReportTask()
+        public ParametersReportTask()
         {
             WorkEmails = new List<WorkEmail>();
         }
         [Key]
-        public int Id { get; set; }
-        public int FactoryId { get; set; }
+        public Guid Id { get; set; }
+        public int ProjectId { get; set; }
 
-        [ForeignKey(nameof(FactoryId))]
-        public Factory Factory { get; set; }
+        [ForeignKey(nameof(ProjectId))]
+        public Project Project { get; set; }
 
         public bool IsActive { get; set; }
 

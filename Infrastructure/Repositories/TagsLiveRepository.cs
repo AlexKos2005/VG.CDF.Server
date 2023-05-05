@@ -19,11 +19,11 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             _sqlDataContext = sqlDataContext;
         }
 
-        public async Task<List<TagLive>> GetByTagsGroup(long tagsGroupId)
+        public async Task<List<ParameterValue>> GetByTagsGroup(long tagsGroupId)
         {
-            return await _sqlDataContext.TagsLive.Where(c => c.TagsGroup.Id == tagsGroupId).ToListAsync();
+            return await _sqlDataContext.TagsLive.Where(c => c.ParameterValuesGroup.Id == tagsGroupId).ToListAsync();
         }
-        public async Task Save(List<TagLive> tagsLives)
+        public async Task Save(List<ParameterValue> tagsLives)
         {
             _sqlDataContext.TagsLive.AddRange(tagsLives);
             await _sqlDataContext.SaveChangesAsync();
@@ -41,18 +41,18 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<TagLive?> Get(long id)
+        public async Task<ParameterValue?> Get(long id)
         {
             return await _sqlDataContext.TagsLive.Where(c => c.Id == id).FirstOrDefaultAsync();
         }
 
-        public async Task Save(TagLive entity)
+        public async Task Save(ParameterValue entity)
         {
             _sqlDataContext.TagsLive.Add(entity);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<TagLive?> Update(long id, TagLive entity)
+        public async Task<ParameterValue?> Update(long id, ParameterValue entity)
         {
             var tagsLive = await _sqlDataContext.TagsLive.Where(c => c.Id == id).FirstOrDefaultAsync();
             if (tagsLive == null)
@@ -68,25 +68,25 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             return tagsLive;
         }
 
-        public async Task<List<TagLive>> GetAllTagsLive()
+        public async Task<List<ParameterValue>> GetAllTagsLive()
         {
             return await _sqlDataContext.TagsLive.ToListAsync();
         }
 
-        public async Task<List<TagLive>> Get(int factoryExternalId, int deviceExternalId, DateTime date)
+        public async Task<List<ParameterValue>> Get(int factoryExternalId, int deviceExternalId, DateTime date)
         {
             return await _sqlDataContext.TagsLive.Where(
-                c => c.FactoryExternalId == factoryExternalId
-                && c.DeviceExternalId == deviceExternalId
+                c => c.ProjectId == factoryExternalId
+                && c.ProcessId == deviceExternalId
                 && c.DateTime.Date == date.Date).ToListAsync();
 
         }
 
-        public async Task<List<TagLive>> Get(int factoryExternalId, int deviceExternalId, DateTime startDate, DateTime endDate)
+        public async Task<List<ParameterValue>> Get(int factoryExternalId, int deviceExternalId, DateTime startDate, DateTime endDate)
         {
             var res = await _sqlDataContext.TagsLive.Where(
-                c => c.FactoryExternalId == factoryExternalId
-                && c.DeviceExternalId == deviceExternalId
+                c => c.ProjectId == factoryExternalId
+                && c.ProcessId == deviceExternalId
                 && c.DateTime >= startDate
                 && c.DateTime <= endDate).ToListAsync();
 

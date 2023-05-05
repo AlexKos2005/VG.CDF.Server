@@ -14,12 +14,12 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             _sqlDataContext = sqlDataContext;
         }
   
-        public async Task AddUserFactoryWithResult(User user, Factory factory)
+        public async Task AddUserFactoryWithResult(User user, Project project)
         {
-           await _sqlDataContext.UsersFactories.AddAsync(new UserFactory()
+           await _sqlDataContext.UsersFactories.AddAsync(new UserProject()
             {
                 UserId = user.Id,
-                FactoryId = factory.Id,
+                ProjectId = project.Id,
             });
            await _sqlDataContext.SaveChangesAsync();
 

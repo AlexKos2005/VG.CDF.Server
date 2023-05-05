@@ -17,24 +17,24 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             _dataContext = dataContext;
         }
 
-        public async Task<List<Factory>> GetAllFactories()
+        public async Task<List<Project>> GetAllFactories()
         {
             return await _dataContext.Factories.ToListAsync();
         }
 
-        public async Task Save(List<Factory> factories)
+        public async Task Save(List<Project> factories)
         {
             _dataContext.Factories.AddRange(factories);
             await _dataContext.SaveChangesAsync();
         }
 
         #region CRUD
-        public async Task Save(Factory entity)
+        public async Task Save(Project entity)
         {
             _dataContext.Factories.Add(entity);
             await _dataContext.SaveChangesAsync();
         }
-        public async Task<Factory?> Update(int id, Factory entity)
+        public async Task<Project?> Update(int id, Project entity)
         {
             var factory = await _dataContext.Factories.Where(c => c.Id == id).FirstOrDefaultAsync();
             if (factory == null)
@@ -64,20 +64,20 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             await _dataContext.SaveChangesAsync();
         }
 
-        public async Task<Factory> Get(int id)
+        public async Task<Project> Get(int id)
         {
             return await _dataContext.Factories.Where(c => c.Id == id).Include(c=>c.Devices).ThenInclude(c=>c.DeviceDescriptions).ThenInclude(c=>c.DescriptionsLanguage).FirstOrDefaultAsync();
         }
 
-        public async Task<List<Factory>> GetAllFactories(int userId)
+        public async Task<List<Project>> GetAllFactories(int userId)
         {
-            var factories = await _dataContext.UsersFactories.Where(c=>c.UserId == userId).Select(s=>s.Factory).ToListAsync();
+            var factories = await _dataContext.UsersFactories.Where(c=>c.UserId == userId).Select(s=>s.Project).ToListAsync();
             return factories;
         }
 
-        public async Task<Factory?> GetFactoryByExternalId(int factoryExternalId)
+        public async Task<Project?> GetFactoryByExternalId(int factoryExternalId)
         {
-            return await _dataContext.Factories.Where(c => c.ExternalId == factoryExternalId).Include(c=>c.FactoryActionsInfo).FirstOrDefaultAsync();
+            return await _dataContext.Factories.Where(c => c.ExternalId == factoryExternalId).Include(c=>c.ProjectActionsInfo).FirstOrDefaultAsync();
         }
         #endregion
 

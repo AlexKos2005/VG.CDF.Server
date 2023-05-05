@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 { 
-   public class TagLive
+   public class ParameterValue
     {
         [Key]
         public long Id { get; set; }
 
-        public int TagParamExternalId { get; set; }
+        public int ParameterExternalId { get; set; }
 
         //Время фиксации
         public DateTime DateTime { get; set; }
@@ -21,17 +21,17 @@ namespace VG.CDF.Server.Domain.Entities
         //Время фиксации в UTC
         public DateTimeOffset DateTimeOffset { get; set; }
 
-        public int FactoryExternalId { get; set; }
+        public Guid ProjectId { get; set; }
 
-        public int DeviceExternalId { get; set; }
+        public Guid ProcessId { get; set; }
 
         public string Value { get; set; }
 
-        public TagValueTypeCodes ValueType { get; set; }
+        public ParameterValueType ValueType { get; set; }
 
         public long TagsGroupId { get; set; }
 
         [ForeignKey(nameof(TagsGroupId))]
-        public TagsGroup TagsGroup { get; set; }
+        public ParameterValuesGroup ParameterValuesGroup { get; set; }
     }
 }

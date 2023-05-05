@@ -14,14 +14,14 @@ namespace VG.CDF.Server.Domain.Entities
     {
         public WorkEmail()
         {
-            TagReportTasks = new List<TagReportTask>();
+            ParametersReportTasks = new List<ParametersReportTask>();
         }
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         
         public string Email { get; set; }
         
-        public ICollection<TagReportTask> TagReportTasks { get; set; }
+        public ICollection<ParametersReportTask> ParametersReportTasks { get; set; }
 
     }
 }

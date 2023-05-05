@@ -8,10 +8,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    public class FactoryActionsInfo
+    public class ProjectActionsInfo
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public DateTime LastDateTimeConnection { get; set; }
 
@@ -23,9 +23,9 @@ namespace VG.CDF.Server.Domain.Entities
 
         public int AlarmMessageCounter { get; set; }
 
-        public int FactoryId { get; set; }
+        public int ProjectId { get; set; }
 
-        [ForeignKey(nameof(FactoryId))]
-        public Factory Factory { get; set; }
+        [ForeignKey(nameof(ProjectId))]
+        public Project Project { get; set; }
     }
 }

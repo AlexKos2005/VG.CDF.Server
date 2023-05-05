@@ -52,10 +52,10 @@ public class WorkEmailService : IWorkEmailService
             queryableEntities = queryableEntities.Where(c => c.Id == query.Id);
         if (query.TagReportTaskId != null)
         {
-            var report = await _dataContext.Set<TagReportTask>()
+            var report = await _dataContext.Set<ParametersReportTask>()
                 .AsNoTracking()
                 .Where(c=>c.Id == query.TagReportTaskId).FirstAsync();
-            queryableEntities = queryableEntities.Where(c => c.TagReportTasks.Contains(report));
+            queryableEntities = queryableEntities.Where(c => c.ParametersReportTasks.Contains(report));
         }
         if (!string.IsNullOrEmpty(query.Email))
             queryableEntities = queryableEntities.Where(c => c.Email == query.Email);

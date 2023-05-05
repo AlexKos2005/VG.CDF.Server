@@ -29,32 +29,32 @@ namespace VG.CDF.Server.Infrastructure.Mapping
             CreateMap<AlarmEventLiveRequestDto, AlarmEventLiveResponseDto>().ReverseMap();
             #endregion
 
-            #region Device
-            CreateMap<Device, DeviceResponseDto>().ReverseMap();
-            CreateMap<Device, DeviceRequestDto>().ReverseMap();
+            #region Process
+            CreateMap<Process, DeviceResponseDto>().ReverseMap();
+            CreateMap<Process, DeviceRequestDto>().ReverseMap();
             CreateMap<DeviceResponseDto, DeviceRequestDto>().ReverseMap();
 
-            CreateMap<DeviceDescription, DeviceDescriptionResponseDto>().ReverseMap();
-            CreateMap<DeviceDescription, DeviceDescriptionRequestDto>().ReverseMap();
+            CreateMap<ProcessDescription, DeviceDescriptionResponseDto>().ReverseMap();
+            CreateMap<ProcessDescription, DeviceDescriptionRequestDto>().ReverseMap();
             CreateMap<DeviceDescriptionResponseDto, DeviceDescriptionRequestDto>().ReverseMap();
             #endregion
 
-            #region Factory
-            var map2 = CreateMap<Factory, FactoryResponseDto>();
+            #region Project
+            var map2 = CreateMap<Project, FactoryResponseDto>();
             map2.ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description)).ReverseMap();
             map2.ForMember(dest => dest.ExternalId, opt => opt.MapFrom(src => src.ExternalId)).ReverseMap();
             map2.ForMember(dest => dest.UtcOffset, opt => opt.MapFrom(src => src.UtcOffset)).ReverseMap();
-            map2.ForMember(dest => dest.EnterpriseActionsInfo, opt => opt.MapFrom(src => src.FactoryActionsInfo)).ReverseMap();
-            CreateMap<Factory, FactoryRequestDto>().ReverseMap();
+            map2.ForMember(dest => dest.EnterpriseActionsInfo, opt => opt.MapFrom(src => src.ProjectActionsInfo)).ReverseMap();
+            CreateMap<Project, FactoryRequestDto>().ReverseMap();
             CreateMap<FactoryResponseDto, FactoryRequestDto>().ReverseMap();
 
-            CreateMap<FactoryActionsInfo, FactoryActionsInfoResponseDto>().ReverseMap();
-            CreateMap<FactoryActionsInfo, FactoryActionsInfoRequestDto>().ReverseMap();
+            CreateMap<ProjectActionsInfo, FactoryActionsInfoResponseDto>().ReverseMap();
+            CreateMap<ProjectActionsInfo, FactoryActionsInfoRequestDto>().ReverseMap();
             CreateMap<FactoryActionsInfoResponseDto, FactoryActionsInfoRequestDto>().ReverseMap();
 
             #endregion
 
-            #region FactoryActionsInfo
+            #region ProjectActionsInfo
 
 
 
@@ -85,33 +85,33 @@ namespace VG.CDF.Server.Infrastructure.Mapping
             #endregion
 
             #region Tag
-            CreateMap<TagParam, TagParamResponseDto>().ReverseMap();
-            CreateMap<TagParam, TagParamRequestDto>().ReverseMap();
+            CreateMap<Parameter, TagParamResponseDto>().ReverseMap();
+            CreateMap<Parameter, TagParamRequestDto>().ReverseMap();
             CreateMap<TagParamResponseDto, TagParamRequestDto>().ReverseMap();
 
-            CreateMap<TagLive, TagLiveResponseDto>().ReverseMap();
-            CreateMap<TagLive, TagLiveRequestDto>().ReverseMap();
+            CreateMap<ParameterValue, TagLiveResponseDto>().ReverseMap();
+            CreateMap<ParameterValue, TagLiveRequestDto>().ReverseMap();
             CreateMap<TagLiveResponseDto, TagLiveRequestDto>().ReverseMap();
 
-            CreateMap<TagsGroup, TagsGroupResponseDto>().ReverseMap();
-            CreateMap<TagsGroup, TagsGroupRequestDto>().ReverseMap();
+            CreateMap<ParameterValuesGroup, TagsGroupResponseDto>().ReverseMap();
+            CreateMap<ParameterValuesGroup, TagsGroupRequestDto>().ReverseMap();
             CreateMap<TagsGroupResponseDto, TagsGroupRequestDto>().ReverseMap();
 
-            var map8 = CreateMap<TagsGroup, TagsGroupRequestDto>();
-            map8.ForMember(dest => dest.TagLiveRequestDtos, opt => opt.MapFrom(src => src.TagsLive));
+            var map8 = CreateMap<ParameterValuesGroup, TagsGroupRequestDto>();
+            map8.ForMember(dest => dest.TagLiveRequestDtos, opt => opt.MapFrom(src => src.ParameterValues));
 
-            var map9 = CreateMap<TagsGroupRequestDto, TagsGroup>();
-            map9.ForMember(dest => dest.TagsLive, opt => opt.MapFrom(src => src.TagLiveRequestDtos));
+            var map9 = CreateMap<TagsGroupRequestDto, ParameterValuesGroup>();
+            map9.ForMember(dest => dest.ParameterValues, opt => opt.MapFrom(src => src.TagLiveRequestDtos));
 
-            CreateMap<TagParamDescription, TagParamDescriptionRequestDto>().ReverseMap();
-            CreateMap<TagParamDescription, TagParamDescriptionResponseDto>().ReverseMap();
+            CreateMap<ParameterDescription, TagParamDescriptionRequestDto>().ReverseMap();
+            CreateMap<ParameterDescription, TagParamDescriptionResponseDto>().ReverseMap();
             CreateMap<TagParamDescriptionResponseDto, TagParamDescriptionRequestDto>().ReverseMap();
 
             #endregion
 
             #region Reports
-            CreateMap<TagParamReport, TagParamReportRequestDto>().ReverseMap();
-            CreateMap<TagParamReport, TagParamReportResponseDto>().ReverseMap();
+            CreateMap<ParameterReport, TagParamReportRequestDto>().ReverseMap();
+            CreateMap<ParameterReport, TagParamReportResponseDto>().ReverseMap();
             CreateMap<TagParamReportResponseDto, TagParamRequestDto>().ReverseMap();
 
             CreateMap<ReportSchema, ReportSchemaRequestDto>().ReverseMap();
@@ -123,12 +123,12 @@ namespace VG.CDF.Server.Infrastructure.Mapping
 
             #region User
 
-            var map13 = CreateMap<DescriptionDto, DeviceDescription>().ReverseMap();
+            var map13 = CreateMap<DescriptionDto, ProcessDescription>().ReverseMap();
             map13.ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));
-            map13.ForMember(dest => dest.LanguageLabel, opt => opt.MapFrom(src => src.DescriptionsLanguage.LanguageLabel));
-            map13.ForMember(dest => dest.LanguageExternalId, opt => opt.MapFrom(src => src.DescriptionsLanguage.LanguageExternalId));
+            map13.ForMember(dest => dest.LanguageLabel, opt => opt.MapFrom(src => src.DescriptionsLanguage.Label));
+            map13.ForMember(dest => dest.LanguageExternalId, opt => opt.MapFrom(src => src.DescriptionsLanguage.ExternalId));
 
-            var map11 = CreateMap<DeviceWithDescriptionsDto,Device>().ReverseMap();
+            var map11 = CreateMap<DeviceWithDescriptionsDto,Process>().ReverseMap();
             map11.ForMember(dest => dest.DeviceDescriptions, opt => opt.MapFrom(src => src.DeviceDescriptions));
 
             var map12 = CreateMap<DescriptionDto, TagParamDescriptionResponseDto>().ReverseMap();

@@ -33,7 +33,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             return await _sqlDataContext.ReportSchemas.Where(c => c.Id == id).FirstOrDefaultAsync();
         }
 
-        public async Task<List<TagParamReport>> GetAllReportSchemas(int userId, int deviceId)
+        public async Task<List<ParameterReport>> GetAllReportSchemas(int userId, int deviceId)
         {
             var result = await _sqlDataContext.ReportSchemas.Where(c => c.UserId == userId && c.DeviceId == deviceId).FirstOrDefaultAsync();
             return result.TagReportsQueue;
@@ -45,7 +45,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<bool> SaveTagReportQueue(int reportSchemaId, TagParamReport tagsReportQueue)
+        public async Task<bool> SaveTagReportQueue(int reportSchemaId, ParameterReport tagsReportQueue)
         {
             var reportSchema = await _sqlDataContext.ReportSchemas.Where(c => c.Id == reportSchemaId).FirstOrDefaultAsync();
             if (reportSchema == null)
@@ -59,7 +59,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             return true;
         }
 
-        public async Task<bool> SaveTagsReportQueue(int reportSchemaId,List<TagParamReport> tagReportsQueue)
+        public async Task<bool> SaveTagsReportQueue(int reportSchemaId,List<ParameterReport> tagReportsQueue)
         {
             var reportSchema = await _sqlDataContext.ReportSchemas.Where(c => c.Id == reportSchemaId).FirstOrDefaultAsync();
             if(reportSchema == null)
@@ -91,7 +91,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             return reportSchema;
         }
 
-        public async Task<bool> UpdateTagReportQueue(int tagReportId, int reportSchemaId, TagParamReport tagReportsQueue)
+        public async Task<bool> UpdateTagReportQueue(int tagReportId, int reportSchemaId, ParameterReport tagReportsQueue)
         {
             var reportSchema = await _sqlDataContext.ReportSchemas.Where(c => c.Id == reportSchemaId).FirstOrDefaultAsync();
             if (reportSchema == null)

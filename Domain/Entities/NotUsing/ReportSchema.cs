@@ -12,7 +12,7 @@ namespace VG.CDF.Server.Domain.Entities
     {
         public ReportSchema()
         {
-            TagReportsQueue = new List<TagParamReport>();
+            TagReportsQueue = new List<ParameterReport>();
         }
         [Key]
         public int Id { get; set; }
@@ -23,6 +23,6 @@ namespace VG.CDF.Server.Domain.Entities
 
         public string Description { get; set; }
 
-        public List<TagParamReport> TagReportsQueue { get; set; }
+        public List<ParameterReport> TagReportsQueue { get; set; }
     }
 }

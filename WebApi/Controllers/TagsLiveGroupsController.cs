@@ -44,7 +44,7 @@ namespace VG.CDF.Server.WebApi.Controllers
         public async Task<ActionResult> PostTagsLiveGroups(List<TagsGroupRequestDto> tagsLiveGroups)
         {
             await _tagsGroupService.SaveTagsGroups(tagsLiveGroups);
-            _logger.Trace($"Was save {tagsLiveGroups.Count} tagsLiveGroups from Factory {tagsLiveGroups[0].FactoryExternalId} by Device {tagsLiveGroups[0].DeviceExternalId}");
+            _logger.Trace($"Was save {tagsLiveGroups.Count} tagsLiveGroups from Project {tagsLiveGroups[0].FactoryExternalId} by Process {tagsLiveGroups[0].DeviceExternalId}");
             return Ok();
         }
 

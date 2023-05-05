@@ -18,7 +18,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             _sqlDataContext = sqlDataContext;
         }
 
-        public async Task AddDescriptionByExternalId(int tagParamExternalId, TagParamDescription taglangDescription)
+        public async Task AddDescriptionByExternalId(int tagParamExternalId, ParameterDescription taglangDescription)
         {
             var tagParam = await _sqlDataContext.TagParams.Where(c => c.ExternalId == tagParamExternalId).FirstOrDefaultAsync();
             if (tagParam == null)
@@ -26,11 +26,11 @@ namespace VG.CDF.Server.Infrastructure.Repositories
                 return;
             }
 
-            tagParam.TagDescriptions.Add(taglangDescription);
+            tagParam.ParametersDescriptions.Add(taglangDescription);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task AddDescriptionById(int tagDescriptionId, TagParamDescription tagLanguageDescription)
+        public async Task AddDescriptionById(int tagDescriptionId, ParameterDescription tagLanguageDescription)
         {
             var tagDescription = await _sqlDataContext.TagParams.Where(c => c.Id == tagDescriptionId).FirstOrDefaultAsync();
             if (tagDescription == null)
@@ -54,49 +54,49 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<TagParam?> Get(int id)
+        public async Task<Parameter?> Get(int id)
         {
             return await _sqlDataContext.TagParams.Where(c => c.Id == id).FirstOrDefaultAsync();
         }
 
-        public async Task<List<TagParam>> GetAll()
+        public async Task<List<Parameter>> GetAll()
         {
             return await _sqlDataContext.TagParams.ToListAsync();
         }
 
-        public async Task<TagParam?> GetByExternalId(int tagParamExternalId)
+        public async Task<Parameter?> GetByExternalId(int tagParamExternalId)
         {
             return await _sqlDataContext.TagParams.Where(c => c.ExternalId == tagParamExternalId).FirstOrDefaultAsync();
         }
 
-        public async Task<List<TagParamDescription>> GetDescriptions(int tagId)
+        public async Task<List<ParameterDescription>> GetDescriptions(int tagId)
         {
-            return await _sqlDataContext.TagParamDescriptions.Where(c => c.TagParamId == tagId).Include(c => c.DescriptionsLanguage).ToListAsync();
+            return await _sqlDataContext.TagParamDescriptions.Where(c => c.ParameterId == tagId).Include(c => c.DescriptionsLanguage).ToListAsync();
         }
 
-        public async Task<List<TagParamDescription>> GetDescriptionsByExtenalId(int externalId)
+        public async Task<List<ParameterDescription>> GetDescriptionsByExtenalId(int externalId)
         {
-            return await _sqlDataContext.TagParamDescriptions.Where(c => c.TagParam.ExternalId == externalId).Include(c => c.DescriptionsLanguage).ToListAsync();
+            return await _sqlDataContext.TagParamDescriptions.Where(c => c.Parameter.ExternalId == externalId).Include(c => c.DescriptionsLanguage).ToListAsync();
         }
 
-        public async Task<List<TagParamDescription>> GetLanguageDescriptions(int tagDescriptionId)
+        public async Task<List<ParameterDescription>> GetLanguageDescriptions(int tagDescriptionId)
         {
-            return await _sqlDataContext.TagParamDescriptions.Where(c => c.TagParamId == tagDescriptionId).ToListAsync();
+            return await _sqlDataContext.TagParamDescriptions.Where(c => c.ParameterId == tagDescriptionId).ToListAsync();
         }
 
-        public async Task Save(TagParam entity)
+        public async Task Save(Parameter entity)
         {
             _sqlDataContext.TagParams.Add(entity);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task Save(List<TagParam> tagDescriptions)
+        public async Task Save(List<Parameter> tagDescriptions)
         {
             _sqlDataContext.TagParams.AddRange(tagDescriptions);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<TagParam?> Update(int id, TagParam entity)
+        public async Task<Parameter?> Update(int id, Parameter entity)
         {
             var tag = await _sqlDataContext.TagParams.Where(c => c.Id == id).FirstOrDefaultAsync();
             if (tag == null)
@@ -104,7 +104,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
                 return null;
             }
 
-            tag.TagDescriptions = entity.TagDescriptions;
+            tag.TagDescriptions = entity.ParametersDescriptions;
             tag.ExternalId = entity.ExternalId;
             tag.ValueType = entity.ValueType;
 

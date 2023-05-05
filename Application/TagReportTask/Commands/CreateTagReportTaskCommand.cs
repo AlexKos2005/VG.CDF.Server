@@ -25,7 +25,7 @@ public class CreateTagReportTaskCommandValidator : AbstractValidator<CreateTagRe
 
         RuleFor(command => command).MustAsync(async (command, cts) =>
         {
-            return !await dataContext.Set<Domain.Entities.TagReportTask>().Where(c => c.FactoryId == command.FactoryId).AnyAsync();
+            return !await dataContext.Set<Domain.Entities.ParametersReportTask>().Where(c => c.ProjectId == command.FactoryId).AnyAsync();
         }).WithMessage($"Задача генерации отчетов по тегам для данного производства уже существует");
     }
 }

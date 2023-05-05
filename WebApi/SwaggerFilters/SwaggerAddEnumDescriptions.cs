@@ -25,7 +25,7 @@ namespace VG.CDF.Server.WebApi.Controllers
                 }
             }
 
-            // add enum descriptions to input parameters
+            // add enum descriptions to input parameter
             foreach (var pathItem in swaggerDoc.Paths.Values)
             {
                 DescribeEnumParameters(pathItem.Operations, swaggerDoc);

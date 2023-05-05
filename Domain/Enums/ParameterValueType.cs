@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-   public enum TagValueTypeCodes
+   public enum ParameterValueType
     {
         None = 0,
         DateTime = 1,

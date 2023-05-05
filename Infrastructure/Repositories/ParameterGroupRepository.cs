@@ -53,7 +53,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             }
 
             parameterGroup.Name = entity.Name;
-            parameterGroup.ParameterGroupExternalId = entity.ParameterGroupExternalId;
+            parameterGroup.ParameterGroupExternalId = entity.ExternalId;
             _sqlDataContext.ParameterGroups.Update(parameterGroup);
             await _sqlDataContext.SaveChangesAsync();
 

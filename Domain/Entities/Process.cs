@@ -10,30 +10,30 @@ using System.Threading.Tasks;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(ExternalId), IsUnique = true)]
-    public class Device
+    public class Process
     {
-        public Device()
+        public Process()
         {
-            TagsDevices = new List<TagParamDevice>();
+            TagsDevices = new List<ParameterProcess>();
             AlarmEvents = new List<AlarmEvent>();
-            DeviceDescriptions = new List<DeviceDescription>();
+            ProcessDescriptions = new List<ProcessDescription>();
         }
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public int ExternalId { get; set; }
         public int DeviceCode { get; set; }
         public string DeviceIp { get; set; }
 
-        public int FactoryId { get; set; }
+        public int ProjectId { get; set; }
 
-        [ForeignKey(nameof(FactoryId))]
-        public Factory Factory { get; set; }
+        [ForeignKey(nameof(ProjectId))]
+        public Project Project { get; set; }
 
-        public List<TagParamDevice> TagsDevices { get; set; }
+        public List<ParameterProcess> TagsDevices { get; set; }
 
         public List<AlarmEvent> AlarmEvents { get; set; }
 
-        public List<DeviceDescription> DeviceDescriptions { get; set; }
+        public List<ProcessDescription> ProcessDescriptions { get; set; }
 
     }
 }

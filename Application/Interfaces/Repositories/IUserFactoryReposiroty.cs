@@ -5,6 +5,6 @@ namespace VG.CDF.Server.Application.Interfaces.Repositories
 {
    public interface IUserFactoryReposiroty
     {
-        Task AddUserFactoryWithResult(User user, Factory factory);
+        Task AddUserFactoryWithResult(User user, Project project);
     }
 }

@@ -28,12 +28,12 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<FactoryActionsInfo> Get(int id)
+        public async Task<ProjectActionsInfo> Get(int id)
         {
             return await _sqlDataContext.FactoryActionsInfos.Where(c => c.Id == id).FirstOrDefaultAsync();
         }
 
-        public async Task<FactoryActionsInfo?> GetByFactoryExternalId(int factoryExternalId)
+        public async Task<ProjectActionsInfo?> GetByFactoryExternalId(int factoryExternalId)
         {
             var factory = await _sqlDataContext.Factories.Where(c => c.ExternalId == factoryExternalId).FirstOrDefaultAsync();
             if(factory == null)
@@ -46,13 +46,13 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             return factoryActions;
         }
 
-        public async Task Save(FactoryActionsInfo entity)
+        public async Task Save(ProjectActionsInfo entity)
         {
             _sqlDataContext.FactoryActionsInfos.Add(entity);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<FactoryActionsInfo> Update(int id, FactoryActionsInfo entity)
+        public async Task<ProjectActionsInfo> Update(int id, ProjectActionsInfo entity)
         {
             var factoryActions = await _sqlDataContext.FactoryActionsInfos.Where(c => c.Id == id).FirstOrDefaultAsync();
             if (factoryActions == null)

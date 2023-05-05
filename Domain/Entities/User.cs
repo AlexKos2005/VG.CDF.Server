@@ -13,11 +13,11 @@ namespace VG.CDF.Server.Domain.Entities
     {
         public User()
         {
-            UsersFactories = new List<UserFactory>();
+            UsersFactories = new List<UserProject>();
             Folders = new List<Folder>();
         }
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Email { get; set; }
 
@@ -28,7 +28,7 @@ namespace VG.CDF.Server.Domain.Entities
         [ForeignKey(nameof(RoleId))]
         public Role Role { get; set; }
 
-        public List<UserFactory> UsersFactories { get; set; }
+        public List<UserProject> UsersFactories { get; set; }
 
         public List<Folder> Folders { get; set; }
     }

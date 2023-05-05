@@ -31,14 +31,14 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var languageRepository = new LanguageRepository(db);
-            await languageRepository.AddDeviceDescription(languageId, _mapper.Map<DeviceDescription>(deviceDescription));
+            await languageRepository.AddDeviceDescription(languageId, _mapper.Map<ProcessDescription>(deviceDescription));
         }
 
         public async Task AddTagDescription(int languageId, TagParamDescriptionRequestDto tagDescription)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var languageRepository = new LanguageRepository(db);
-            await languageRepository.AddTagDescription(languageId, _mapper.Map<TagParamDescription>(tagDescription));
+            await languageRepository.AddTagDescription(languageId, _mapper.Map<ParameterDescription>(tagDescription));
         }
 
         public async Task Delete(int id)

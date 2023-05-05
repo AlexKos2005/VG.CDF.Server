@@ -48,7 +48,7 @@ namespace VG.CDF.Server.Infrastructure.Services
             var tagDescriptionRepository = new TagParamDescriptionRepository(db);
             var languageRepository = new LanguageRepository(db);
             var languages = await languageRepository.GetAll();
-            var language = languages.Where(c => c.LanguageExternalId == languageExternalId).FirstOrDefault();
+            var language = languages.Where(c => c.ExternalId == languageExternalId).FirstOrDefault();
             if(language == null)
             {
                 return null;
@@ -109,21 +109,21 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagDescriptionRepository = new TagParamDescriptionRepository(db);
-            await tagDescriptionRepository.Save(_mapper.Map<TagParamDescription>(entity));
+            await tagDescriptionRepository.Save(_mapper.Map<ParameterDescription>(entity));
         }
 
         public async Task Save(List<TagParamDescriptionRequestDto> tagDescriptions)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagDescriptionRepository = new TagParamDescriptionRepository(db);
-            await tagDescriptionRepository.Save(_mapper.Map<List<TagParamDescription>>(tagDescriptions));
+            await tagDescriptionRepository.Save(_mapper.Map<List<ParameterDescription>>(tagDescriptions));
         }
 
         public async Task<TagParamDescriptionResponseDto?> Update(int id, TagParamDescriptionRequestDto entity)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var tagDescriptionRepository = new TagParamDescriptionRepository(db);
-            var result = await tagDescriptionRepository.Update(id, _mapper.Map<TagParamDescription>(entity));
+            var result = await tagDescriptionRepository.Update(id, _mapper.Map<ParameterDescription>(entity));
             if (result == null)
             {
                 return null;

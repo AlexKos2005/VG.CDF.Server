@@ -35,7 +35,7 @@ namespace VG.CDF.Server.Infrastructure.Services
             var excelReportData = new ExcelReportData();
             var excelSheet = new ExcelSheet();
             var collumnDatas = new List<CollumnData>();
-            var devices = new List<Device>();
+            var devices = new List<Process>();
             using var db = new SqlDataContext(_dbConnectionConfig);
             //находим предприятие
             var factory = await db.Factories.Where(c=>c.Id == reportDataInfo.FactoryId).FirstOrDefaultAsync();
@@ -61,7 +61,7 @@ namespace VG.CDF.Server.Infrastructure.Services
             }
 
             //получаем все параметры тегов
-            var alarmEvents = await db.AlarmEvents.Where(c => c.Device.FactoryId == factory.Id)
+            var alarmEvents = await db.AlarmEvents.Where(c => c.Process.FactoryId == factory.Id)
                 .Include(c=>c.AlarmEventDescriptions).ThenInclude(c=>c.DescriptionsLanguage).ToListAsync();
 
             //ищем все реал-тайм теги по девайсам
@@ -147,7 +147,7 @@ namespace VG.CDF.Server.Infrastructure.Services
             var collumnDatas = new List<CollumnData>();
 
             //var alarmEvents = await _alarmEventLiveService.GetAlarmEventsByFactoryExternalIdAndDeviceExternalId(factoryExternalId, deviceExternalId, startReportDate, endReportDate);
-            //var sortedAlarmEvents = alarmEvents.OrderBy(c => c.FactoryExternalId).ThenBy(c => c.DeviceExternalId).ToList();
+            //var sortedAlarmEvents = alarmEvents.OrderBy(c => c.ProjectId).ThenBy(c => c.ProcessId).ToList();
             //var firstAlarmGroupId = sortedTags[0].TagsGroupId;
             //var firstTagsGroup = sortedTags.Where(c => c.TagsGroupId == firstTagGroupId).ToList();
 

@@ -8,23 +8,23 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(Id), nameof(LanguageLabel), IsUnique = true)]
+    [Index(nameof(Id), nameof(Label), IsUnique = true)]
     public class DescriptionsLanguage
     {
         public DescriptionsLanguage()
         {
-            TagDescriptions = new List<TagParamDescription>();
-            DeviceDescriptions = new List<DeviceDescription>();
+            ParameterDescriptions = new List<ParameterDescription>();
+            ProcessDescriptions = new List<ProcessDescription>();
             AlarmEventDescription = new List<AlarmEventDescription>();
         }
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        public int LanguageExternalId { get; set; }
-        public string LanguageLabel { get; set; }
+        public int ExternalId { get; set; }
+        public string Label { get; set; }
 
-        public List<TagParamDescription> TagDescriptions { get; set; }
-        public List<DeviceDescription> DeviceDescriptions { get; set; }
+        public List<ParameterDescription> ParameterDescriptions { get; set; }
+        public List<ProcessDescription> ProcessDescriptions { get; set; }
 
         public List<AlarmEventDescription> AlarmEventDescription { get; set; }
     }

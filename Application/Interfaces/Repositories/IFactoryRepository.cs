@@ -7,12 +7,12 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.Interfaces.Repositories
 {
-   public interface IFactoryRepository : ICrud<Factory,int>
+   public interface IFactoryRepository : ICrud<Project,int>
     {
-        Task<List<Factory>> GetAllFactories();
-        Task Save(List<Factory> factories);
+        Task<List<Project>> GetAllFactories();
+        Task Save(List<Project> factories);
 
-        Task<Factory?> GetFactoryByExternalId(int factoryExternalId);
-        Task<List<Factory>> GetAllFactories(int userId);
+        Task<Project?> GetFactoryByExternalId(int factoryExternalId);
+        Task<List<Project>> GetAllFactories(int userId);
     }
 }
