@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using VG.CDF.Server.Application.AlarmEvents.Commands;
 using VG.CDF.Server.Application.CommandBase;
 using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.Extentions;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Domain.Entities;
 
@@ -14,11 +15,11 @@ namespace VG.CDF.Server.Application.AlarmEventDescriptions.Commands;
 
 public class UpdateAlarmEventDescriptionCommand : EntityBaseDto,IRequest<AlarmEventDescriptionDto>
 {
-    public string Description { get; set; }
+    public string Description { get; set; } = string.Empty;
 
     public Guid AlarmEventId { get; set; }
     
-    public Guid DescriptionsLanguageId { get; set; }
+    public Guid LanguageId { get; set; }
 
     public class UpdateAlarmEventDescriptionCommandHandler : UpdateCommandBase<UpdateAlarmEventDescriptionCommand,AlarmEventDescriptionDto, AlarmEventDescription>
     {
@@ -28,27 +29,23 @@ public class UpdateAlarmEventDescriptionCommand : EntityBaseDto,IRequest<AlarmEv
         }
     }
 
-    public class UpdateAlarmEventDescriptionCommandValidator : AbstractValidator<UpdateAlarmEventCommand>
+    public class UpdateAlarmEventDescriptionCommandValidator : AbstractValidator<UpdateAlarmEventDescriptionCommand>
     {
         public UpdateAlarmEventDescriptionCommandValidator(ISqlDataContext dataContext)
         {
-            RuleFor(c => c).MustAsync(async(command,cts) =>
-            {
-                return await dataContext.Set<AlarmEventDescription>()
-                    .Where(c => c.Id == command.Id).AnyAsync();
-            }).WithMessage(command=> $"Описания аварийного события с Id {command.Id} не существует");
-            
+            RuleFor(c => c.Description).NotEmpty()
+                .WithMessage("Описание параметра не должно быть пустым");
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
                 return await dataContext.Set<AlarmEvent>()
-                    .Where(c => c.CompanyId == command.CompanyId).AnyAsync();
-            }).WithMessage(command=> $"Компании с Id {command.CompanyId} не существует");
+                    .EntityIsExists(command.AlarmEventId);
+            }).WithMessage(command=> $"Аварийное событие с Id {command.AlarmEventId} не существует");
             
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
-                return !await dataContext.Set<AlarmEvent>()
-                    .Where(c => c.CompanyId == command.CompanyId && c.ExternalId == command.ExternalId).AnyAsync();
-            }).WithMessage(command=> $"У заданной компании с Id {command.CompanyId} уже существует событие с ExternalId {command.ExternalId}");
+                return await dataContext.Set<Language>()
+                    .EntityIsExists(command.LanguageId);
+            }).WithMessage(command=> $"Языка с Id {command.LanguageId} не существует");
         }
     }
 }

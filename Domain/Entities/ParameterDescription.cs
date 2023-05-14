@@ -17,12 +17,12 @@ namespace VG.CDF.Server.Domain.Entities
 
         public string Description { get; set; }
 
-        public int ParameterId { get; set; }
+        public Guid ParameterId { get; set; }
 
         [ForeignKey(nameof(ParameterId))]
         public Parameter Parameter { get; set; }
 
-        public int LanguageId { get; set; }
+        public Guid LanguageId { get; set; }
 
         [ForeignKey(nameof(LanguageId))]
         public Language Language { get; set; }

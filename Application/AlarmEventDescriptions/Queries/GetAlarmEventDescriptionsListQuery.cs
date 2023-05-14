@@ -34,18 +34,18 @@ public class GetAlarmEventDescriptionsListQuery: IRequest<IEnumerable<AlarmEvent
         }
         public async Task<IEnumerable<AlarmEventDescriptionDto>> Handle(GetAlarmEventDescriptionsListQuery request, CancellationToken cancellationToken)
         {
-            IQueryable<AlarmEventDescription> alarDescriptionQuery = _dataContext.Set<AlarmEventDescription>();
+            IQueryable<AlarmEventDescription> alarmDescriptionQuery = _dataContext.Set<AlarmEventDescription>();
 
             if (request.Id != null)
-                alarDescriptionQuery = alarDescriptionQuery.Where(c => c.Id == request.Id);
+                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.Id == request.Id);
+            if (request.Description != null)
+                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.Description == request.Description);
             if (request.AlarmEventId != null)
-                alarDescriptionQuery = alarDescriptionQuery.Where(c => c.Description == request.Description);
-            if (request.AlarmEventId != null)
-                alarDescriptionQuery = alarDescriptionQuery.Where(c => c.AlarmEventId == request.AlarmEventId);
+                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.AlarmEventId == request.AlarmEventId);
             if (request.DescriptionsLanguageId != null)
-                alarDescriptionQuery = alarDescriptionQuery.Where(c => c.LanguageId == request.DescriptionsLanguageId);
+                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.LanguageId == request.DescriptionsLanguageId);
 
-            var alarmEventsDescriptions = await alarDescriptionQuery.ToListAsync(cancellationToken);
+            var alarmEventsDescriptions = await alarmDescriptionQuery.ToListAsync(cancellationToken);
 
             return _mapper.Map<IEnumerable<AlarmEventDescriptionDto>>(alarmEventsDescriptions);
 

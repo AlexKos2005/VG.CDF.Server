@@ -13,7 +13,7 @@ namespace VG.CDF.Server.Application.AlarmEventDescriptions.Commands;
 
 public class CreateAlarmEventDescriptionCommand : EntityBaseDto,IRequest<AlarmEventDescriptionDto>
 {
-    public string Description { get; set; }
+    public string Description { get; set; } = string.Empty;
 
     public Guid AlarmEventId { get; set; }
     
@@ -26,9 +26,9 @@ public class CreateAlarmEventDescriptionCommand : EntityBaseDto,IRequest<AlarmEv
         }
     }
 
-    public class CreateAlarmEventCommandValidator : AbstractValidator<CreateAlarmEventDescriptionCommand>
+    public class CreateAlarmEventDescriptionCommandValidator : AbstractValidator<CreateAlarmEventDescriptionCommand>
     {
-        public CreateAlarmEventCommandValidator(ISqlDataContext dataContext)
+        public CreateAlarmEventDescriptionCommandValidator(ISqlDataContext dataContext)
         {
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
