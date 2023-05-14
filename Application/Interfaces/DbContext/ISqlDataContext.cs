@@ -50,7 +50,7 @@ namespace VG.CDF.Server.Application.Interfaces
 
         public DbSet<ParameterReport> TagReportQueues { get; set; }
         
-        public DbSet<Domain.Entities.ParametersReportTask> TagReportTasks { get; set; }
+        public DbSet<Domain.Entities.ParameterReportTask> TagReportTasks { get; set; }
         
         public DbSet<Domain.Entities.WorkEmail> WorkEmails { get; set; }
         

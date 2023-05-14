@@ -42,11 +42,11 @@ public class TagReportTaskService : ITagReportTaskService
         _getValidator = getValidator;
     }
 
-    public async Task<IEnumerable<TagReportTaskDto>> Get(GetTagReportTasksListQuery query, CancellationToken cts)
+    public async Task<IEnumerable<ParameterReportTaskDto>> Get(GetTagReportTasksListQuery query, CancellationToken cts)
     {
         await _getValidator.ValidateAndThrowAsync(query, cts);
 
-        var queryableEntities = _dataContext.Set<ParametersReportTask>()
+        var queryableEntities = _dataContext.Set<ParameterReportTask>()
             .AsNoTracking()
             .AsQueryable();
 
@@ -63,22 +63,22 @@ public class TagReportTaskService : ITagReportTaskService
 
         var entities =await queryableEntities.ToListAsync();
 
-        return _mapper.Map<IEnumerable<TagReportTaskDto>>(entities);
+        return _mapper.Map<IEnumerable<ParameterReportTaskDto>>(entities);
         
     }
 
-    public async Task<TagReportTaskDto> Create(CreateTagReportTaskCommand command, CancellationToken cts)
+    public async Task<ParameterReportTaskDto> Create(CreateTagReportTaskCommand command, CancellationToken cts)
     {
         await _createValidator.ValidateAndThrowAsync(command, cts);
-        var entity = _mapper.Map<ParametersReportTask>(command);
+        var entity = _mapper.Map<ParameterReportTask>(command);
 
         await _dataContext.TagReportTasks.AddAsync(entity,cts);
         await _dataContext.SaveChangesAsync(cts);
         
-        return _mapper.Map<TagReportTaskDto>(entity);
+        return _mapper.Map<ParameterReportTaskDto>(entity);
     }
 
-    public async Task<TagReportTaskDto> Update(UpdateTagReportTaskCommand command, CancellationToken cts)
+    public async Task<ParameterReportTaskDto> Update(UpdateTagReportTaskCommand command, CancellationToken cts)
     {
         await _updateValidator.ValidateAndThrowAsync(command, cts);
 
@@ -90,10 +90,10 @@ public class TagReportTaskService : ITagReportTaskService
         _dataContext.TagReportTasks.Update(updateEntity);
         await _dataContext.SaveChangesAsync(cts);
         
-        return _mapper.Map<TagReportTaskDto>(updateEntity);
+        return _mapper.Map<ParameterReportTaskDto>(updateEntity);
     }
 
-    public async Task<TagReportTaskDto> AddEmailToTagReportTask(AddWorkEmailToTagReportTaskCommand command, CancellationToken cts)
+    public async Task<ParameterReportTaskDto> AddEmailToTagReportTask(AddWorkEmailToTagReportTaskCommand command, CancellationToken cts)
     {
         await _addEmailValidator.ValidateAndThrowAsync(command, cts);
         var reportTask = await _dataContext.TagReportTasks.Where(c => c.Id == command.TagReportTaskId).FirstAsync();
@@ -102,7 +102,7 @@ public class TagReportTaskService : ITagReportTaskService
 
         await _dataContext.SaveChangesAsync(cts);
         
-        return _mapper.Map<TagReportTaskDto>(reportTask);
+        return _mapper.Map<ParameterReportTaskDto>(reportTask);
     }
 
     public async Task<bool> Delete(DeleteTagReportTaskCommand command, CancellationToken cts)

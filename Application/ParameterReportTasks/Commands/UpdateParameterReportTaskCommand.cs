@@ -2,24 +2,34 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using VG.CDF.Server.Application.AlarmEventDescriptions.Commands;
+using VG.CDF.Server.Application.CommandBase;
+using VG.CDF.Server.Application.Dto;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Domain.Entities;
 
-namespace VG.CDF.Server.Application.TagReportTask.Commands;
+namespace VG.CDF.Server.Application.ParameterReportTasks.Commands;
 
-public class UpdateTagReportTaskCommand
+public class UpdateParameterReportTaskCommand : EntityBaseDto, IRequest<ParameterReportTaskDto>
 {
-    public int Id { get; set; }
     public bool IsActive { get; set; }
     public  DateTime LastSendDt { get; set; }
     public  ReportTaskStatus Status { get; set; }
-    
+
+    public class UpdateParameterReportTaskCommandHandler: UpdateCommandBase<UpdateParameterReportTaskCommand,ParameterReportTaskDto, ParameterReportTask>
+    {
+        public UpdateParameterReportTaskCommandHandler(ISqlDataContext dataContext, IMapper mapper, IValidator<UpdateParameterReportTaskCommand>? validator) 
+            : base(dataContext, mapper, validator)
+        {
+        }
+    }
 }
 
-public class UpdateTagReportTaskCommandValidator : AbstractValidator<UpdateTagReportTaskCommand>
+public class UpdateTagReportTaskCommandValidator : AbstractValidator<UpdateParameterReportTaskCommand>
 {
     public UpdateTagReportTaskCommandValidator(ISqlDataContext dataContext)
     {

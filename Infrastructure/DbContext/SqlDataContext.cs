@@ -48,7 +48,7 @@ namespace VG.CDF.Server.Infrastructure.DataContext
 
         public DbSet<ParameterReport> TagReportQueues { get; set; }
         
-        public DbSet<ParametersReportTask> TagReportTasks { get; set; }
+        public DbSet<ParameterReportTask> TagReportTasks { get; set; }
         
         public DbSet<WorkEmail> WorkEmails { get; set; }
 
@@ -84,11 +84,11 @@ namespace VG.CDF.Server.Infrastructure.DataContext
                 .HasForeignKey<ProjectActionsInfo>(s => s.FactoryId);
 
             modelBuilder.Entity<Project>()
-                .HasOne(sc => sc.ParametersReportTask)
+                .HasOne(sc => sc.ParameterReportTask)
                 .WithOne(s => s.Project)
-                .HasForeignKey<ParametersReportTask>(s=>s.ProjectId);
+                .HasForeignKey<ParameterReportTask>(s=>s.ProjectId);
             
-            modelBuilder.Entity<ParametersReportTask>()
+            modelBuilder.Entity<ParameterReportTask>()
                 .Property(s => s.Status)
                 .HasConversion<int>();
 

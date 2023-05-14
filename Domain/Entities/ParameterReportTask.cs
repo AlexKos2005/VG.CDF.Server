@@ -7,15 +7,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(ProjectId), IsUnique = true)]
-    public class ParametersReportTask : EntityBase
+    public class ParameterReportTask : EntityBase
     {
-        public ParametersReportTask()
+        public ParameterReportTask()
         {
             WorkEmails = new List<WorkEmail>();
         }
         [Key]
         public override Guid Id { get; set; }
-        public int ProjectId { get; set; }
+        public Guid ProjectId { get; set; }
 
         [ForeignKey(nameof(ProjectId))]
         public Project Project { get; set; }

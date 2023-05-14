@@ -32,7 +32,7 @@ public class TagReportTaskController : Controller
     /// </summary>
     /// <returns></returns>
     [HttpGet(nameof(Get))]
-    public async Task<ActionResult<List<TagReportTaskDto>>> Get([FromQuery]GetTagReportTasksListQuery query, CancellationToken cts)
+    public async Task<ActionResult<List<ParameterReportTaskDto>>> Get([FromQuery]GetTagReportTasksListQuery query, CancellationToken cts)
     {
         return Ok(await _reportTaskService.Get(query,cts));
     }
@@ -42,7 +42,7 @@ public class TagReportTaskController : Controller
     /// </summary>
     /// <returns></returns>
     [HttpPost(nameof(Create))]
-    public async Task<ActionResult<TagReportTaskDto>> Create(CreateTagReportTaskCommand command, CancellationToken cts)
+    public async Task<ActionResult<ParameterReportTaskDto>> Create(CreateTagReportTaskCommand command, CancellationToken cts)
     {
         return Ok(await _reportTaskService.Create(command,cts));
     }
@@ -62,7 +62,7 @@ public class TagReportTaskController : Controller
     /// </summary>
     /// <returns></returns>
     [HttpPut(nameof(Update))]
-    public async Task<ActionResult<TagReportTaskDto>> Update(UpdateTagReportTaskCommand command, CancellationToken cts)
+    public async Task<ActionResult<ParameterReportTaskDto>> Update(UpdateTagReportTaskCommand command, CancellationToken cts)
     {
         return Ok(await _reportTaskService.Update(command,cts));
     }

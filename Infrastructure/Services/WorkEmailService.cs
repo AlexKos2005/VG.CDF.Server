@@ -52,7 +52,7 @@ public class WorkEmailService : IWorkEmailService
             queryableEntities = queryableEntities.Where(c => c.Id == query.Id);
         if (query.TagReportTaskId != null)
         {
-            var report = await _dataContext.Set<ParametersReportTask>()
+            var report = await _dataContext.Set<ParameterReportTask>()
                 .AsNoTracking()
                 .Where(c=>c.Id == query.TagReportTaskId).FirstAsync();
             queryableEntities = queryableEntities.Where(c => c.ParametersReportTasks.Contains(report));

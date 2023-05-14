@@ -36,6 +36,6 @@ namespace VG.CDF.Server.Domain.Entities
         public List<Folder> Folders { get; set; }
         public ProjectActionsInfo ProjectActionsInfo { get; set; }
         
-        public ParametersReportTask ParametersReportTask { get; set; }
+        public ParameterReportTask ParameterReportTask { get; set; }
     }
 }
