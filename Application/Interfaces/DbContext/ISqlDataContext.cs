@@ -44,7 +44,7 @@ namespace VG.CDF.Server.Application.Interfaces
 
         public DbSet<ProcessDescription> DeviceDescriptions { get; set; }
 
-        public DbSet<DescriptionsLanguage> DescriptionsLanguages { get; set; }
+        public DbSet<Language> DescriptionsLanguages { get; set; }
 
         public DbSet<ReportSchema> ReportSchemas { get; set; }
 

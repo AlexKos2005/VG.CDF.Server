@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(Id), nameof(Label), IsUnique = true)]
-    public class DescriptionsLanguage
+    [Index(nameof(Id), nameof(Acronym), IsUnique = true)]
+    public class Language: EntityBase
     {
-        public DescriptionsLanguage()
+        public Language()
         {
             ParameterDescriptions = new List<ParameterDescription>();
             ProcessDescriptions = new List<ProcessDescription>();
             AlarmEventDescription = new List<AlarmEventDescription>();
         }
         [Key]
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
 
         public int ExternalId { get; set; }
-        public string Label { get; set; }
+        public string Acronym { get; set; }
 
         public List<ParameterDescription> ParameterDescriptions { get; set; }
         public List<ProcessDescription> ProcessDescriptions { get; set; }

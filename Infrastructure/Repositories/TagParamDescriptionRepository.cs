@@ -31,7 +31,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
 
         public async Task<ParameterDescription?> Get(int tagParamId, int languageId)
         {
-            return await _sqlDataContext.TagParamDescriptions.Where(c => c.ParameterId == tagParamId && c.DescriptionsLanguageId == languageId).FirstOrDefaultAsync();
+            return await _sqlDataContext.TagParamDescriptions.Where(c => c.ParameterId == tagParamId && c.LanguageId == languageId).FirstOrDefaultAsync();
         }
 
         public async Task<List<ParameterDescription>> GetAll()
@@ -44,7 +44,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             return await _sqlDataContext.TagParamDescriptions.Where(c => c.Parameter.ExternalId == tagParamExternalId).ToListAsync();
         }
 
-        public async Task<DescriptionsLanguage> GetLanguage(int tagDescriptionId)
+        public async Task<Language> GetLanguage(int tagDescriptionId)
         {
             return await _sqlDataContext.TagParamDescriptions.Where(c => c.Id == tagDescriptionId).Select(s => s.DescriptionsLanguage).FirstOrDefaultAsync();
         }

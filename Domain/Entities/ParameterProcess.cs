@@ -7,7 +7,7 @@ using System.Text;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(ParameterId), nameof(ProcessId), IsUnique = true)]
-    public class ParameterProcess
+    public class ParameterProcess 
     {
         [Key]
         public int Id { get; set; }

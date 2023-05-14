@@ -8,10 +8,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    public class ProjectActionsInfo
+    public class ProjectActionsInfo : EntityBase
     {
         [Key]
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
 
         public DateTime LastDateTimeConnection { get; set; }
 

@@ -13,6 +13,6 @@ namespace VG.CDF.Server.Application.Interfaces.Repositories
 
         Task<ParameterDescription?> Get(int tagParamId,int languageId);
 
-        Task<DescriptionsLanguage?> GetLanguage(int tagDescriptionId);
+        Task<Language?> GetLanguage(int tagDescriptionId);
     }
 }

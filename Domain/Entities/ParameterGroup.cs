@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(ExternalId), IsUnique = true)]
-    public class ParameterGroup
+    public class ParameterGroup : EntityBase
     {
         public ParameterGroup()
         {
             Parameters = new List<Parameter>();
         }
         [Key]
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
 
         public int ExternalId { get; set; }
 

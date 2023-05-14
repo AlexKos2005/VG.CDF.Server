@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    public class ParameterValuesGroup
+    public class ParameterValuesGroup 
     {
         public ParameterValuesGroup()
         {

@@ -71,12 +71,12 @@ namespace VG.CDF.Server.Infrastructure.Repositories
 
         public async Task<List<ParameterDescription>> GetDescriptions(int tagId)
         {
-            return await _sqlDataContext.TagParamDescriptions.Where(c => c.ParameterId == tagId).Include(c => c.DescriptionsLanguage).ToListAsync();
+            return await _sqlDataContext.TagParamDescriptions.Where(c => c.ParameterId == tagId).Include(c => c.Language).ToListAsync();
         }
 
         public async Task<List<ParameterDescription>> GetDescriptionsByExtenalId(int externalId)
         {
-            return await _sqlDataContext.TagParamDescriptions.Where(c => c.Parameter.ExternalId == externalId).Include(c => c.DescriptionsLanguage).ToListAsync();
+            return await _sqlDataContext.TagParamDescriptions.Where(c => c.Parameter.ExternalId == externalId).Include(c => c.Language).ToListAsync();
         }
 
         public async Task<List<ParameterDescription>> GetLanguageDescriptions(int tagDescriptionId)

@@ -61,8 +61,8 @@ namespace VG.CDF.Server.Infrastructure.Mapping
             #endregion
 
             #region Language
-            CreateMap<DescriptionsLanguage, DescriptionsLanguageRequestDto>().ReverseMap();
-            CreateMap<DescriptionsLanguage, LanguageResponseDto>().ReverseMap();
+            CreateMap<Language, DescriptionsLanguageRequestDto>().ReverseMap();
+            CreateMap<Language, LanguageResponseDto>().ReverseMap();
             CreateMap<DescriptionsLanguageRequestDto, LanguageResponseDto>().ReverseMap();
             #endregion
 
@@ -125,8 +125,8 @@ namespace VG.CDF.Server.Infrastructure.Mapping
 
             var map13 = CreateMap<DescriptionDto, ProcessDescription>().ReverseMap();
             map13.ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));
-            map13.ForMember(dest => dest.LanguageLabel, opt => opt.MapFrom(src => src.DescriptionsLanguage.Label));
-            map13.ForMember(dest => dest.LanguageExternalId, opt => opt.MapFrom(src => src.DescriptionsLanguage.ExternalId));
+            map13.ForMember(dest => dest.LanguageLabel, opt => opt.MapFrom(src => src.Language.Acronym));
+            map13.ForMember(dest => dest.LanguageExternalId, opt => opt.MapFrom(src => src.Language.ExternalId));
 
             var map11 = CreateMap<DeviceWithDescriptionsDto,Process>().ReverseMap();
             map11.ForMember(dest => dest.DeviceDescriptions, opt => opt.MapFrom(src => src.DeviceDescriptions));

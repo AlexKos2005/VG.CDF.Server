@@ -42,7 +42,7 @@ namespace VG.CDF.Server.Infrastructure.DataContext
 
         public DbSet<ProcessDescription> DeviceDescriptions { get; set; }
 
-        public DbSet<DescriptionsLanguage> DescriptionsLanguages { get; set; }
+        public DbSet<Language> DescriptionsLanguages { get; set; }
 
         public DbSet<ReportSchema> ReportSchemas { get; set; }
 

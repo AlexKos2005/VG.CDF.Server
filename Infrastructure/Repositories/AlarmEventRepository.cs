@@ -85,7 +85,7 @@ namespace BreadCommunityWeb.Blz.Infrastructure.Server.Repositories
 
         public async Task<List<AlarmEventDescription>> GetDescriptionsByExtenalId(int externalId)
         {
-            return await _sqlDataContext.AlarmEventDescriptions.Where(c => c.AlarmEvent.ExternalId == externalId).Include(c => c.DescriptionsLanguage).ToListAsync();
+            return await _sqlDataContext.AlarmEventDescriptions.Where(c => c.AlarmEvent.ExternalId == externalId).Include(c => c.Language).ToListAsync();
         }
 
         public async Task Save(AlarmEvent entity)

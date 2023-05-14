@@ -40,7 +40,7 @@ namespace BreadCommunityWeb.Blz.Infrastructure.Server.Repositories
             return await _sqlDataContext.DeviceDescriptions.Where(c => c.Process.ExternalId == deviceParamExternalId).ToListAsync();
         }
 
-        public async Task<DescriptionsLanguage?> GetLanguage(int deviceDescriptionId)
+        public async Task<Language?> GetLanguage(int deviceDescriptionId)
         {
             return await _sqlDataContext.DeviceDescriptions.Where(c => c.Id == deviceDescriptionId).Select(s => s.DescriptionsLanguage).FirstOrDefaultAsync();
         }

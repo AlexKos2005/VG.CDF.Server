@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(ProcessId), nameof(DescriptionsLanguageId), IsUnique = true)]
-    public class ProcessDescription
+    [Index(nameof(ProcessId), nameof(LanguageId), IsUnique = true)]
+    public class ProcessDescription : EntityBase
     {
         [Key]
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
 
         public string Description { get; set; }
 
@@ -22,9 +22,9 @@ namespace VG.CDF.Server.Domain.Entities
         [ForeignKey(nameof(ProcessId))]
         public Process Process { get; set; }
 
-        public int DescriptionsLanguageId { get; set; }
+        public int LanguageId { get; set; }
 
-        [ForeignKey(nameof(DescriptionsLanguageId))]
-        public DescriptionsLanguage DescriptionsLanguage { get; set; }
+        [ForeignKey(nameof(LanguageId))]
+        public Language Language { get; set; }
     }
 }

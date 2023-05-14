@@ -4,14 +4,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace VG.CDF.Server.Domain.Entities;
 
-public class Company
+public class Company: EntityBase
 {
     public Company()
     {
         Projects = new HashSet<Project>();
     }
     [Key]
-    public Guid Id { get; set; }
+    public override Guid Id { get; set; }
 
     public string Name { get; set; }
 

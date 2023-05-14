@@ -35,7 +35,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             return await _sqlDataContext.AlarmEventDescriptions.ToListAsync();
         }
 
-        public async Task<DescriptionsLanguage?> GetLanguage(int alarmEventDescriptionsId)
+        public async Task<Language?> GetLanguage(int alarmEventDescriptionsId)
         {
             return await _sqlDataContext.AlarmEventDescriptions.Where(c => c.Id == alarmEventDescriptionsId).Select(s => s.DescriptionsLanguage).FirstOrDefaultAsync();
         }

@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(ExternalId), IsUnique = true)]
-    public class AlarmEvent
+    public class AlarmEvent : EntityBase
     {
         public AlarmEvent()
         {
             AlarmEventDescriptions = new List<AlarmEventDescription>();
         }
         [Key]
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
 
         public int ExternalId { get; set; }
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 { 
-   public class ParameterValue
+   public class ParameterValue 
     {
         [Key]
         public long Id { get; set; }

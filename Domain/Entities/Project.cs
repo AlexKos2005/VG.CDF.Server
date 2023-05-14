@@ -9,7 +9,7 @@ using System.Text.Json.Serialization;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(ExternalId), IsUnique = true)]
-    public class Project
+    public class Project : EntityBase
     {
         public Project()
         {
@@ -18,7 +18,7 @@ namespace VG.CDF.Server.Domain.Entities
             Folders = new List<Folder>();
         }
         [Key]
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
         public int ExternalId { get; set; }
 
         public int UtcOffset { get; set; }

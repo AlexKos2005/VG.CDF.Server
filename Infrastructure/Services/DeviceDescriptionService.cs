@@ -60,7 +60,7 @@ namespace VG.CDF.Server.Infrastructure.Services
                 return null;
             }
 
-            var targetLangDescription = descriptionsForDevice.Where(c => c.DescriptionsLanguageId == language.Id).FirstOrDefault();
+            var targetLangDescription = descriptionsForDevice.Where(c => c.LanguageId == language.Id).FirstOrDefault();
             if (targetLangDescription == null)
             {
                 return null;

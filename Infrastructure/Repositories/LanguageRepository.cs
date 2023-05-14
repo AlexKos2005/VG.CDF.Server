@@ -74,28 +74,28 @@ namespace VG.CDF.Server.Infrastructure.Repositories
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<DescriptionsLanguage?> Get(int id)
+        public async Task<Language?> Get(int id)
         {
             return await _sqlDataContext.DescriptionsLanguages.Where(c => c.Id == id).FirstOrDefaultAsync();
         }
 
-        public async Task<List<DescriptionsLanguage>> GetAll()
+        public async Task<List<Language>> GetAll()
         {
           return await _sqlDataContext.DescriptionsLanguages.ToListAsync();
         }
 
-        public async Task<DescriptionsLanguage?> GetByExternalId(int languageExternalId)
+        public async Task<Language?> GetByExternalId(int languageExternalId)
         {
             return await _sqlDataContext.DescriptionsLanguages.Where(c => c.ExternalId == languageExternalId).FirstOrDefaultAsync();
         }
 
-        public async Task Save(DescriptionsLanguage entity)
+        public async Task Save(Language entity)
         {
             await _sqlDataContext.DescriptionsLanguages.AddAsync(entity);
             await _sqlDataContext.SaveChangesAsync();
         }
 
-        public async Task<DescriptionsLanguage?> Update(int id, DescriptionsLanguage entity)
+        public async Task<Language?> Update(int id, Language entity)
         {
             var language = await _sqlDataContext.DescriptionsLanguages.Where(c => c.Id == id).FirstOrDefaultAsync();
             if (language == null)
@@ -103,7 +103,7 @@ namespace VG.CDF.Server.Infrastructure.Repositories
                 return null;
             }
 
-            language.LanguageLabel = entity.Label;
+            language.LanguageLabel = entity.Acronym;
 
             _sqlDataContext.DescriptionsLanguages.Update(language);
             await _sqlDataContext.SaveChangesAsync();

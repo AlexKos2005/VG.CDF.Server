@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(ExternalId), IsUnique = true)]
-    public class Process
+    public class Process: EntityBase
     {
         public Process()
         {
@@ -19,7 +19,7 @@ namespace VG.CDF.Server.Domain.Entities
             ProcessDescriptions = new List<ProcessDescription>();
         }
         [Key]
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
         public int ExternalId { get; set; }
         public int DeviceCode { get; set; }
         public string DeviceIp { get; set; }

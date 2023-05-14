@@ -99,14 +99,14 @@ namespace VG.CDF.Server.Infrastructure.Services
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var languageRepository = new LanguageRepository(db);
-            await languageRepository.Save(_mapper.Map<DescriptionsLanguage>(entity));
+            await languageRepository.Save(_mapper.Map<Language>(entity));
         }
 
         public async Task<LanguageResponseDto?> Update(int id, DescriptionsLanguageRequestDto entity)
         {
             using var db = new SqlDataContext(_dbConnectionConfig);
             var languageRepository = new LanguageRepository(db);
-            var result = await languageRepository.Update(id, _mapper.Map<DescriptionsLanguage>(entity));
+            var result = await languageRepository.Update(id, _mapper.Map<Language>(entity));
             if (result == null)
             {
                 return null;

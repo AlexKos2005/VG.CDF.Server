@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(Email), IsUnique = true)]
-    public class WorkEmail
+    public class WorkEmail : EntityBase
     {
         public WorkEmail()
         {
             ParametersReportTasks = new List<ParametersReportTask>();
         }
         [Key]
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
         
         public string Email { get; set; }
         

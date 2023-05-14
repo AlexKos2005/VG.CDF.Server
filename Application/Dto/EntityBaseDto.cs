@@ -1,6 +1,8 @@
-﻿namespace VG.CDF.Server.Application.Dto;
+﻿using System;
+
+namespace VG.CDF.Server.Application.Dto;
 
 public class EntityBaseDto
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 }

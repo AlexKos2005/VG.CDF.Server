@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace VG.CDF.Server.Domain.Entities
 {
     [Index(nameof(Email), IsUnique = true)]
-    public class User
+    public class User : EntityBase
     {
         public User()
         {
@@ -17,7 +17,7 @@ namespace VG.CDF.Server.Domain.Entities
             Folders = new List<Folder>();
         }
         [Key]
-        public Guid Id { get; set; }
+        public override Guid Id { get; set; }
 
         public string Email { get; set; }
 

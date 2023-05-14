@@ -12,6 +12,6 @@ namespace VG.CDF.Server.Application.Interfaces.Repositories
         Task Save(List<AlarmEventDescription> tagDescriptions);
         Task<List<AlarmEventDescription>> GetAll();
 
-        Task<DescriptionsLanguage?> GetLanguage(int tagDescriptionId);
+        Task<Language?> GetLanguage(int tagDescriptionId);
     }
 }

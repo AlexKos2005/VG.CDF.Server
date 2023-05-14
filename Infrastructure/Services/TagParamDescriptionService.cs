@@ -60,7 +60,7 @@ namespace VG.CDF.Server.Infrastructure.Services
                 return null;
             }
 
-            var targetLandDescription = descriptionsForTag.Where(c => c.DescriptionsLanguageId == language.Id).FirstOrDefault();
+            var targetLandDescription = descriptionsForTag.Where(c => c.LanguageId == language.Id).FirstOrDefault();
             if (targetLandDescription == null)
             {
                 return null;

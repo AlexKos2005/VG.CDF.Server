@@ -13,6 +13,6 @@ namespace VG.CDF.Server.Application.Interfaces.Repositories
         Task<List<ProcessDescription>> GetAll();
 
         Task<List<ProcessDescription>> GetAllByExternalId(int deviceParamExternalId);
-        Task<DescriptionsLanguage?> GetLanguage(int deviceDescriptionId);
+        Task<Language?> GetLanguage(int deviceDescriptionId);
     }
 }

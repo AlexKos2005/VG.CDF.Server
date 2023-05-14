@@ -113,7 +113,7 @@ namespace BreadCommunityWeb.Blz.Infrastructure.Server.Repositories
 
         public async Task<List<ProcessDescription>> GetDescriptionsByExtenalId(int externalId)
         {
-            var device = await _sqlDataContext.DeviceDescriptions.Where(c => c.Process.ExternalId == externalId).Include(c => c.DescriptionsLanguage).ToListAsync();
+            var device = await _sqlDataContext.DeviceDescriptions.Where(c => c.Process.ExternalId == externalId).Include(c => c.Language).ToListAsync();
             return device;
         }
 
