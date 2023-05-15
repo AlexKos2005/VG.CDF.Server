@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using VG.CDF.Server.Application.Dto;
-using VG.CDF.Server.Application.WorkEmail.Commands;
+using VG.CDF.Server.Application.WorkEmails.Commands;
 
-namespace VG.CDF.Server.Application.WorkEmail;
+namespace VG.CDF.Server.Application.WorkEmails;
 
 public class WorkEmailMappingProfiler : Profile
 {
@@ -12,6 +12,6 @@ public class WorkEmailMappingProfiler : Profile
         CreateMap<CreateWorkEmailCommand, Domain.Entities.WorkEmail>().ReverseMap();
         CreateMap<DeleteWorkEmailCommand, Domain.Entities.WorkEmail>().ReverseMap();
         CreateMap<UpdateWorkEmailCommand, Domain.Entities.WorkEmail>().ReverseMap();
-        CreateMap<AddWorkEmailToTagReportTaskCommand, Domain.Entities.WorkEmail>().ReverseMap();
+        CreateMap<AddWorkEmailToParameterReportTaskCommand, Domain.Entities.WorkEmail>().ReverseMap();
     }
 }

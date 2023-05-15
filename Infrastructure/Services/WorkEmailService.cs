@@ -20,7 +20,7 @@ public class WorkEmailService : IWorkEmailService
     private readonly IValidator<CreateWorkEmailCommand> _createValidator;
     private readonly IValidator<DeleteWorkEmailCommand> _deleteValidator;
     private readonly IValidator<UpdateWorkEmailCommand> _updateValidator;
-    private readonly IValidator<AddWorkEmailToTagReportTaskCommand> _addToReportTaskValidator;
+    private readonly IValidator<AddWorkEmailToParameterReportTaskCommand> _addToReportTaskValidator;
     private readonly IMapper _mapper; 
     public WorkEmailService(
         ISqlDataContext dataContext, 
@@ -29,7 +29,7 @@ public class WorkEmailService : IWorkEmailService
         IValidator<UpdateWorkEmailCommand> updateValidator, 
         IMapper mapper, 
         IValidator<GetWorkEmailsListQuery> getValidator, 
-        IValidator<AddWorkEmailToTagReportTaskCommand> addToReportTaskValidator)
+        IValidator<AddWorkEmailToParameterReportTaskCommand> addToReportTaskValidator)
     {
         _dataContext = dataContext;
         _createValidator = createValidator;
@@ -101,7 +101,7 @@ public class WorkEmailService : IWorkEmailService
         return true;
     }
 
-    public async Task<bool> AddWorkEmailToTagReportTask(AddWorkEmailToTagReportTaskCommand command, CancellationToken cts)
+    public async Task<bool> AddWorkEmailToTagReportTask(AddWorkEmailToParameterReportTaskCommand command, CancellationToken cts)
     {
         await _addToReportTaskValidator.ValidateAndThrowAsync(command, cts);
         

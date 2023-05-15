@@ -2,17 +2,27 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using VG.CDF.Server.Application.CommandBase;
+using VG.CDF.Server.Application.Dto;
 using VG.CDF.Server.Application.Interfaces;
+using VG.CDF.Server.Domain.Entities;
 
-namespace VG.CDF.Server.Application.WorkEmail.Commands;
+namespace VG.CDF.Server.Application.WorkEmails.Commands;
 
-public class UpdateWorkEmailCommand
+public class UpdateWorkEmailCommand : EntityBaseDto,IRequest<WorkEmailDto>
 {
-    public int Id { get; set; }
-    public string? Email { get; set; }
+    public string Email { get; set; } = string.Empty;
+
+    public class UpdateWorkEmailCommandHandler: UpdateCommandBase<UpdateWorkEmailCommand,WorkEmailDto,WorkEmail>
+    {
+        public UpdateWorkEmailCommandHandler(ISqlDataContext dataContext, IMapper mapper, IValidator<UpdateWorkEmailCommand>? validator) : base(dataContext, mapper, validator)
+        {
+        }
+    }
 }
 
 public class UpdateWorkEmailCommandValidator : AbstractValidator<UpdateWorkEmailCommand>

@@ -13,6 +13,6 @@ public interface IWorkEmailService
    Task<WorkEmailDto> Update(UpdateWorkEmailCommand command, CancellationToken cts);
    Task<bool> Delete(DeleteWorkEmailCommand command, CancellationToken cts);
    
-   Task<bool> AddWorkEmailToTagReportTask(AddWorkEmailToTagReportTaskCommand command, CancellationToken cts);
+   Task<bool> AddWorkEmailToTagReportTask(AddWorkEmailToParameterReportTaskCommand command, CancellationToken cts);
    
 }

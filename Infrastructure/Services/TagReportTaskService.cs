@@ -23,14 +23,14 @@ public class TagReportTaskService : ITagReportTaskService
     private readonly IValidator<CreateTagReportTaskCommand> _createValidator;
     private readonly IValidator<DeleteTagReportTaskCommand> _deleteValidator;
     private readonly IValidator<UpdateTagReportTaskCommand> _updateValidator;
-    private readonly IValidator<AddWorkEmailToTagReportTaskCommand> _addEmailValidator;
+    private readonly IValidator<AddWorkEmailToParameterReportTaskCommand> _addEmailValidator;
     private readonly IMapper _mapper;
     public TagReportTaskService(ISqlDataContext dataContext, 
         IValidator<CreateTagReportTaskCommand> createValidator, 
         IMapper mapper, 
         IValidator<DeleteTagReportTaskCommand> deleteValidator, 
         IValidator<UpdateTagReportTaskCommand> updateValidator, 
-        IValidator<AddWorkEmailToTagReportTaskCommand> addEmailValidator, 
+        IValidator<AddWorkEmailToParameterReportTaskCommand> addEmailValidator, 
         IValidator<GetTagReportTasksListQuery> getValidator)
     {
         _dataContext = dataContext;
@@ -93,7 +93,7 @@ public class TagReportTaskService : ITagReportTaskService
         return _mapper.Map<ParameterReportTaskDto>(updateEntity);
     }
 
-    public async Task<ParameterReportTaskDto> AddEmailToTagReportTask(AddWorkEmailToTagReportTaskCommand command, CancellationToken cts)
+    public async Task<ParameterReportTaskDto> AddEmailToTagReportTask(AddWorkEmailToParameterReportTaskCommand command, CancellationToken cts)
     {
         await _addEmailValidator.ValidateAndThrowAsync(command, cts);
         var reportTask = await _dataContext.TagReportTasks.Where(c => c.Id == command.TagReportTaskId).FirstAsync();

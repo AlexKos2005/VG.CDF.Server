@@ -70,7 +70,7 @@ public class WorkEmailController : Controller
     /// </summary>
     /// <returns></returns>
     [HttpPost(nameof(PutToTagReportTask))]
-    public async Task<ActionResult<WorkEmailDto>> PutToTagReportTask(AddWorkEmailToTagReportTaskCommand command, CancellationToken cts)
+    public async Task<ActionResult<WorkEmailDto>> PutToTagReportTask(AddWorkEmailToParameterReportTaskCommand command, CancellationToken cts)
     {
         return Ok(await _workEmailService.AddWorkEmailToTagReportTask(command,cts));
     }

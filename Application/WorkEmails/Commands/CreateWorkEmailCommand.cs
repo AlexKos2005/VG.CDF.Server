@@ -2,16 +2,28 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.HandlerBase;
 using VG.CDF.Server.Application.Interfaces;
+using VG.CDF.Server.Domain.Entities;
 
-namespace VG.CDF.Server.Application.WorkEmail.Commands;
+namespace VG.CDF.Server.Application.WorkEmails.Commands;
 
-public class CreateWorkEmailCommand
+public class CreateWorkEmailCommand : IRequest<WorkEmailDto>
 {
-    public string Email { get; set; }
+    public string Email { get; set; } = string.Empty;
+
+    public class CreateWorkEmailCommandHandler: CreateHandlerBase<CreateWorkEmailCommand,WorkEmailDto,WorkEmail>
+    {
+        public CreateWorkEmailCommandHandler(IValidator<CreateWorkEmailCommand> validator, ISqlDataContext dataContext, IMapper mapper) 
+            : base(validator, dataContext, mapper)
+        {
+        }
+    }
 }
 
 public class CreateWorkEmailCommandValidator : AbstractValidator<CreateWorkEmailCommand>

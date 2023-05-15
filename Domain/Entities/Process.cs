@@ -24,7 +24,7 @@ namespace VG.CDF.Server.Domain.Entities
         public int DeviceCode { get; set; }
         public string DeviceIp { get; set; }
 
-        public int ProjectId { get; set; }
+        public Guid ProjectId { get; set; }
 
         [ForeignKey(nameof(ProjectId))]
         public Project Project { get; set; }
