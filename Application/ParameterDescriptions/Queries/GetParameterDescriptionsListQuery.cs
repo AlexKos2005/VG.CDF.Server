@@ -22,12 +22,12 @@ public class GetParameterDescriptionsListQuery: IRequest<IEnumerable<ParameterDe
     
     public Guid? DescriptionsLanguageId { get; set; }= null;
     
-    public class GetAlarmEventsListQueryHandler : IRequestHandler<GetParameterDescriptionsListQuery,IEnumerable<ParameterDescriptionDto>>
+    public class GetParameterDescriptionsListQueryHandler : IRequestHandler<GetParameterDescriptionsListQuery,IEnumerable<ParameterDescriptionDto>>
     {
         private readonly ISqlDataContext _dataContext;
         private readonly IMapper _mapper;
 
-        public GetAlarmEventsListQueryHandler(ISqlDataContext dataContext,IMapper mapper)
+        public GetParameterDescriptionsListQueryHandler(ISqlDataContext dataContext,IMapper mapper)
         {
             _dataContext = dataContext;
             _mapper = mapper;

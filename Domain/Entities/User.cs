@@ -23,7 +23,7 @@ namespace VG.CDF.Server.Domain.Entities
 
         public string PasswordHash { get; set; }
 
-        public int RoleId { get; set; }
+        public Guid RoleId { get; set; }
 
         [ForeignKey(nameof(RoleId))]
         public Role Role { get; set; }

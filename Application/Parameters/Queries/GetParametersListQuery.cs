@@ -24,12 +24,12 @@ public class GetParametersListQuery: IRequest<IEnumerable<ParameterDto>>
 
     public Guid? ParameterGroupId { get; set; } = null;
     
-    public class GetLanguagesListQueryHandler : IRequestHandler<GetParametersListQuery,IEnumerable<ParameterDto>>
+    public class GetParametersListQueryHandler : IRequestHandler<GetParametersListQuery,IEnumerable<ParameterDto>>
     {
         private readonly ISqlDataContext _dataContext;
         private readonly IMapper _mapper;
 
-        public GetLanguagesListQueryHandler(ISqlDataContext dataContext,IMapper mapper)
+        public GetParametersListQueryHandler(ISqlDataContext dataContext,IMapper mapper)
         {
             _dataContext = dataContext;
             _mapper = mapper;

@@ -21,12 +21,12 @@ public class GetProcessesListQuery: IRequest<IEnumerable<ProcessDto>>
     public string? DeviceIp { get; set; } = null;
     public Guid? ProjectId { get; set; } = null;
     
-    public class GetLanguagesListQueryHandler : IRequestHandler<GetProcessesListQuery,IEnumerable<ProcessDto>>
+    public class GetProcessesListQueryHandler : IRequestHandler<GetProcessesListQuery,IEnumerable<ProcessDto>>
     {
         private readonly ISqlDataContext _dataContext;
         private readonly IMapper _mapper;
 
-        public GetLanguagesListQueryHandler(ISqlDataContext dataContext,IMapper mapper)
+        public GetProcessesListQueryHandler(ISqlDataContext dataContext,IMapper mapper)
         {
             _dataContext = dataContext;
             _mapper = mapper;

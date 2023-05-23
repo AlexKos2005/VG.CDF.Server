@@ -17,12 +17,12 @@ namespace VG.CDF.Server.Domain.Entities
 
         public string Description { get; set; }
 
-        public int ProcessId { get; set; }
+        public Guid ProcessId { get; set; }
 
         [ForeignKey(nameof(ProcessId))]
         public Process Process { get; set; }
 
-        public int LanguageId { get; set; }
+        public Guid LanguageId { get; set; }
 
         [ForeignKey(nameof(LanguageId))]
         public Language Language { get; set; }
