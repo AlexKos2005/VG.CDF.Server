@@ -10,6 +10,7 @@
   <ItemGroup>
     <Folder Include="Interfaces\Modules\" />
     <Folder Include="Mapping\" />
+    <Folder Include="QueryBase" />
     <Folder Include="Services\" />
   </ItemGroup>
 

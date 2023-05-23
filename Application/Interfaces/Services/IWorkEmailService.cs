@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using VG.CDF.Server.Application.Dto;
-using VG.CDF.Server.Application.WorkEmail.Commands;
+using VG.CDF.Server.Application.WorkEmails.Commands;
 
 namespace VG.CDF.Server.Application.Interfaces.Services;
 

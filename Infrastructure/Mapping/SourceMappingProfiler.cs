@@ -129,7 +129,7 @@ namespace VG.CDF.Server.Infrastructure.Mapping
             map13.ForMember(dest => dest.LanguageExternalId, opt => opt.MapFrom(src => src.Language.ExternalId));
 
             var map11 = CreateMap<DeviceWithDescriptionsDto,Process>().ReverseMap();
-            map11.ForMember(dest => dest.DeviceDescriptions, opt => opt.MapFrom(src => src.DeviceDescriptions));
+            map11.ForMember(dest => dest.DeviceDescriptions, opt => opt.MapFrom(src => src.ProcessDescriptions));
 
             var map12 = CreateMap<DescriptionDto, TagParamDescriptionResponseDto>().ReverseMap();
             map12.ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));

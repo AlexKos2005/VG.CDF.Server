@@ -81,7 +81,7 @@ namespace VG.CDF.Server.Infrastructure.DataContext
             modelBuilder.Entity<Project>()
                 .HasOne(sc => sc.ProjectActionsInfo)
                 .WithOne(s => s.Project)
-                .HasForeignKey<ProjectActionsInfo>(s => s.FactoryId);
+                .HasForeignKey<ProjectActionsInfo>(s => s.ProjectId);
 
             modelBuilder.Entity<Project>()
                 .HasOne(sc => sc.ParameterReportTask)
