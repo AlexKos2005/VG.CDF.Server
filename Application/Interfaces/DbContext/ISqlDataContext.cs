@@ -11,20 +11,20 @@ namespace VG.CDF.Server.Application.Interfaces
 {
     public interface ISqlDataContext : IDisposable
     {
-        public DbSet<Project> Factories { get; set; }
-        public DbSet<ProjectActionsInfo> FactoryActionsInfos { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectActionsInfo> ProjectActionsInfos { get; set; }
         public DbSet<DoseWa> DosesWa { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<UserProject> UsersFactories { get; set; }
+        public DbSet<UserProject> UsersProjects { get; set; }
 
         public DbSet<Role> Roles { get; set; }
         public DbSet<Folder> Folders { get; set; }
         public DbSet<File> Files { get; set; }
 
        
-        public DbSet<ParameterProcess> TagParamsDevices { get; set; }
+        public DbSet<ParameterProcess> ParametersProcesses { get; set; }
 
-        public DbSet<Process> Devices { get; set; }
+        public DbSet<Process> Processess { get; set; }
 
         public DbSet<AlarmEvent> AlarmEvents { get; set; }
 
@@ -32,30 +32,28 @@ namespace VG.CDF.Server.Application.Interfaces
 
         public DbSet<AlarmEventDescription> AlarmEventDescriptions { get; set; }
 
-        public DbSet<ParameterValue> TagsLive { get; set; }
+        public DbSet<ParameterValue> ParameterValues { get; set; }
 
-        public DbSet<ParameterDescription> TagParamDescriptions { get; set; }
+        public DbSet<ParameterDescription> ParameterDescriptions { get; set; }
 
-        public DbSet<ParameterValuesGroup> TagsGroups { get; set; }
+        public DbSet<ParameterValuesGroup> ParameterValuesGroups { get; set; }
 
-        public DbSet<Parameter> TagParams { get; set; }
+        public DbSet<Parameter> Parameters { get; set; }
         public DbSet<ParameterGroup> ParameterGroups { get; set; }
 
 
-        public DbSet<ProcessDescription> DeviceDescriptions { get; set; }
+        public DbSet<ProcessDescription> ProcessDescriptions { get; set; }
 
-        public DbSet<Language> DescriptionsLanguages { get; set; }
+        public DbSet<Language> Languages { get; set; }
 
         public DbSet<ReportSchema> ReportSchemas { get; set; }
 
-        public DbSet<ParameterReport> TagReportQueues { get; set; }
+        public DbSet<ParameterReport> ParameterReports { get; set; }
         
-        public DbSet<Domain.Entities.ParameterReportTask> TagReportTasks { get; set; }
+        public DbSet<ParameterReportTask> ParameterReportTasks { get; set; }
         
-        public DbSet<Domain.Entities.WorkEmail> WorkEmails { get; set; }
-        
-        //public DbSet<ParametersReportTaskWorkEmail> ParametersReportTaskWorkEmail { get; set; }
-        
+        public DbSet<WorkEmail> WorkEmails { get; set; }
+
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 
         public DbSet<TEntity> Set<TEntity>() where TEntity: class;

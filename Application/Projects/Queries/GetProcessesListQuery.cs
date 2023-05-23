@@ -22,7 +22,7 @@ public class GetProjectListQuery: IRequest<IEnumerable<ProjectDto>>
 
     public string? Description { get; set; } = null;
         
-    public int? CompanyId { get; set; } = null;
+    public Guid? CompanyId { get; set; } = null;
     
     public class GetProjectsListQueryHandler : IRequestHandler<GetProjectListQuery,IEnumerable<ProjectDto>>
     {

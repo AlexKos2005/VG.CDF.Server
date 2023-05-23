@@ -25,7 +25,7 @@ namespace VG.CDF.Server.Domain.Entities
 
         public string Description { get; set; }
         
-        public int CompanyId { get; set; }
+        public Guid CompanyId { get; set; }
 
         [ForeignKey(nameof(CompanyId))]
         public Company Company { get; set; }
@@ -34,7 +34,7 @@ namespace VG.CDF.Server.Domain.Entities
         public List<Process> Processes { get; set; }
 
         public List<Folder> Folders { get; set; }
-        public ProjectActionsInfo ProjectActionsInfo { get; set; }
+        public ProjectActionsInfo? ProjectActionsInfo { get; set; }
         
         public ParameterReportTask ParameterReportTask { get; set; }
     }

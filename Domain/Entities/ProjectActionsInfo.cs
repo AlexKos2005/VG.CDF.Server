@@ -24,8 +24,6 @@ namespace VG.CDF.Server.Domain.Entities
         public int AlarmMessageCounter { get; set; }
 
         public int ProjectId { get; set; }
-
-        [ForeignKey(nameof(ProjectId))]
-        public Project Project { get; set; }
+        public Project? Project { get; set; }
     }
 }

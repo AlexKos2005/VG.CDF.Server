@@ -19,7 +19,7 @@ public class CreateProjectCommand : IRequest<ProjectDto>
 
     public string Description { get; set; } = string.Empty;
         
-    public int CompanyId { get; set; }
+    public Guid CompanyId { get; set; }
 
     public class CreateProjectCommandHandler : CreateCommandBase<CreateProjectCommand,ProjectDto, Project>
     {

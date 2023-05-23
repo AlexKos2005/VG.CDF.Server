@@ -55,7 +55,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\Administration\" />
-    <Folder Include="DbContext" />
   </ItemGroup>
 
   <ItemGroup>
