@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using VG.CDF.Server.Application.Dto;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Application.Interfaces.Configurations;
@@ -84,17 +85,87 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasForeignKey(v => v.ProjectId)
                 .OnDelete(DeleteBehavior.SetNull);
             
+            modelBuilder.Entity<Parameter>()
+                .HasOne(sc => sc.Company)
+                .WithMany(s => s.Parameters)
+                .HasForeignKey(v => v.CompanyId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<ParameterProcess>()
+                .HasOne(sc => sc.Parameter)
+                .WithMany(s => s.ParametersProcesses)
+                .HasForeignKey(v => v.ParameterId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<ParameterProcess>()
+                .HasOne(sc => sc.Process)
+                .WithMany(s => s.ParametersProcesses)
+                .HasForeignKey(v => v.ProcessId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
             modelBuilder.Entity<ProjectActionsInfo>()
                 .HasOne(sc => sc.Project)
                 .WithOne(s => s.ProjectActionsInfo)
                 .HasForeignKey<ProjectActionsInfo>(v => v.ProjectId)
                 .OnDelete(DeleteBehavior.SetNull);
-//-------------------------------------------------------------------------------------
-
+            
+            modelBuilder.Entity<UserProject>()
+                .HasOne(sc => sc.User)
+                .WithMany(s => s.UserProjects)
+                .HasForeignKey(v => v.UserId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<UserProject>()
+                .HasOne(sc => sc.Project)
+                .WithMany(s => s.UserProjects)
+                .HasForeignKey(v => v.ProjectId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
             modelBuilder.Entity<User>()
                 .HasOne(sc => sc.Role)
                 .WithMany(s => s.Users)
                 .HasForeignKey(v => v.RoleId);
+
+            modelBuilder.Entity<Role>()
+                .Property(sc => sc.RoleName)
+                .HasMaxLength(50);
+            
+            modelBuilder.Entity<Role>()
+                .Property(sc => sc.RoleCode)
+                .HasMaxLength(50)
+                .HasConversion(
+                    v => v.ToString(),
+                    v => (RoleCodes)Enum.Parse(typeof(RoleCodes),v))
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ParameterReportTask>()
+                .HasOne(c => c.Project)
+                .WithOne(c => c.ParameterReportTask)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<ParameterReportTask>()
+                .Property(sc => sc.Status)
+                .HasMaxLength(50)
+                .HasConversion(
+                    v => v.ToString(),
+                    v => (ReportTaskStatus)Enum.Parse(typeof(ReportTaskStatus),v))
+                .IsUnicode(false);
+           
+            modelBuilder.Entity<ParametersReportTaskWorkEmail>()
+                .HasOne(sc => sc.ParameterReportTask)
+                .WithMany(s => s.ParametersReportTaskWorkEmails)
+                .HasForeignKey(v => v.ParameterReportTaskId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<ParametersReportTaskWorkEmail>()
+                .HasOne(sc => sc.WorkEmail)
+                .WithMany(s => s.ParametersReportTaskWorkEmails)
+                .HasForeignKey(v => v.WorkEmailId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+//-------------------------------------------------------------------------------------
+
+
             
             
             modelBuilder.Entity<ParameterReportTask>()

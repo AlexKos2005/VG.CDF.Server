@@ -6,14 +6,9 @@ namespace VG.CDF.Server.Domain.Entities;
 
 public class Company: EntityBase
 {
-    public Company()
-    {
-        Projects = new HashSet<Project>();
-    }
-    [Key]
-    public override Guid Id { get; set; }
-
     public string Name { get; set; }
 
-    public ICollection<Project> Projects { get; set; }
+    public virtual ICollection<Project> Projects { get; set; }
+    
+    public virtual ICollection<Parameter> Parameters { get; set; }
 }

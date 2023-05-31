@@ -9,31 +9,19 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(ExternalId), IsUnique = true)]
     public class Process: EntityBase
     {
-        public Process()
-        {
-            TagsDevices = new List<ParameterProcess>();
-            AlarmEvents = new List<AlarmEvent>();
-            ProcessDescriptions = new List<ProcessDescription>();
-        }
-        [Key]
-        public override Guid Id { get; set; }
         public int ExternalId { get; set; }
         public int DeviceCode { get; set; }
         public string DeviceIp { get; set; }
-
         public Guid ProjectId { get; set; }
-
-        [ForeignKey(nameof(ProjectId))]
         public Project Project { get; set; }
 
-        public List<ParameterProcess> TagsDevices { get; set; }
+        public ICollection<ParameterProcess> ParametersProcesses { get; set; }
 
-        public List<AlarmEvent> AlarmEvents { get; set; }
+        public ICollection<AlarmEvent> AlarmEvents { get; set; }
 
-        public List<ProcessDescription> ProcessDescriptions { get; set; }
+        public ICollection<ProcessDescription> ProcessDescriptions { get; set; }
 
     }
 }

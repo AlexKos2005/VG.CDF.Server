@@ -9,11 +9,6 @@ namespace VG.CDF.Server.Domain.Entities
 {
     public class ParameterValuesGroup 
     {
-        public ParameterValuesGroup()
-        {
-            ParameterValues = new List<ParameterValue>();
-        }
-        [Key]
         public long Id { get; set; }
 
         //Время фиксации
@@ -26,6 +21,6 @@ namespace VG.CDF.Server.Domain.Entities
 
         public int ProcessExternalId { get; set; }
 
-        public List<ParameterValue> ParameterValues { get; set; }
+        public ICollection<ParameterValue> ParameterValues { get; set; }
     }
 }

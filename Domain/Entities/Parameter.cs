@@ -9,16 +9,8 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(CompanyId),nameof(ExternalId), IsUnique = true)]
     public class Parameter: EntityBase
     {
-        public Parameter()
-        {
-            ParametersProcesses = new List<ParameterProcess>();
-            ParametersDescriptions = new List<ParameterDescription>();
-            ParametersReports = new List<ParameterReport>();
-        }
-        [Key]
         public override Guid Id { get; set; }
 
         public int ExternalId { get; set; }
@@ -26,16 +18,14 @@ namespace VG.CDF.Server.Domain.Entities
         public ParameterValueType ValueType { get; set; }
         
         public Guid CompanyId { get; set; }
-        [ForeignKey(nameof(CompanyId))]
-        public Company Company { get; set; }
+        public Company? Company { get; set; }
         
         public Guid ParameterGroupId { get; set; }
-        [ForeignKey(nameof(ParameterGroupId))]
         public ParameterGroup ParameterGroup { get; set; }
 
-        public List<ParameterProcess> ParametersProcesses { get; set; }
-        public List<ParameterDescription> ParametersDescriptions { get; set; }
+        public ICollection<ParameterProcess> ParametersProcesses { get; set; }
+        public ICollection<ParameterDescription> ParametersDescriptions { get; set; }
 
-        public List<ParameterReport> ParametersReports { get; set; }
+        public ICollection<ParameterReport> ParametersReports { get; set; }
     }
 }

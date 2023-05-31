@@ -10,9 +10,7 @@ namespace VG.CDF.Server.Domain.Entities
 {
     public class ProjectActionsInfo : EntityBase
     {
-        [Key]
-        public override Guid Id { get; set; }
-
+      
         public DateTime LastDateTimeConnection { get; set; }
 
         public DateTime LastDateTimeReportSending { get; set; }

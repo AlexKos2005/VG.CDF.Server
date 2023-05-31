@@ -9,22 +9,15 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(ParameterId), nameof(LanguageId), IsUnique = true)]
     public class ParameterDescription: EntityBase
     {
-        [Key]
-        public override Guid Id { get; set; }
-
         public string Description { get; set; }
 
         public Guid ParameterId { get; set; }
-
-        [ForeignKey(nameof(ParameterId))]
+        
         public Parameter Parameter { get; set; }
-
         public Guid LanguageId { get; set; }
-
-        [ForeignKey(nameof(LanguageId))]
+        
         public Language Language { get; set; }
     }
 }

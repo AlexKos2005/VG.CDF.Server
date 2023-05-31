@@ -8,17 +8,8 @@ using System.Text.Json.Serialization;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(ExternalId), IsUnique = true)]
     public class Project : EntityBase
     {
-        public Project()
-        {
-            UsersFactories = new List<UserProject>();
-            Processes = new List<Process>();
-            Folders = new List<Folder>();
-        }
-        [Key]
-        public override Guid Id { get; set; }
         public int ExternalId { get; set; }
 
         public int UtcOffset { get; set; }
@@ -26,14 +17,13 @@ namespace VG.CDF.Server.Domain.Entities
         public string Description { get; set; }
         
         public Guid CompanyId { get; set; }
+        
+        public Company? Company { get; set; }
+        public ICollection<UserProject> UserProjects { get; set; }
 
-        [ForeignKey(nameof(CompanyId))]
-        public Company Company { get; set; }
-        public List<UserProject> UsersFactories { get; set; }
+        public ICollection<Process> Processes { get; set; }
 
-        public List<Process> Processes { get; set; }
-
-        public List<Folder> Folders { get; set; }
+        public ICollection<Folder> Folders { get; set; }
         public ProjectActionsInfo? ProjectActionsInfo { get; set; }
         
         public ParameterReportTask ParameterReportTask { get; set; }

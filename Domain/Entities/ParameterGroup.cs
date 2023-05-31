@@ -8,20 +8,12 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(ExternalId), IsUnique = true)]
     public class ParameterGroup : EntityBase
     {
-        public ParameterGroup()
-        {
-            Parameters = new List<Parameter>();
-        }
-        [Key]
-        public override Guid Id { get; set; }
-
         public int ExternalId { get; set; }
 
         public string Name { get; set; }
 
-        public List<Parameter> Parameters { get; set; }
+        public ICollection<Parameter> Parameters { get; set; }
     }
 }

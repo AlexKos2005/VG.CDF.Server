@@ -10,7 +10,6 @@ namespace VG.CDF.Server.Domain.Entities
 { 
    public class ParameterValue 
     {
-        [Key]
         public long Id { get; set; }
 
         public int ParameterExternalId { get; set; }
@@ -30,8 +29,7 @@ namespace VG.CDF.Server.Domain.Entities
         public ParameterValueType ValueType { get; set; }
 
         public long TagsGroupId { get; set; }
-
-        [ForeignKey(nameof(TagsGroupId))]
+        
         public ParameterValuesGroup ParameterValuesGroup { get; set; }
     }
 }

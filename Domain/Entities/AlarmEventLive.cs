@@ -10,7 +10,6 @@ namespace VG.CDF.Server.Domain.Entities
 {
     public class AlarmEventLive
     {
-        [Key]
         public long Id { get; set; }
 
         public int ExternalId { get; set; }
