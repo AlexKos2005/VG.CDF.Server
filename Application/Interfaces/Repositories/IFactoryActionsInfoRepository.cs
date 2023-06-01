@@ -3,8 +3,8 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.Interfaces.Repositories
 {
-   public interface IFactoryActionsInfoRepository : ICrud<FactoryActionsInfo,int>
+   public interface IFactoryActionsInfoRepository : ICrud<ProjectActionsInfo,int>
     {
-        Task<FactoryActionsInfo?> GetByFactoryExternalId(int factoryExternalId);
+        Task<ProjectActionsInfo?> GetByFactoryExternalId(int factoryExternalId);
     }
 }

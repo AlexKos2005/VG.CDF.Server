@@ -7,26 +7,26 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.Interfaces.Repositories
 {
-    public interface IDeviceRepository : ICrud<Device,int>
+    public interface IDeviceRepository : ICrud<Process,int>
     {
-        Task<Device?> GetByExternalId(int deviceExternalId);
-        Task Save(List<Device> devices);
-        Task<List<Device>> GetAll();
+        Task<Process?> GetByExternalId(int deviceExternalId);
+        Task Save(List<Process> devices);
+        Task<List<Process>> GetAll();
 
-        Task<List<Device>> GetAll(int factoryId);
+        Task<List<Process>> GetAll(int factoryId);
 
-        Task<List<TagParamDevice>> GetTagParamsForDevice(int deviceId);
+        Task<List<ParameterProcess>> GetTagParamsForDevice(int deviceId);
 
-        Task AddTagParam(int deviceId, TagParam tagParam);
+        Task AddTagParam(int deviceId, Parameter parameter);
 
-        Task AddDescriptionById(int deviceId, DeviceDescription deviceDescription);
+        Task AddDescriptionById(int deviceId, ProcessDescription processDescription);
 
-        Task AddDescriptionByExternalId(int deviceExternalId, DeviceDescription deviceDescription);
+        Task AddDescriptionByExternalId(int deviceExternalId, ProcessDescription processDescription);
 
         Task DeleteDescription(int deviceId, int deviceDescriptionId);
 
-        Task<List<DeviceDescription>> GetDescriptions(int deviceId);
+        Task<List<ProcessDescription>> GetDescriptions(int deviceId);
 
-        Task<List<DeviceDescription>> GetDescriptionsByExtenalId(int externalId);
+        Task<List<ProcessDescription>> GetDescriptionsByExtenalId(int externalId);
     }
 }

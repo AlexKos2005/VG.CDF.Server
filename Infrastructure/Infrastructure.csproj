@@ -30,4 +30,9 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DbContext" />
+    <Folder Include="Mapping" />
+  </ItemGroup>
+
 </Project>

@@ -9,19 +9,11 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(Email), IsUnique = true)]
-    public class WorkEmail
+    public class WorkEmail : EntityBase
     {
-        public WorkEmail()
-        {
-            TagReportTasks = new List<TagReportTask>();
-        }
-        [Key]
-        public int Id { get; set; }
-        
         public string Email { get; set; }
         
-        public ICollection<TagReportTask> TagReportTasks { get; set; }
+        public ICollection<ParametersReportTaskWorkEmail> ParametersReportTaskWorkEmails { get; set; }
 
     }
 }

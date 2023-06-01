@@ -9,24 +9,14 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(ExternalId), IsUnique = true)]
-    public class AlarmEvent
+    public class AlarmEvent : EntityBase
     {
-        public AlarmEvent()
-        {
-            AlarmEventDescriptions = new List<AlarmEventDescription>();
-        }
-        [Key]
-        public int Id { get; set; }
-
         public int ExternalId { get; set; }
+        public Guid CompanyId { get; set; }
 
-        public int DeviceId { get; set; }
+        public Company? Company { get; set; }
 
-        [ForeignKey(nameof(DeviceId))]
-        public Device Device { get; set; }
-
-        public List<AlarmEventDescription> AlarmEventDescriptions { get; set; }
+        public ICollection<AlarmEventDescription> AlarmEventDescriptions { get; set; }
 
     }
 }

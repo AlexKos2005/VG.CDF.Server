@@ -9,22 +9,16 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(AlarmEventId), nameof(DescriptionsLanguageId), IsUnique = true)]
-    public class AlarmEventDescription
+    public class AlarmEventDescription: EntityBase
     {
-        [Key]
-        public int Id { get; set; }
-
         public string Description { get; set; }
 
-        public int AlarmEventId { get; set; }
-
-        [ForeignKey(nameof(AlarmEventId))]
+        public Guid AlarmEventId { get; set; }
+        
         public AlarmEvent AlarmEvent { get; set; }
 
-        public int DescriptionsLanguageId { get; set; }
-
-        [ForeignKey(nameof(DescriptionsLanguageId))]
-        public DescriptionsLanguage DescriptionsLanguage { get; set; }
+        public Guid LanguageId { get; set; }
+        
+        public Language Language { get; set; }
     }
 }

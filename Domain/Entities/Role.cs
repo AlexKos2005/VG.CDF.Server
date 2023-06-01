@@ -8,20 +8,12 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(RoleCode), IsUnique = true)]
-    public class Role
+    public class Role : EntityBase
     {
-        public Role()
-        {
-            Users = new List<User>();
-        }
-        [Key]
-        public int Id { get; set; }
-        
         public string RoleName { get; set; }
 
-        public RoleCodes RoleCode { get; set; }
+        public RoleCode RoleCode { get; set; }
 
-        public List<User> Users { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }

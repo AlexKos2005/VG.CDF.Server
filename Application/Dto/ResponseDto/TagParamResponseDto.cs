@@ -11,6 +11,6 @@ namespace VG.CDF.Server.Application.Dto.ResponseDto
 
         public int ParameterGroupId { get; set; }
 
-        public TagValueTypeCodes ValueType { get; set; }
+        public ParameterValueType ValueType { get; set; }
     }
 }

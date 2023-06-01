@@ -8,28 +8,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(Email), IsUnique = true)]
-    public class User
+    public class User : EntityBase
     {
-        public User()
-        {
-            UsersFactories = new List<UserFactory>();
-            Folders = new List<Folder>();
-        }
-        [Key]
-        public int Id { get; set; }
 
         public string Email { get; set; }
 
         public string PasswordHash { get; set; }
 
-        public int RoleId { get; set; }
-
-        [ForeignKey(nameof(RoleId))]
+        public Guid RoleId { get; set; }
+        
         public Role Role { get; set; }
 
-        public List<UserFactory> UsersFactories { get; set; }
-
-        public List<Folder> Folders { get; set; }
+        public ICollection<UserProject> UserProjects { get; set; }
+        
     }
 }

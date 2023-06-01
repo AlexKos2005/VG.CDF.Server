@@ -9,7 +9,7 @@ namespace VG.CDF.Server.Application.Dto.ResponseDto
 
         public string Description { get; set; }
 
-        public LanguageDescriptionCodes Language { get; set; }
+        public AcronymCode Language { get; set; }
 
     }
 }

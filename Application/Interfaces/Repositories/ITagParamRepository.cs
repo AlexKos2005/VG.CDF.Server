@@ -4,19 +4,19 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.Interfaces.Repositories
 {
-    public interface ITagParamRepository : ICrud<TagParam,int>
+    public interface ITagParamRepository : ICrud<Parameter,int>
     {
-        Task<TagParam?> GetByExternalId(int tagParamExternalId);
+        Task<Parameter?> GetByExternalId(int tagParamExternalId);
 
-        Task Save(List<TagParam> tags);
-        Task<List<TagParam>> GetAll();
+        Task Save(List<Parameter> tags);
+        Task<List<Parameter>> GetAll();
 
-        Task AddDescriptionById(int tagParamId, TagParamDescription tagDescription);
+        Task AddDescriptionById(int tagParamId, ParameterDescription tagDescription);
 
-        Task AddDescriptionByExternalId(int tagParamExternalId, TagParamDescription tagDescription);
+        Task AddDescriptionByExternalId(int tagParamExternalId, ParameterDescription tagDescription);
 
-        Task<List<TagParamDescription>> GetDescriptions(int tagId);
+        Task<List<ParameterDescription>> GetDescriptions(int tagId);
 
-        Task<List<TagParamDescription>> GetDescriptionsByExtenalId(int externalId);
+        Task<List<ParameterDescription>> GetDescriptionsByExtenalId(int externalId);
     }
 }

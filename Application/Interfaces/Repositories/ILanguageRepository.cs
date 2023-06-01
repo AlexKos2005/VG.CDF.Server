@@ -4,15 +4,15 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.Interfaces.Repositories
 {
-    public interface ILanguageRepository : ICrud<DescriptionsLanguage,int>
+    public interface ILanguageRepository : ICrud<Language,int>
     {
-        Task<List<DescriptionsLanguage>> GetAll();
+        Task<List<Language>> GetAll();
 
-        Task<DescriptionsLanguage?> GetByExternalId(int languageExternalId);
-        Task AddTagDescription(int languageId,TagParamDescription tagDescription);
+        Task<Language?> GetByExternalId(int languageExternalId);
+        Task AddTagDescription(int languageId,ParameterDescription tagDescription);
         Task DeleteTagDescription(int languageId, int tagDescriptionId);
 
-        Task AddDeviceDescription(int languageId, DeviceDescription deviceDescription);
+        Task AddDeviceDescription(int languageId, ProcessDescription processDescription);
         Task DeleteDeviceDescription(int languageId, int deviceDescriptionId);
 
         Task AddAlarmEventDescription(int languageId, AlarmEventDescription alarmEventDescription);

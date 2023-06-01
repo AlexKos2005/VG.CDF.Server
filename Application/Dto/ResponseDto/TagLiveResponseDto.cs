@@ -23,6 +23,6 @@ namespace VG.CDF.Server.Application.Dto.ResponseDto
 
         public string Value { get; set; }
 
-        public TagValueTypeCodes ValueType { get; set; }
+        public ParameterValueType ValueType { get; set; }
     }
 }

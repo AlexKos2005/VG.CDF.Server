@@ -10,7 +10,6 @@ namespace VG.CDF.Server.Domain.Entities
 {
     public class AlarmEventLive
     {
-        [Key]
         public long Id { get; set; }
 
         public int ExternalId { get; set; }
@@ -20,9 +19,9 @@ namespace VG.CDF.Server.Domain.Entities
 
         //Время фиксации в UTC
         public DateTimeOffset DateTimeOffset { get; set; }
-
-        public int FactoryExternalId { get; set; }
-
-        public int DeviceExternalId { get; set; }
+        
+        public Guid ProcessId { get; set; }
+        public Process Process { get; set; }
+       
     }
 }
