@@ -53,13 +53,7 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(_dbConnection.ConnectionString);
-            //optionsBuilder.UseSqlServer(@"Data Source = 31.31.198.169; Database = u1135159_BreadCommWeb; Integrated Security = False; User ID = u1135159_brcomm; Password = Qwerty12345");
-            //optionsBuilder.UseSqlServer(@"Data Source = 37.140.192.55; Database = u1135159_BreadCommWeb; Integrated Security = False; User ID = u1135159_brcomm; Password = Qwerty12345");
-            //optionsBuilder.UseSqlServer(@"Data Source = WIN-5ADDIEFMN79\SQLEXPRESS; Initial Catalog = Ent5; Integrated Security = True");
             optionsBuilder.UseNpgsql(_dbConnection.ConnectionString);
-
-            //@"Data Source = WIN-5ADDIEFMN79\SQLEXPRESS; Initial Catalog = Ent5; Integrated Security = True"
         }
 
         public SqlDataContext(IDbConnectionConfig dbConnection)

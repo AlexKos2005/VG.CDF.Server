@@ -8,6 +8,7 @@ using VG.CDF.Server.Application.Interfaces.Services;
 using VG.CDF.Server.Application.TagReportTask.Commands;
 using VG.CDF.Server.Infrastructure.DataContext;
 using VG.CDF.Server.Infrastructure.Services;
+using VG.CDF.Server.WebApi.DataBaseContext;
 
 namespace VG.CDF.Server.WebApi.Controllers
 {
