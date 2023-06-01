@@ -42,7 +42,14 @@ public class AddWorkEmailToParameterReportTaskCommand : EntityBaseDto,IRequest<W
             var parameterReportTask = await _dataContext.Set<ParameterReportTask>()
                 .Where(c => c.Id == request.ParameterReportTaskId).FirstAsync();
             
-            parameterReportTask.WorkEmails.Add(workEmail);
+            await _dataContext.Set<ParametersReportTaskWorkEmail>().AddAsync(
+            
+                new ParametersReportTaskWorkEmail
+                {
+                    ParameterReportTask = parameterReportTask,
+                    WorkEmail = workEmail
+                }
+            );
 
             await _dataContext.SaveChangesAsync(cancellationToken);
 

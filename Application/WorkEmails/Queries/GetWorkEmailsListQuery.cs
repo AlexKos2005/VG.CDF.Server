@@ -35,7 +35,7 @@ public class GetWorkEmailsListQuery: IRequest<IEnumerable<WorkEmailDto>>
             if (request.Id != null)
                 workEmailQuery = workEmailQuery.Where(c => c.Id == request.Id);
             if (request.ParameterReportTaskId != null)
-                workEmailQuery = workEmailQuery.Where(c => c.ParametersReportTasks.Any(c => c.Id == request.ParameterReportTaskId));
+                workEmailQuery = workEmailQuery.Where(c => c.ParametersReportTaskWorkEmails.Any(c => c.Id == request.ParameterReportTaskId));
             if (request.Email != null)
                 workEmailQuery = workEmailQuery.Where(c => c.Email == request.Email);
 
