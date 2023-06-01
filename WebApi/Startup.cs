@@ -112,7 +112,8 @@ namespace VG.CDF.Server.WebApi
         public void Configure(
             IApplicationBuilder app, 
             IWebHostEnvironment env,
-            DbConnectionConfig dbConnectionConfig)
+            DbConnectionConfig dbConnectionConfig,
+            ISqlDataContext sqlDataContext)
         {
             if (env.IsDevelopment())
             {
