@@ -9,22 +9,18 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(ReportSchemaId), nameof(TagParamId), IsUnique = true)]
     public class ParameterReport
     {
-        [Key]
         public int Id { get; set; }
 
         public int NumberInQueue { get; set; }
 
         public int ReportSchemaId { get; set; }
-
-        [ForeignKey(nameof(ReportSchemaId))]
+        
         public ReportSchema ReportSchema { get; set; }
 
         public int TagParamId { get; set; }
-
-        [ForeignKey(nameof(TagParamId))]
+        
         public Parameter Parameter { get; set; }
     }
 }

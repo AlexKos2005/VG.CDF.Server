@@ -23,10 +23,9 @@ using System.IO;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using VG.CDF.Server.Application.Interfaces.Configurations;
-using VG.CDF.Server.Application.TagReportTask;
 using VG.CDF.Server.Infrastructure.Configurations;
-using VG.CDF.Server.Infrastructure.Mapping;
 using VG.CDF.Server.WebApi.Controllers;
+using VG.CDF.Server.WebApi.DataBaseContext;
 
 namespace VG.CDF.Server.WebApi
 {
@@ -48,8 +47,8 @@ namespace VG.CDF.Server.WebApi
             mapperConfig = new MapperConfiguration(cfg => cfg.
                 AddMaps(new Assembly[]
                 {
-                    Assembly.GetAssembly(typeof(SourceMappingProfiler)),
-                    Assembly.GetAssembly(typeof(TagReportTaskMappingProfiler))
+                    //Assembly.GetAssembly(typeof(SourceMappingProfiler)),
+                    //Assembly.GetAssembly(typeof(TagReportTaskMappingProfiler))
                 }));
             services.AddSingleton(s => mapperConfig.CreateMapper());
             #endregion
@@ -59,6 +58,12 @@ namespace VG.CDF.Server.WebApi
             services.RegistrateServices(Configuration);
             services.RegistrateValidators();
             
+            var connectionString = Configuration["DbConnectionConfig:ConnectionString"];
+            services.AddDbContext<SqlDataContext>(
+                opts => opts.UseNpgsql("Host=localhost;Port=5432;Database=volgor_asud;Username=postgres;Password=sa;")
+            );
+
+            //services.AddDbContext<SqlDataContext>();
             services.AddScoped(sp =>
             new HttpClient()
             {

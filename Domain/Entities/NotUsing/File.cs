@@ -7,10 +7,8 @@ using System.Text;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    [Index(nameof(FolderId), nameof(FullFileName), IsUnique = true)]
     public class File
     {
-        [Key]
         public int Id { get; set; }
         public string FullFileName { get; set; }
 
@@ -22,8 +20,7 @@ namespace VG.CDF.Server.Domain.Entities
         public byte[] FileBytes { get; set; }
 
         public int FolderId { get; set; }
-
-        [ForeignKey(nameof(FolderId))]
+        
         public Folder Folder { get; set; }
 
     }

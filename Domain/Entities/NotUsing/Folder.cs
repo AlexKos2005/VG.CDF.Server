@@ -12,18 +12,15 @@ namespace VG.CDF.Server.Domain.Entities
         {
             Files = new List<File>();
         }
-        [Key]
         public int Id { get; set; }
         public string Name { get; set; }
 
         public int FactoryId { get; set; }
-
-        [ForeignKey(nameof(FactoryId))]
+        
         public Project Project { get; set; }
 
         public int UserId { get; set; }
-
-        [ForeignKey(nameof(UserId))]
+        
         public User User { get; set; }
 
         public List<File> Files { get; set; }

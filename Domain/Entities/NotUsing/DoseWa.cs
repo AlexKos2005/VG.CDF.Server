@@ -9,7 +9,6 @@ namespace VG.CDF.Server.Domain.Entities
 {
    public class DoseWa
     {
-        [Key]
         public int Id { get; set; }
 
         public int FactoryExternalId { get; set; }

@@ -12,7 +12,7 @@ namespace VG.CDF.Server.Domain.Entities
     public class AlarmEvent : EntityBase
     {
         public int ExternalId { get; set; }
-        public int CompanyId { get; set; }
+        public Guid CompanyId { get; set; }
 
         public Company? Company { get; set; }
 

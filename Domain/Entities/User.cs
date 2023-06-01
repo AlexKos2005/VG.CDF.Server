@@ -20,7 +20,6 @@ namespace VG.CDF.Server.Domain.Entities
         public Role Role { get; set; }
 
         public ICollection<UserProject> UserProjects { get; set; }
-
-        public ICollection<Folder> Folders { get; set; }
+        
     }
 }

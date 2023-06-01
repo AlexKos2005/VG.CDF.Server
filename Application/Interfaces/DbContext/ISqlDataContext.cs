@@ -13,15 +13,12 @@ namespace VG.CDF.Server.Application.Interfaces
     {
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectActionsInfo> ProjectActionsInfos { get; set; }
-        public DbSet<DoseWa> DosesWa { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserProject> UsersProjects { get; set; }
 
         public DbSet<Role> Roles { get; set; }
-        public DbSet<Folder> Folders { get; set; }
-        public DbSet<File> Files { get; set; }
 
-       
+
         public DbSet<ParameterProcess> ParametersProcesses { get; set; }
 
         public DbSet<Process> Processess { get; set; }
@@ -45,10 +42,7 @@ namespace VG.CDF.Server.Application.Interfaces
         public DbSet<ProcessDescription> ProcessDescriptions { get; set; }
 
         public DbSet<Language> Languages { get; set; }
-
-        public DbSet<ReportSchema> ReportSchemas { get; set; }
-
-        public DbSet<ParameterReport> ParameterReports { get; set; }
+        
         
         public DbSet<ParameterReportTask> ParameterReportTasks { get; set; }
         

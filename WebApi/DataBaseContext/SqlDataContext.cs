@@ -10,19 +10,15 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
 {
     public class SqlDataContext : DbContext, ISqlDataContext
     {
-        private readonly IDbConnectionConfig _dbConnection;
 
         public DbSet<Project> Projects { get; set; } = null!;
         public DbSet<ProjectActionsInfo> ProjectActionsInfos { get; set; }= null!;
-        public DbSet<DoseWa> DosesWa { get; set; }= null!;
         public DbSet<User> Users { get; set; }= null!;
         public DbSet<UserProject> UsersProjects { get; set; }= null!;
 
         public DbSet<Role> Roles { get; set; }= null!;
-        public DbSet<Folder> Folders { get; set; }= null!;
-        public DbSet<File> Files { get; set; }= null!;
 
-       
+
         public DbSet<ParameterProcess> ParametersProcesses { get; set; }= null!;
 
         public DbSet<Process> Processess { get; set; }= null!;
@@ -45,20 +41,19 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
         public DbSet<ProcessDescription> ProcessDescriptions { get; set; }= null!;
 
         public DbSet<Language> Languages { get; set; }= null!;
-        public DbSet<ReportSchema> ReportSchemas { get; set; }= null!;
-        public DbSet<ParameterReport> ParameterReports { get; set; }= null!;
         public DbSet<ParameterReportTask> ParameterReportTasks { get; set; }= null!;
         public DbSet<WorkEmail> WorkEmails { get; set; }= null!;
         
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(_dbConnection.ConnectionString);
-        }
+            //optionsBuilder.UseNpgsql(_dbConnection.ConnectionString);
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=volgor_asud;Username=postgres;Password=sa;");
+        }*/
 
-        public SqlDataContext(IDbConnectionConfig dbConnection)
+        public SqlDataContext(DbContextOptions<SqlDataContext> options)
+        :base(options)
         {
-            _dbConnection = dbConnection;
             Database.EnsureCreated();
         }
 
@@ -224,15 +219,6 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasForeignKey(v => v.WorkEmailId)
                 .OnDelete(DeleteBehavior.SetNull);
             
-            
-//-------------------------------------------------------------------------------------
-
-
-            
-            
-            modelBuilder.Entity<ParameterReportTask>()
-                .Property(s => s.Status)
-                .HasConversion<int>();
         }
 
 

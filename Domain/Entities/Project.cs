@@ -22,8 +22,7 @@ namespace VG.CDF.Server.Domain.Entities
         public ICollection<UserProject> UserProjects { get; set; }
 
         public ICollection<Process> Processes { get; set; }
-
-        public ICollection<Folder> Folders { get; set; }
+        
         public ProjectActionsInfo? ProjectActionsInfo { get; set; }
         
         public ParameterReportTask ParameterReportTask { get; set; }

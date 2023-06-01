@@ -19,7 +19,7 @@ public class GetAlarmEventsListQuery: IRequest<IEnumerable<AlarmEventDto>>
 
     public int? ExternalId { get; set; } = null;
 
-    public int? CompanyId { get; set; } = null;
+    public Guid? CompanyId { get; set; } = null;
     
     public class GetAlarmEventsListQueryHandler : IRequestHandler<GetAlarmEventsListQuery,IEnumerable<AlarmEventDto>>
     {

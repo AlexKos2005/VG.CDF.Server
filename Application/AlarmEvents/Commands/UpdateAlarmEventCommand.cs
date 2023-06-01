@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using AutoMapper;
 using FluentValidation;
 using MediatR;
@@ -14,7 +15,7 @@ public class UpdateAlarmEventCommand : EntityBaseDto,IRequest<AlarmEventDto>
 {
     public int ExternalId { get; set; }
 
-    public int CompanyId { get; set; }
+    public Guid CompanyId { get; set; }
 
     public class UpdateAlarmEventCommandHandler : UpdateCommandBase<UpdateAlarmEventCommand,AlarmEventDto, Domain.Entities.AlarmEvent>
     {

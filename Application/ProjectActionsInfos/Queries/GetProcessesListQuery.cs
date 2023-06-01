@@ -27,7 +27,7 @@ public class GetProjectActionsInfoListQuery: IRequest<IEnumerable<ProjectActions
 
     public int? AlarmMessageCounter { get; set; } = null;
 
-    public int? ProjectId { get; set; } = null;
+    public Guid? ProjectId { get; set; } = null;
 
     
     public class GetProjectActionsInfosListQueryHandler : IRequestHandler<GetProjectActionsInfoListQuery,IEnumerable<ProjectActionsInfoDto>>

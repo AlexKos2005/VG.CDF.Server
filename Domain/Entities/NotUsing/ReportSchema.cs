@@ -14,7 +14,6 @@ namespace VG.CDF.Server.Domain.Entities
         {
             TagReportsQueue = new List<ParameterReport>();
         }
-        [Key]
         public int Id { get; set; }
 
         public int UserId { get; set; }
