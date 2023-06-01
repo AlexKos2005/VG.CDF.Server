@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u6QdsrTlRRgVQPHIDudstBps+XLPSWaKXbO9pDOOSD/V1Rv1ByAku3Cr/m/gHV8SgC96hYCMrQf2eu6U1vFRhg==",
+  "dgSpecHash": "yXCp4VODlnqQR/Nw9za+BODXvBSXlmAnpQM2etAhCJMH5z3nhWbNXWsD15kPb9YmewWhj/Jj587W9rR5UK50hg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Алексей\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",

@@ -8893,11 +8893,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\WebApi\\WebApi.csproj",
       "projectName": "VG.CDF.Server.WebApi",
-      "projectPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\WebApi\\WebApi.csproj",
+      "projectPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\Алексей\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\WebApi\\obj\\",
+      "outputPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -8924,11 +8924,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Application\\Application.csproj"
+            "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\Application\\Application.csproj"
             },
-            "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

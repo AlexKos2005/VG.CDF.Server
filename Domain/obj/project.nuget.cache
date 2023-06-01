@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z3Y+U8mcTje2lmwuBwgWbzLSbBeE1RJRqrsa276TcTpezy4ouCbemNVjzgH2ixhyXrwXloOP9iy1CQQyFIFv8g==",
+  "dgSpecHash": "XKq9GIRupEo9uGobo/6VL2/cTGXnY4Bk2T4dnlgfOlAgjIIVAxL3EYaFrjQRzDLYwUJt4ccv+KKDL5F/Fn/uJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",

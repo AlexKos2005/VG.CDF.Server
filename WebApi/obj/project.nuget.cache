@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ng6kurFEFdHvCal+M0+6v65gAGNGQeZg5CBbZHCjUufPfRLW2tkzV0LbQ0ceVInEyffO13gQ+SCnO/OcDc5/jw==",
+  "dgSpecHash": "mvjlFsJVHXvP13cni5fm83GdqSHCjKP1ia0gPyusL15ewxn3MiBkXuZNwaBJ5wXzMHB3g5dHvxuavmgAqaSmDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Алексей\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
