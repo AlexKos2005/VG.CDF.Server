@@ -22,6 +22,7 @@ using AutoMapper;
 using System.IO;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Application.Interfaces.Configurations;
 using VG.CDF.Server.Infrastructure.Configurations;
 using VG.CDF.Server.WebApi.Controllers;
@@ -60,10 +61,10 @@ namespace VG.CDF.Server.WebApi
             
             var connectionString = Configuration["DbConnectionConfig:ConnectionString"];
             services.AddDbContext<SqlDataContext>(
-                opts => opts.UseNpgsql("Host=localhost;Port=5432;Database=volgor_asud;Username=postgres;Password=sa;")
+                opts => opts.UseNpgsql(connectionString)
             );
 
-            //services.AddDbContext<SqlDataContext>();
+            services.AddScoped<ISqlDataContext, SqlDataContext>();
             services.AddScoped(sp =>
             new HttpClient()
             {
