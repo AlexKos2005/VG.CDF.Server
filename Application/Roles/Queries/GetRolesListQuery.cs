@@ -18,7 +18,7 @@ public class GetRolesListQuery: IRequest<IEnumerable<RoleDto>>
     public Guid? Id { get; set; } = null;
     public string? RoleName { get; set; } = null;
 
-    public RoleCodes? RoleCode { get; set; } = null;
+    public RoleCode? RoleCode { get; set; } = null;
     
     public class GetProjectsListQueryHandler : IRequestHandler<GetRolesListQuery,IEnumerable<RoleDto>>
     {

@@ -16,6 +16,6 @@ namespace VG.CDF.Server.Domain.Entities
         public ICollection<ParameterDescription> ParameterDescriptions { get; set; }
         public ICollection<ProcessDescription> ProcessDescriptions { get; set; }
 
-        public ICollection<AlarmEventDescription> AlarmEventDescription { get; set; }
+        public ICollection<AlarmEventDescription> AlarmEventDescriptions { get; set; }
     }
 }

@@ -11,4 +11,6 @@ public class Company: EntityBase
     public virtual ICollection<Project> Projects { get; set; }
     
     public virtual ICollection<Parameter> Parameters { get; set; }
+    
+    public virtual ICollection<AlarmEvent> AlarmEvents { get; set; }
 }

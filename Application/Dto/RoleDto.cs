@@ -7,5 +7,5 @@ public class RoleDto : EntityBaseDto
 {
     public string RoleName { get; set; } = string.Empty;
 
-    public RoleCodes RoleCode { get; set; }
+    public RoleCode RoleCode { get; set; }
 }

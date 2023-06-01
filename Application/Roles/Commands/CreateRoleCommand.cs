@@ -15,7 +15,7 @@ public class CreateRoleCommand : IRequest<RoleDto>
 {
     public string RoleName { get; set; } = string.Empty;
 
-    public RoleCodes RoleCode { get; set; }
+    public RoleCode RoleCode { get; set; }
 
     public class CreateProjectCommandHandler : CreateCommandBase<CreateRoleCommand,RoleDto, Role>
     {

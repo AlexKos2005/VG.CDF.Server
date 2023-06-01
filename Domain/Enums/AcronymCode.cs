@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace VG.CDF.Server.Domain.Entities
 {
-    public enum RoleCodes
+    public enum AcronymCode
     {
-        None = 0,
-        User = 100,
-        Ingineer = 200,
-        Admin = 300,
+        Eng = 1,
+        Rus = 2,
+        Ukr = 3
+
     }
 }

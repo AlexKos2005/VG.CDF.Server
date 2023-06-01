@@ -12,7 +12,7 @@ namespace VG.CDF.Server.Domain.Entities
     {
         public string RoleName { get; set; }
 
-        public RoleCodes RoleCode { get; set; }
+        public RoleCode RoleCode { get; set; }
 
         public ICollection<User> Users { get; set; }
     }

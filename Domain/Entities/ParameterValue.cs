@@ -20,16 +20,11 @@ namespace VG.CDF.Server.Domain.Entities
         //Время фиксации в UTC
         public DateTimeOffset DateTimeOffset { get; set; }
 
-        public Guid ProjectId { get; set; }
-
-        public Guid ProcessId { get; set; }
-
         public string Value { get; set; }
 
         public ParameterValueType ValueType { get; set; }
 
-        public long TagsGroupId { get; set; }
-        
+        public Guid ParameterValuesGroupId { get; set; }
         public ParameterValuesGroup ParameterValuesGroup { get; set; }
     }
 }

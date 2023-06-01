@@ -17,9 +17,8 @@ namespace VG.CDF.Server.Domain.Entities
         //Время фиксации по UTC
         public DateTimeOffset DateTimeOffset { get; set; }
 
-        public int ProjectExternalId { get; set; }
-
-        public int ProcessExternalId { get; set; }
+        public Guid ProcessId { get; set; }
+        public Process Process { get; set; }
 
         public ICollection<ParameterValue> ParameterValues { get; set; }
     }

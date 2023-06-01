@@ -16,11 +16,12 @@ namespace VG.CDF.Server.Domain.Entities
         public string DeviceIp { get; set; }
         public Guid ProjectId { get; set; }
         public Project Project { get; set; }
-
+        
         public ICollection<ParameterProcess> ParametersProcesses { get; set; }
 
-        public ICollection<AlarmEvent> AlarmEvents { get; set; }
+        public ICollection<AlarmEventLive> AlarmEventLives { get; set; }
 
+        public ICollection<ParameterValuesGroup> ParameterValuesGroups { get; set; }
         public ICollection<ProcessDescription> ProcessDescriptions { get; set; }
 
     }

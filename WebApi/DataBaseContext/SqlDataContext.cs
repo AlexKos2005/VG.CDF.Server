@@ -85,11 +85,42 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasForeignKey(v => v.ProjectId)
                 .OnDelete(DeleteBehavior.SetNull);
             
+            modelBuilder.Entity<ProcessDescription>()
+                .HasOne(sc => sc.Process)
+                .WithMany(s => s.ProcessDescriptions)
+                .HasForeignKey(v => v.ProcessId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<ProcessDescription>()
+                .HasOne(sc => sc.Language)
+                .WithMany(s => s.ProcessDescriptions)
+                .HasForeignKey(v => v.LanguageId)
+                .OnDelete(DeleteBehavior.SetNull);
+     
             modelBuilder.Entity<Parameter>()
                 .HasOne(sc => sc.Company)
                 .WithMany(s => s.Parameters)
                 .HasForeignKey(v => v.CompanyId)
                 .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<Parameter>()
+                .HasOne(sc => sc.ParameterGroup)
+                .WithMany(s => s.Parameters)
+                .HasForeignKey(v => v.ParameterGroupId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<ParameterDescription>()
+                .HasOne(sc => sc.Parameter)
+                .WithMany(s => s.ParametersDescriptions)
+                .HasForeignKey(v => v.ParameterId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<ParameterDescription>()
+                .HasOne(sc => sc.Language)
+                .WithMany(s => s.ParameterDescriptions)
+                .HasForeignKey(v => v.LanguageId)
+                .OnDelete(DeleteBehavior.SetNull);
+
             
             modelBuilder.Entity<ParameterProcess>()
                 .HasOne(sc => sc.Parameter)
@@ -101,6 +132,42 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasOne(sc => sc.Process)
                 .WithMany(s => s.ParametersProcesses)
                 .HasForeignKey(v => v.ProcessId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<ParameterValuesGroup>()
+                .HasOne(sc => sc.Process)
+                .WithMany(s => s.ParameterValuesGroups)
+                .HasForeignKey(v => v.ProcessId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<ParameterValue>()
+                .HasOne(sc => sc.ParameterValuesGroup)
+                .WithMany(s => s.ParameterValues)
+                .HasForeignKey(v => v.ParameterValuesGroupId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<AlarmEvent>()
+                .HasOne(sc => sc.Company)
+                .WithMany(s => s.AlarmEvents)
+                .HasForeignKey(v => v.CompanyId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<AlarmEventLive>()
+                .HasOne(sc => sc.Process)
+                .WithMany(s => s.AlarmEventLives)
+                .HasForeignKey(v => v.ProcessId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<AlarmEventDescription>()
+                .HasOne(sc => sc.AlarmEvent)
+                .WithMany(s => s.AlarmEventDescriptions)
+                .HasForeignKey(v => v.AlarmEventId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
+            modelBuilder.Entity<AlarmEventDescription>()
+                .HasOne(sc => sc.Language)
+                .WithMany(s => s.AlarmEventDescriptions)
+                .HasForeignKey(v => v.LanguageId)
                 .OnDelete(DeleteBehavior.SetNull);
             
             modelBuilder.Entity<ProjectActionsInfo>()
@@ -135,7 +202,7 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasMaxLength(50)
                 .HasConversion(
                     v => v.ToString(),
-                    v => (RoleCodes)Enum.Parse(typeof(RoleCodes),v))
+                    v => (RoleCode)Enum.Parse(typeof(RoleCode),v))
                 .IsUnicode(false);
 
             modelBuilder.Entity<ParameterReportTask>()
@@ -162,7 +229,8 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .WithMany(s => s.ParametersReportTaskWorkEmails)
                 .HasForeignKey(v => v.WorkEmailId)
                 .OnDelete(DeleteBehavior.SetNull);
-
+            
+            
 //-------------------------------------------------------------------------------------
 
 

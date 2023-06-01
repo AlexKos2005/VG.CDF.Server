@@ -10,6 +10,6 @@ namespace VG.CDF.Server.Application.Dto.ResponseDto
         
         public string RoleName { get; set; }
 
-        public RoleCodes RoleCode { get; set; }
+        public RoleCode RoleCode { get; set; }
     }
 }
