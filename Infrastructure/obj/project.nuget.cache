@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U9jCZDtbTswmvyIjsgF7vI47Y9EkDdNmqUA9T3WMiNkOZy+YjSf6p2RKbpGHzJZUD1Roo7l1mNJwxEuDXFkP0g==",
+  "dgSpecHash": "fB/QBZzEVHm3vVJfIv6cEX6VsGhFi1NmKGzIZNqbFEURdAOK/yrdGMxLyx4jb8/RY88OKMDvaOs+uopWzfhxzw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\New\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Алексей\\Documents\\Проекты\\Volgor\\Projects\\VG.CDF.Server\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Алексей\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Алексей\\.nuget\\packages\\epplus\\5.8.2\\epplus.5.8.2.nupkg.sha512",

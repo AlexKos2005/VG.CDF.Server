@@ -1,6 +1,11 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System;
+using System.Reflection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
+using VG.CDF.Server.Application.Companies.Commands;
+using VG.CDF.Server.Application.Interfaces;
+using VG.CDF.Server.WebApi.DataBaseContext;
 
 
 namespace VG.CDF.Server.WebApi.Controllers
@@ -9,8 +14,8 @@ namespace VG.CDF.Server.WebApi.Controllers
     {
         public static void RegistrateServices(this IServiceCollection services, IConfiguration configuration)
         {
-            /*services.AddTransient<ISqlDataContext, SqlDataContext>();
-            services.AddTransient<IJwtService<UserAuthenticationResponseDto>, JwtService>();
+            services.AddTransient<ISqlDataContext, SqlDataContext>();
+            /*services.AddTransient<IJwtService<UserAuthenticationResponseDto>, JwtService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IFactoryService, FactoryService>();
             services.AddTransient<ITagsLiveService, TagsLiveService>();
@@ -38,7 +43,13 @@ namespace VG.CDF.Server.WebApi.Controllers
 
         public static void RegistrateValidators(this IServiceCollection services)
         {
-            //services.AddValidatorsFromAssemblyContaining(typeof(CreateTagReportTaskCommand),ServiceLifetime.Transient);
+            services.AddValidatorsFromAssemblyContaining(typeof(CreateCompanyCommand),ServiceLifetime.Transient);
+        }
+        
+        public static void RegistrateAutomapper(this IServiceCollection services)
+        {
+            var tt = AppDomain.CurrentDomain.GetAssemblies();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
     }

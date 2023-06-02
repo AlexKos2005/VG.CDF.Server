@@ -32,6 +32,7 @@ where TEntity : EntityBase
         await _validator.ValidateAndThrowAsync(request, cancellationToken);
 
         var entity = await _dataContext.Set<TEntity>()
+            .AsNoTracking()
             .Where(c => c.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
 
         if (entity == null)

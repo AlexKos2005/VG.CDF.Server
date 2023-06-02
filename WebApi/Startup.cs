@@ -22,6 +22,7 @@ using AutoMapper;
 using System.IO;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using VG.CDF.Server.Application.Companies.Commands;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Application.Interfaces.Configurations;
 using VG.CDF.Server.Infrastructure.Configurations;
@@ -58,13 +59,18 @@ namespace VG.CDF.Server.WebApi
             services.AddSingleton(Configuration.GetSection("JwtConfiguration").Get<JwtConfiguration>());
             services.RegistrateServices(Configuration);
             services.RegistrateValidators();
+            services.AddMediatR(c=>
+                c.RegisterServicesFromAssembly(Assembly.GetAssembly(typeof(CreateCompanyCommand))));
+            //services.RegistrateAutomapper();
+            
+            mapperConfig = new MapperConfiguration(cfg => cfg.AddMaps("VG.CDF.Server.Application"));
+            services.AddSingleton(s => mapperConfig.CreateMapper());
             
             var connectionString = Configuration["DbConnectionConfig:ConnectionString"];
             services.AddDbContext<SqlDataContext>(
                 opts => opts.UseNpgsql(connectionString)
             );
-
-            services.AddScoped<ISqlDataContext, SqlDataContext>();
+            
             services.AddScoped(sp =>
             new HttpClient()
             {
@@ -96,8 +102,7 @@ namespace VG.CDF.Server.WebApi
             {
                 options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyHeader());
             });
-
-            services.AddAutoMapper(typeof(Startup).Assembly);
+            
             services
                .AddProblemDetails(ConfigureProblemDetails)
                .AddSwaggerGen(ConfigureSwaggerGenOptions)

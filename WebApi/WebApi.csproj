@@ -67,4 +67,8 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\Authentication" />
+  </ItemGroup>
+
 </Project>

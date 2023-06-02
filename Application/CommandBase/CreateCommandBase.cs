@@ -29,6 +29,7 @@ where TEntity : EntityBase
         if(_validator != null)
         await _validator.ValidateAndThrowAsync(request, cancellationToken);
 
+        var tt = typeof(TEntity);
         var entity = _mapper.Map<TEntity>(request);
 
         await _dataContext.Set<TEntity>().AddAsync(entity,cancellationToken);
