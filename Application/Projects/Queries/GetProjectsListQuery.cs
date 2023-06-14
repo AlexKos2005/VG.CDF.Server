@@ -13,7 +13,7 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.Projects.Queries;
 
-public class GetProjectListQuery: IRequest<IEnumerable<ProjectDto>>
+public class GetProjectsListQuery: IRequest<IEnumerable<ProjectDto>>
 {
     public Guid? Id { get; set; } = null;
     public int? ExternalId { get; set; } = null;
@@ -24,7 +24,7 @@ public class GetProjectListQuery: IRequest<IEnumerable<ProjectDto>>
         
     public Guid? CompanyId { get; set; } = null;
     
-    public class GetProjectsListQueryHandler : IRequestHandler<GetProjectListQuery,IEnumerable<ProjectDto>>
+    public class GetProjectsListQueryHandler : IRequestHandler<GetProjectsListQuery,IEnumerable<ProjectDto>>
     {
         private readonly ISqlDataContext _dataContext;
         private readonly IMapper _mapper;
@@ -34,7 +34,7 @@ public class GetProjectListQuery: IRequest<IEnumerable<ProjectDto>>
             _dataContext = dataContext;
             _mapper = mapper;
         }
-        public async Task<IEnumerable<ProjectDto>> Handle(GetProjectListQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<ProjectDto>> Handle(GetProjectsListQuery request, CancellationToken cancellationToken)
         {
             IQueryable<Project> projectQuery = _dataContext.Set<Project>();
 

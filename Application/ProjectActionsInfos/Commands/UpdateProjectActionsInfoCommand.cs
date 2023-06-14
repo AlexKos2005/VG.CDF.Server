@@ -12,7 +12,7 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.ProjectActionsInfos.Commands;
 
-public class UpdateProjectActionsInfoCommand : EntityBaseDto,IRequest<ProjectDto>
+public class UpdateProjectActionsInfoCommand : EntityBaseDto,IRequest<ProjectActionsInfoDto>
 {
     public DateTime LastDateTimeConnection { get; set; }
 
@@ -26,7 +26,7 @@ public class UpdateProjectActionsInfoCommand : EntityBaseDto,IRequest<ProjectDto
 
     public Guid ProjectId { get; set; }
 
-    public class UpdateProjectActionsInfoCommandHandler : UpdateCommandBase<UpdateProjectActionsInfoCommand,ProjectDto, Project>
+    public class UpdateProjectActionsInfoCommandHandler : UpdateCommandBase<UpdateProjectActionsInfoCommand,ProjectActionsInfoDto, ProjectActionsInfo>
     {
         public UpdateProjectActionsInfoCommandHandler(ISqlDataContext dataContext, IMapper mapper, IValidator<UpdateProjectActionsInfoCommand>? validator) 
             : base(dataContext, mapper, validator)

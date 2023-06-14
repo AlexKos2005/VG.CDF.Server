@@ -13,7 +13,7 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.Users.Queries;
 
-public class GetUserListQuery: IRequest<IEnumerable<UserDto>>
+public class GetUsersListQuery: IRequest<IEnumerable<UserDto>>
 {
     public Guid? Id { get; set; } = null;
 
@@ -21,7 +21,7 @@ public class GetUserListQuery: IRequest<IEnumerable<UserDto>>
 
     public Guid? RoleId { get; set; } = null;
     
-    public class GetProjectsListQueryHandler : IRequestHandler<GetUserListQuery,IEnumerable<UserDto>>
+    public class GetProjectsListQueryHandler : IRequestHandler<GetUsersListQuery,IEnumerable<UserDto>>
     {
         private readonly ISqlDataContext _dataContext;
         private readonly IMapper _mapper;
@@ -31,7 +31,7 @@ public class GetUserListQuery: IRequest<IEnumerable<UserDto>>
             _dataContext = dataContext;
             _mapper = mapper;
         }
-        public async Task<IEnumerable<UserDto>> Handle(GetUserListQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<UserDto>> Handle(GetUsersListQuery request, CancellationToken cancellationToken)
         {
             IQueryable<User> userQuery = _dataContext.Set<User>();
 
