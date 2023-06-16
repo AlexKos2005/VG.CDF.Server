@@ -11,9 +11,8 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.ProcessDescriptions.Commands;
 
-public class CreateProcessDescriptionCommand : EntityBaseDto,IRequest<ProcessDescriptionDto>
+public class CreateProcessDescriptionCommand : IRequest<ProcessDescriptionDto>
 {
-   
     public string Description { get; set; } = string.Empty;
 
     public Guid LanguageId { get; set; }
