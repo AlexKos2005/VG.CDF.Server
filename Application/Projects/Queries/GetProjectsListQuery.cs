@@ -44,7 +44,7 @@ public class GetProjectsListQuery: IRequest<IEnumerable<ProjectDto>>
                 projectQuery = projectQuery.Where(c => c.ExternalId == request.ExternalId);
             if (request.CompanyId != null)
                 projectQuery = projectQuery.Where(c => c.CompanyId == request.CompanyId);
-            if (string.IsNullOrEmpty(request.Description))
+            if (string.IsNullOrEmpty(request.Description) == false)
                 projectQuery = projectQuery.Where(c => c.Description == request.Description);
             if (request.UtcOffset != null)
                 projectQuery = projectQuery.Where(c => c.UtcOffset == request.UtcOffset);

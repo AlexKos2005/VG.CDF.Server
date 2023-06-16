@@ -2,7 +2,7 @@
 
 namespace VG.CDF.Server.Domain.Entities;
 
-public abstract class EntityBase
+public  class EntityBase
 {
     public  virtual Guid Id { get; set; }
 }

@@ -10,8 +10,8 @@ public class ProjectMappingProfile : Profile
     public ProjectMappingProfile()
     {
         CreateMap<Project, ProjectDto>().ReverseMap();
-        CreateMap<CreateProjectCommand, EntityBase>().ReverseMap();
+        CreateMap<CreateProjectCommand, Project>().ReverseMap();
         CreateMap<DeleteProjectCommand, EntityBase>().ReverseMap();
-        CreateMap<UpdateProjectCommand, EntityBase>().ReverseMap();
+        CreateMap<UpdateProjectCommand, Project>().ReverseMap();
     }
 }

@@ -10,6 +10,6 @@ public class ProcessDto : EntityBaseDto
 
     public string Description { get; set; } = string.Empty;
         
-    public Guid CompanyId { get; set; }
+    public Guid ProjectId { get; set; }
 
 }

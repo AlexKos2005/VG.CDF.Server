@@ -10,6 +10,6 @@ public class ProjectDto : EntityBaseDto
 
     public string Description { get; set; } = string.Empty;
         
-    public int CompanyId { get; set; }
+    public Guid CompanyId { get; set; }
 
 }

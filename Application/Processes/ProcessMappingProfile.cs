@@ -11,8 +11,9 @@ public class ProcessMappingProfile : Profile
     public ProcessMappingProfile()
     {
         CreateMap<Process, ProcessDto>().ReverseMap();
-        CreateMap<CreateProcessCommand, EntityBase>().ReverseMap();
+        CreateMap<CreateProcessCommand, Process>().ReverseMap();
         CreateMap<DeleteProcessCommand, EntityBase>().ReverseMap();
-        CreateMap<UpdateProcessCommand, EntityBase>().ReverseMap();
+        CreateMap<UpdateProcessCommand, Process>().ReverseMap();
+        
     }
 }

@@ -4,7 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
 using VG.CDF.Server.Application.Companies.Commands;
+using VG.CDF.Server.Application.Dto;
 using VG.CDF.Server.Application.Interfaces;
+using VG.CDF.Server.Application.Interfaces.Services;
+using VG.CDF.Server.Infrastructure.Services;
 using VG.CDF.Server.WebApi.DataBaseContext;
 
 
@@ -15,6 +18,8 @@ namespace VG.CDF.Server.WebApi.Controllers
         public static void RegistrateServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<ISqlDataContext, SqlDataContext>();
+            services.AddTransient<ISaveable<AlarmEventDto>, AlarmEventService>();
+            services.AddTransient<ISaveable<ParameterValuesGroupDto>, ParameterValuesGroupService>();
             /*services.AddTransient<IJwtService<UserAuthenticationResponseDto>, JwtService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IFactoryService, FactoryService>();
@@ -48,7 +53,6 @@ namespace VG.CDF.Server.WebApi.Controllers
         
         public static void RegistrateAutomapper(this IServiceCollection services)
         {
-            var tt = AppDomain.CurrentDomain.GetAssemblies();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
