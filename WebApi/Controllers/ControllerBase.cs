@@ -43,7 +43,7 @@ where Td: EntityBaseDto,IRequest<bool>, new()
     }
     
     [HttpDelete]
-    public async Task<IActionResult> Update([FromQuery]Guid id, CancellationToken cts)
+    public async Task<IActionResult> Delete([FromQuery]Guid id, CancellationToken cts)
     {
         var command = new Td() { Id = id };
         var result = await _mediator.Send(command, cts);
