@@ -11,7 +11,7 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.AlarmEventDescriptions.Commands;
 
-public class CreateAlarmEventDescriptionCommand : EntityBaseDto,IRequest<AlarmEventDescriptionDto>
+public class CreateAlarmEventDescriptionCommand : IRequest<AlarmEventDescriptionDto>
 {
     public string Description { get; set; } = string.Empty;
 

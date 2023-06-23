@@ -16,8 +16,9 @@ public class AlarmEventMappingProfile : Profile
     public AlarmEventMappingProfile()
     {
         CreateMap<AlarmEvent, AlarmEventDto>().ReverseMap();
-        CreateMap<CreateAlarmEventCommand, EntityBase>().ReverseMap();
+        CreateMap<CreateAlarmEventCommand, AlarmEvent>().ReverseMap();
         CreateMap<DeleteAlarmEventCommand, EntityBase>().ReverseMap();
-        CreateMap<UpdateAlarmEventCommand, EntityBase>().ReverseMap();
+        CreateMap<UpdateAlarmEventCommand, AlarmEvent>().ReverseMap();
+     
     }
 }

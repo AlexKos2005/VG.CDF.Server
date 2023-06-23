@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO.Pipes;
 using System.Linq;
 using AutoMapper;
 using FluentValidation;
@@ -43,7 +44,12 @@ public class CreateUserCommand : IRequest<UserDto>
                 return !await dataContext.Set<Role>()
                     .Where(c => c.Id == command.RoleId).AnyAsync();
             }).WithMessage(command=> $"Роли с указанным Id {command.RoleId} не существует");
-            
+
+            RuleFor(c => c.Email).MustAsync(async (email, cts) =>
+            {
+                return !await dataContext.Set<User>().AnyAsync(c=>c.Email.ToLower() == email.ToLower());
+            }).WithMessage(command=> $"Пользователь с указанным Email {command.Email} уже существует");;
+
         }
     }
 }

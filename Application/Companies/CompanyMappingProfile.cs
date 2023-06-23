@@ -13,5 +13,6 @@ public class CompanyMappingProfile : Profile
         CreateMap<CreateCompanyCommand, Company>().ReverseMap();
         CreateMap<DeleteCompanyCommand, EntityBase>().ReverseMap();
         CreateMap<UpdateCompanyCommand, Company>().ReverseMap();
+        
     }
 }

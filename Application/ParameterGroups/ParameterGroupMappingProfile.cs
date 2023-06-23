@@ -14,8 +14,8 @@ public class ParameterGroupMappingProfile : Profile
     public ParameterGroupMappingProfile()
     {
         CreateMap<ParameterGroup, ParameterGroupDto>().ReverseMap();
-        CreateMap<CreateParameterGroupCommand, EntityBase>().ReverseMap();
+        CreateMap<CreateParameterGroupCommand, ParameterGroup>().ReverseMap();
         CreateMap<DeleteParameterGroupCommand, EntityBase>().ReverseMap();
-        CreateMap<UpdateParameterGroupCommand, EntityBase>().ReverseMap();
+        CreateMap<UpdateParameterGroupCommand, ParameterGroup>().ReverseMap();
     }
 }

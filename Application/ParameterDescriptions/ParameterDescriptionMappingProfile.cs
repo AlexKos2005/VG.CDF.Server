@@ -14,8 +14,8 @@ public class ParameterDescriptionMappingProfile : Profile
     public ParameterDescriptionMappingProfile()
     {
         CreateMap<ParameterDescription, ParameterDescriptionDto>().ReverseMap();
-        CreateMap<CreateParameterDescriptionCommand, EntityBase>().ReverseMap();
+        CreateMap<CreateParameterDescriptionCommand, ParameterDescription>().ReverseMap();
         CreateMap<DeleteParameterDescriptionCommand, EntityBase>().ReverseMap();
-        CreateMap<UpdateParameterDescriptionCommand, EntityBase>().ReverseMap();
+        CreateMap<UpdateParameterDescriptionCommand, ParameterDescription>().ReverseMap();
     }
 }

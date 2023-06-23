@@ -14,8 +14,8 @@ public class LanguageMappingProfile : Profile
     public LanguageMappingProfile()
     {
         CreateMap<Language, LanguageDto>().ReverseMap();
-        CreateMap<CreateLanguageCommand, EntityBase>().ReverseMap();
+        CreateMap<CreateLanguageCommand, Language>().ReverseMap();
         CreateMap<DeleteLanguageCommand, EntityBase>().ReverseMap();
-        CreateMap<UpdateLanguageCommand, EntityBase>().ReverseMap();
+        CreateMap<UpdateLanguageCommand, Language>().ReverseMap();
     }
 }

@@ -12,7 +12,7 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.ParameterDescriptions.Commands;
 
-public class CreateParameterDescriptionCommand : EntityBaseDto,IRequest<ParameterDescriptionDto>
+public class CreateParameterDescriptionCommand : IRequest<ParameterDescriptionDto>
 {
     public string Description { get; set; } = string.Empty;
 
