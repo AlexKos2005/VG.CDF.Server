@@ -4,6 +4,23 @@
         <name>VG.CDF.Server.WebApi</name>
     </assembly>
     <members>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.Authentication.AuthenticationController">
+            <summary>
+            Авторизация
+            </summary>
+        </member>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.Registration.RegistrationController">
+            <summary>
+            Регистрация
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.Registration.RegistrationController.Registrate(VG.CDF.Server.Application.Users.Commands.CreateUserCommand)">
+            <summary>
+            Регистрация пользователя
+            </summary>
+            <param name="userRegistrationRequestDto"></param>
+            <returns></returns>
+        </member>
         <member name="T:VG.CDF.Server.WebApi.Controllers.SwaggerAddEnumDescriptions">
             <summary>
             https://stackoverflow.com/questions/36452468/swagger-ui-web-api-documentation-present-enums-as-strings

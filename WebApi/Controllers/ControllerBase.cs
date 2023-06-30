@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
@@ -25,7 +26,7 @@ where Td: EntityBaseDto,IRequest<bool>, new()
     public async Task<IEnumerable<TOut>> Get([FromQuery]Tg query, CancellationToken cts)
     {
         var result = await _mediator.Send(query, cts);
-        return result;
+        return result.ToArray();
     }
     
     [HttpPost]

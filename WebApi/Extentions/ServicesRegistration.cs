@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
 using VG.CDF.Server.Application.Companies.Commands;
 using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.Dto.ResponseDto.Authentication;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Application.Interfaces.Services;
 using VG.CDF.Server.Infrastructure.Services;
@@ -20,8 +21,8 @@ namespace VG.CDF.Server.WebApi.Controllers
             services.AddTransient<ISqlDataContext, SqlDataContext>();
             services.AddTransient<ISaveable<AlarmEventDto>, AlarmEventService>();
             services.AddTransient<ISaveable<ParameterValuesGroupDto>, ParameterValuesGroupService>();
-            /*services.AddTransient<IJwtService<UserAuthenticationResponseDto>, JwtService>();
-            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IJwtService<UserAuthenticationResponseDto>, JwtService>();
+            /*services.AddTransient<IUserService, UserService>();
             services.AddTransient<IFactoryService, FactoryService>();
             services.AddTransient<ITagsLiveService, TagsLiveService>();
             services.AddTransient<ITagParamDescriptionService, TagParamDescriptionService>();

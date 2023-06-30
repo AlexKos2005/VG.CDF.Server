@@ -23,12 +23,10 @@ namespace VG.CDF.Server.WebApi.Controllers.Authentication
         private readonly IMediator _mediator;
         private readonly JwtConfiguration _jwtConfiguration;
         private readonly IJwtService<UserAuthenticationResponseDto> _tokenService;
-        private readonly IUserService _userService;
-        public AuthenticationController(JwtConfiguration jwtConfiguration, IJwtService<UserAuthenticationResponseDto> tokenService, IUserService userService, IMediator mediator)
+        public AuthenticationController(JwtConfiguration jwtConfiguration, IJwtService<UserAuthenticationResponseDto> tokenService, IMediator mediator)
         {
             _jwtConfiguration = jwtConfiguration;
             _tokenService = tokenService;
-            _userService= userService;
             _mediator = mediator;
         }
 
