@@ -22,8 +22,7 @@ public class GetProcessDescriptionsListQuery: IRequest<IEnumerable<ProcessDescri
     public string? EngDescription { get; set; } = null;
         
     public string? UkrDescription { get; set; } = null;
-
-    public Guid? LanguageId { get; set; } = null;
+    
         
     public Guid? ProcessId { get; set; } = null;
     

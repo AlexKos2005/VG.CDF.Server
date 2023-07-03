@@ -24,7 +24,6 @@ public class GetAlarmEventDescriptionsListQuery: IRequest<IEnumerable<AlarmEvent
     public string? UkrDescription { get; set; } = null;
     public Guid? AlarmEventId { get; set; }= null;
     
-    public Guid? DescriptionsLanguageId { get; set; }= null;
     
     public class GetAlarmEventsListQueryHandler : IRequestHandler<GetAlarmEventDescriptionsListQuery,IEnumerable<AlarmEventDescriptionDto>>
     {

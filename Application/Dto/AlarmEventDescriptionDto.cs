@@ -10,8 +10,7 @@ namespace VG.CDF.Server.Application.Dto
         public string EngDescription { get; set; }
         
         public string UkrDescription { get; set; }
-        public int LanguageId { get; set; }
-        
+
         public Guid AlarmEventId { get; set; }
 
     }

@@ -26,7 +26,6 @@ public class GetParameterDescriptionsListQuery: IRequest<IEnumerable<ParameterDe
     public string? UkrDescription { get; set; } = null;
     public Guid? ParameterId { get; set; }= null;
     
-    public Guid? DescriptionsLanguageId { get; set; }= null;
     
     public class GetParameterDescriptionsListQueryHandler : IRequestHandler<GetParameterDescriptionsListQuery,IEnumerable<ParameterDescriptionDto>>
     {
