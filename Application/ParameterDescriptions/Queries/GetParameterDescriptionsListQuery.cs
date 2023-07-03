@@ -17,6 +17,8 @@ public class GetParameterDescriptionsListQuery: IRequest<IEnumerable<ParameterDe
 {
     
     public Guid? Id { get; set; } = null;
+    
+    public Guid? CompanyId { get; set; } = null;
     public string? Description { get; set; } = null;
     public Guid? ParameterId { get; set; }= null;
     
@@ -44,7 +46,8 @@ public class GetParameterDescriptionsListQuery: IRequest<IEnumerable<ParameterDe
                 paramDescriptionQuery = paramDescriptionQuery.Where(c => c.ParameterId == request.ParameterId);
             if (request.DescriptionsLanguageId != null)
                 paramDescriptionQuery = paramDescriptionQuery.Where(c => c.LanguageId == request.DescriptionsLanguageId);
-
+            if (request.CompanyId != null)
+                paramDescriptionQuery = paramDescriptionQuery.Where(c => c.Parameter.CompanyId == request.CompanyId);
             var paramDescriptions = await paramDescriptionQuery.ToListAsync(cancellationToken);
 
             return _mapper.Map<IEnumerable<ParameterDescriptionDto>>(paramDescriptions);
