@@ -16,8 +16,8 @@ namespace VG.CDF.Server.Domain.Entities
         public string EngDescription { get; set; }
         
         public string UkrDescription { get; set; }
-        public Guid AlarmEventId { get; set; }
-        public AlarmEvent AlarmEvent { get; set; }
+        public Guid? AlarmEventId { get; set; }
+        public AlarmEvent? AlarmEvent { get; set; }
 
     }
 }

@@ -16,7 +16,7 @@ namespace VG.CDF.Server.Domain.Entities
 
         public string Description { get; set; }
         
-        public Guid CompanyId { get; set; }
+        public Guid? CompanyId { get; set; }
         
         public Company? Company { get; set; }
         public ICollection<UserProject> UserProjects { get; set; }
@@ -25,6 +25,6 @@ namespace VG.CDF.Server.Domain.Entities
         
         public ProjectActionsInfo? ProjectActionsInfo { get; set; }
         
-        public ParameterReportTask ParameterReportTask { get; set; }
+        public ParameterReportTask? ParameterReportTask { get; set; }
     }
 }

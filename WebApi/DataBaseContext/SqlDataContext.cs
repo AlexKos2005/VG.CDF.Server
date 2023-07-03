@@ -65,99 +65,99 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasOne(sc => sc.Company)
                 .WithMany(s => s.Projects)
                 .HasForeignKey(v => v.CompanyId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<Process>()
                 .HasOne(sc => sc.Project)
                 .WithMany(s => s.Processes)
                 .HasForeignKey(v => v.ProjectId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<Process>()
                 .HasOne(sc => sc.ProcessDescription)
                 .WithOne(s => s.Process)
                 .HasForeignKey<ProcessDescription>(v => v.ProcessId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
      
             modelBuilder.Entity<Parameter>()
                 .HasOne(sc => sc.Company)
                 .WithMany(s => s.Parameters)
                 .HasForeignKey(v => v.CompanyId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<Parameter>()
                 .HasOne(sc => sc.ParameterGroup)
                 .WithMany(s => s.Parameters)
                 .HasForeignKey(v => v.ParameterGroupId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<Parameter>()
                 .HasOne(sc => sc.ParametersDescription)
                 .WithOne(s => s.Parameter)
                 .HasForeignKey<ParameterDescription>(v => v.ParameterId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             
             modelBuilder.Entity<ParameterProcess>()
                 .HasOne(sc => sc.Parameter)
                 .WithMany(s => s.ParametersProcesses)
                 .HasForeignKey(v => v.ParameterId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<ParameterProcess>()
                 .HasOne(sc => sc.Process)
                 .WithMany(s => s.ParametersProcesses)
                 .HasForeignKey(v => v.ProcessId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<ParameterValuesGroup>()
                 .HasOne(sc => sc.Process)
                 .WithMany(s => s.ParameterValuesGroups)
                 .HasForeignKey(v => v.ProcessId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<ParameterValue>()
                 .HasOne(sc => sc.ParameterValuesGroup)
                 .WithMany(s => s.ParameterValues)
                 .HasForeignKey(v => v.ParameterValuesGroupId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<AlarmEvent>()
                 .HasOne(sc => sc.Company)
                 .WithMany(s => s.AlarmEvents)
                 .HasForeignKey(v => v.CompanyId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<AlarmEvent>()
                 .HasOne(sc => sc.AlarmEventDescription)
                 .WithOne(s => s.AlarmEvent)
                 .HasForeignKey<AlarmEventDescription>(v => v.AlarmEventId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<AlarmEventLive>()
                 .HasOne(sc => sc.Process)
                 .WithMany(s => s.AlarmEventLives)
                 .HasForeignKey(v => v.ProcessId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<ProjectActionsInfo>()
                 .HasOne(sc => sc.Project)
                 .WithOne(s => s.ProjectActionsInfo)
                 .HasForeignKey<ProjectActionsInfo>(v => v.ProjectId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<UserProject>()
                 .HasOne(sc => sc.User)
                 .WithMany(s => s.UserProjects)
                 .HasForeignKey(v => v.UserId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<UserProject>()
                 .HasOne(sc => sc.Project)
                 .WithMany(s => s.UserProjects)
                 .HasForeignKey(v => v.ProjectId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<User>()
                 .HasOne(sc => sc.Role)
@@ -179,7 +179,7 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
             modelBuilder.Entity<ParameterReportTask>()
                 .HasOne(c => c.Project)
                 .WithOne(c => c.ParameterReportTask)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<ParameterReportTask>()
                 .Property(sc => sc.Status)
@@ -193,13 +193,13 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasOne(sc => sc.ParameterReportTask)
                 .WithMany(s => s.ParametersReportTaskWorkEmails)
                 .HasForeignKey(v => v.ParameterReportTaskId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
             modelBuilder.Entity<ParametersReportTaskWorkEmail>()
                 .HasOne(sc => sc.WorkEmail)
                 .WithMany(s => s.ParametersReportTaskWorkEmails)
                 .HasForeignKey(v => v.WorkEmailId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
             
         }
 

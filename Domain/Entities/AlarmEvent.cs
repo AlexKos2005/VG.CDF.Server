@@ -16,7 +16,7 @@ namespace VG.CDF.Server.Domain.Entities
 
         public Company? Company { get; set; }
 
-        public AlarmEventDescription AlarmEventDescription { get; set; }
+        public AlarmEventDescription? AlarmEventDescription { get; set; }
 
     }
 }

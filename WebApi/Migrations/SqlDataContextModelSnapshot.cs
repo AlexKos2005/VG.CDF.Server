@@ -47,7 +47,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("AlarmEventId")
+                    b.Property<Guid?>("AlarmEventId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("EngDescription")
@@ -122,7 +122,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Property<int>("ExternalId")
                         .HasColumnType("integer");
 
-                    b.Property<Guid>("ParameterGroupId")
+                    b.Property<Guid?>("ParameterGroupId")
                         .HasColumnType("uuid");
 
                     b.Property<int>("ValueType")
@@ -146,7 +146,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Property<string>("EngDescription")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("ParameterId")
+                    b.Property<Guid?>("ParameterId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("RusDescription")
@@ -186,10 +186,10 @@ namespace VG.CDF.Server.WebApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("ParameterId")
+                    b.Property<Guid?>("ParameterId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("ProcessId")
+                    b.Property<Guid?>("ProcessId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
@@ -213,7 +213,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Property<DateTime?>("LastSendDt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("ProjectId")
+                    b.Property<Guid?>("ProjectId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Status")
@@ -236,10 +236,10 @@ namespace VG.CDF.Server.WebApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("ParameterReportTaskId")
+                    b.Property<Guid?>("ParameterReportTaskId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("WorkEmailId")
+                    b.Property<Guid?>("WorkEmailId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
@@ -323,7 +323,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Property<int>("ExternalId")
                         .HasColumnType("integer");
 
-                    b.Property<Guid>("ProjectId")
+                    b.Property<Guid?>("ProjectId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
@@ -342,7 +342,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Property<string>("EngDescription")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("ProcessId")
+                    b.Property<Guid?>("ProcessId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("RusDescription")
@@ -365,7 +365,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("CompanyId")
+                    b.Property<Guid?>("CompanyId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Description")
@@ -405,7 +405,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Property<DateTimeOffset>("LastDateTimeReportSendingOffset")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("ProjectId")
+                    b.Property<Guid?>("ProjectId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
@@ -499,7 +499,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Company", "Company")
                         .WithMany("AlarmEvents")
                         .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Company");
@@ -510,8 +510,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.AlarmEvent", "AlarmEvent")
                         .WithOne("AlarmEventDescription")
                         .HasForeignKey("VG.CDF.Server.Domain.Entities.AlarmEventDescription", "AlarmEventId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("AlarmEvent");
                 });
@@ -521,7 +520,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Process", "Process")
                         .WithMany("AlarmEventLives")
                         .HasForeignKey("ProcessId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Process");
@@ -532,14 +531,13 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Company", "Company")
                         .WithMany("Parameters")
                         .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("VG.CDF.Server.Domain.Entities.ParameterGroup", "ParameterGroup")
                         .WithMany("Parameters")
                         .HasForeignKey("ParameterGroupId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Company");
 
@@ -551,8 +549,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Parameter", "Parameter")
                         .WithOne("ParametersDescription")
                         .HasForeignKey("VG.CDF.Server.Domain.Entities.ParameterDescription", "ParameterId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Parameter");
                 });
@@ -562,14 +559,12 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Parameter", "Parameter")
                         .WithMany("ParametersProcesses")
                         .HasForeignKey("ParameterId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("VG.CDF.Server.Domain.Entities.Process", "Process")
                         .WithMany("ParametersProcesses")
                         .HasForeignKey("ProcessId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Parameter");
 
@@ -581,8 +576,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Project", "Project")
                         .WithOne("ParameterReportTask")
                         .HasForeignKey("VG.CDF.Server.Domain.Entities.ParameterReportTask", "ProjectId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Project");
                 });
@@ -592,14 +586,12 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.ParameterReportTask", "ParameterReportTask")
                         .WithMany("ParametersReportTaskWorkEmails")
                         .HasForeignKey("ParameterReportTaskId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("VG.CDF.Server.Domain.Entities.WorkEmail", "WorkEmail")
                         .WithMany("ParametersReportTaskWorkEmails")
                         .HasForeignKey("WorkEmailId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("ParameterReportTask");
 
@@ -611,7 +603,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.ParameterValuesGroup", "ParameterValuesGroup")
                         .WithMany("ParameterValues")
                         .HasForeignKey("ParameterValuesGroupId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ParameterValuesGroup");
@@ -622,7 +614,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Process", "Process")
                         .WithMany("ParameterValuesGroups")
                         .HasForeignKey("ProcessId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Process");
@@ -633,8 +625,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Project", "Project")
                         .WithMany("Processes")
                         .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Project");
                 });
@@ -644,8 +635,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Process", "Process")
                         .WithOne("ProcessDescription")
                         .HasForeignKey("VG.CDF.Server.Domain.Entities.ProcessDescription", "ProcessId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Process");
                 });
@@ -655,8 +645,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Company", "Company")
                         .WithMany("Projects")
                         .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Company");
                 });
@@ -666,8 +655,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Project", "Project")
                         .WithOne("ProjectActionsInfo")
                         .HasForeignKey("VG.CDF.Server.Domain.Entities.ProjectActionsInfo", "ProjectId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Project");
                 });
@@ -688,13 +676,13 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.HasOne("VG.CDF.Server.Domain.Entities.Project", "Project")
                         .WithMany("UserProjects")
                         .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("VG.CDF.Server.Domain.Entities.User", "User")
                         .WithMany("UserProjects")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Project");

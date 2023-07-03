@@ -20,11 +20,11 @@ namespace VG.CDF.Server.Domain.Entities
         public Guid CompanyId { get; set; }
         public Company? Company { get; set; }
         
-        public Guid ParameterGroupId { get; set; }
-        public ParameterGroup ParameterGroup { get; set; }
+        public Guid? ParameterGroupId { get; set; }
+        public ParameterGroup? ParameterGroup { get; set; }
 
         public ICollection<ParameterProcess> ParametersProcesses { get; set; }
-        public ParameterDescription ParametersDescription { get; set; }
+        public ParameterDescription? ParametersDescription { get; set; }
         
     }
 }

@@ -8,9 +8,9 @@ namespace VG.CDF.Server.Domain.Entities
 {
     public class ParameterReportTask : EntityBase
     {
-        public Guid ProjectId { get; set; }
+        public Guid? ProjectId { get; set; }
         
-        public Project Project { get; set; }
+        public Project? Project { get; set; }
 
         public bool IsActive { get; set; }
 

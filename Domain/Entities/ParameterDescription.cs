@@ -15,8 +15,8 @@ namespace VG.CDF.Server.Domain.Entities
         public string EngDescription { get; set; }
         
         public string UkrDescription { get; set; }
-        public Guid ParameterId { get; set; }
-        public Parameter Parameter { get; set; }
+        public Guid? ParameterId { get; set; }
+        public Parameter? Parameter { get; set; }
        
     }
 }

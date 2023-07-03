@@ -17,9 +17,9 @@ namespace VG.CDF.Server.Domain.Entities
         public string EngDescription { get; set; }
         
         public string UkrDescription { get; set; }
-        public Guid ProcessId { get; set; }
+        public Guid? ProcessId { get; set; }
         
-        public Process Process { get; set; }
+        public Process? Process { get; set; }
 
     }
 }
