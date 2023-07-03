@@ -11,14 +11,13 @@ namespace VG.CDF.Server.Domain.Entities
 {
     public class AlarmEventDescription: EntityBase
     {
-        public string Description { get; set; }
-
-        public Guid AlarmEventId { get; set; }
+        public string RusDescription { get; set; }
         
+        public string EngDescription { get; set; }
+        
+        public string UkrDescription { get; set; }
+        public Guid AlarmEventId { get; set; }
         public AlarmEvent AlarmEvent { get; set; }
 
-        public Guid LanguageId { get; set; }
-        
-        public Language Language { get; set; }
     }
 }

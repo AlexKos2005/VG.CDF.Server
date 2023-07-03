@@ -11,13 +11,12 @@ namespace VG.CDF.Server.Domain.Entities
 {
     public class ParameterDescription: EntityBase
     {
-        public string Description { get; set; }
-
+        public string RusDescription { get; set; }
+        public string EngDescription { get; set; }
+        
+        public string UkrDescription { get; set; }
         public Guid ParameterId { get; set; }
-        
         public Parameter Parameter { get; set; }
-        public Guid LanguageId { get; set; }
-        
-        public Language Language { get; set; }
+       
     }
 }

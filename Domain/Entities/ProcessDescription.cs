@@ -12,7 +12,11 @@ namespace VG.CDF.Server.Domain.Entities
     public class ProcessDescription : EntityBase
     {
 
-        public string Description { get; set; }
+        public string RusDescription { get; set; }
+        
+        public string EngDescription { get; set; }
+        
+        public string UkrDescription { get; set; }
         public Guid ProcessId { get; set; }
         
         public Process Process { get; set; }

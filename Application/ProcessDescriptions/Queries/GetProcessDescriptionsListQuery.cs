@@ -17,7 +17,11 @@ public class GetProcessDescriptionsListQuery: IRequest<IEnumerable<ProcessDescri
 {
     
     public Guid? Id { get; set; } = null;
-    public string? Description { get; set; } = null;
+    public string? RusDescription { get; set; } = null;
+        
+    public string? EngDescription { get; set; } = null;
+        
+    public string? UkrDescription { get; set; } = null;
 
     public Guid? LanguageId { get; set; } = null;
         
@@ -39,12 +43,14 @@ public class GetProcessDescriptionsListQuery: IRequest<IEnumerable<ProcessDescri
 
             if (request.Id != null)
                 processDescriptionQuery = processDescriptionQuery.Where(c => c.Id == request.Id);
-            if (request.Description != null)
-                processDescriptionQuery = processDescriptionQuery.Where(c => c.Description == request.Description);
+            if (request.RusDescription != null)
+                processDescriptionQuery = processDescriptionQuery.Where(c => c.RusDescription.ToLower() == request.RusDescription.ToLower());
+            if (request.EngDescription != null)
+                processDescriptionQuery = processDescriptionQuery.Where(c => c.EngDescription.ToLower() == request.EngDescription.ToLower());
+            if (request.UkrDescription != null)
+                processDescriptionQuery = processDescriptionQuery.Where(c => c.UkrDescription.ToLower() == request.UkrDescription.ToLower());
             if (request.ProcessId != null)
                 processDescriptionQuery = processDescriptionQuery.Where(c => c.AlarmEventId == request.ProcessId);
-            if (request.LanguageId != null)
-                processDescriptionQuery = processDescriptionQuery.Where(c => c.LanguageId == request.LanguageId);
 
             var alarmEventsDescriptions = await processDescriptionQuery.ToListAsync(cancellationToken);
 

@@ -17,7 +17,11 @@ public class GetAlarmEventDescriptionsListQuery: IRequest<IEnumerable<AlarmEvent
 {
     
     public Guid? Id { get; set; } = null;
-    public string? Description { get; set; } = null;
+    public string? RusDescription { get; set; } = null;
+        
+    public string? EngDescription { get; set; } = null;
+        
+    public string? UkrDescription { get; set; } = null;
     public Guid? AlarmEventId { get; set; }= null;
     
     public Guid? DescriptionsLanguageId { get; set; }= null;
@@ -38,12 +42,14 @@ public class GetAlarmEventDescriptionsListQuery: IRequest<IEnumerable<AlarmEvent
 
             if (request.Id != null)
                 alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.Id == request.Id);
-            if (request.Description != null)
-                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.Description == request.Description);
+            if (request.RusDescription != null)
+                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.RusDescription.ToLower() == request.RusDescription.ToLower());
+            if (request.EngDescription != null)
+                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.EngDescription.ToLower() == request.EngDescription.ToLower());
+            if (request.UkrDescription != null)
+                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.UkrDescription.ToLower() == request.UkrDescription.ToLower());
             if (request.AlarmEventId != null)
                 alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.AlarmEventId == request.AlarmEventId);
-            if (request.DescriptionsLanguageId != null)
-                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.LanguageId == request.DescriptionsLanguageId);
 
             var alarmEventsDescriptions = await alarmDescriptionQuery.ToListAsync(cancellationToken);
 

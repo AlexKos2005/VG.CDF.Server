@@ -24,7 +24,7 @@ namespace VG.CDF.Server.Domain.Entities
         public ParameterGroup ParameterGroup { get; set; }
 
         public ICollection<ParameterProcess> ParametersProcesses { get; set; }
-        public ICollection<ParameterDescription> ParametersDescriptions { get; set; }
+        public ParameterDescription ParametersDescription { get; set; }
         
     }
 }

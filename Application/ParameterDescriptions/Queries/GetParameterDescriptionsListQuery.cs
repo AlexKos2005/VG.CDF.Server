@@ -19,7 +19,11 @@ public class GetParameterDescriptionsListQuery: IRequest<IEnumerable<ParameterDe
     public Guid? Id { get; set; } = null;
     
     public Guid? CompanyId { get; set; } = null;
-    public string? Description { get; set; } = null;
+    public string? RusDescription { get; set; } = null;
+        
+    public string? EngDescription { get; set; } = null;
+        
+    public string? UkrDescription { get; set; } = null;
     public Guid? ParameterId { get; set; }= null;
     
     public Guid? DescriptionsLanguageId { get; set; }= null;
@@ -40,12 +44,14 @@ public class GetParameterDescriptionsListQuery: IRequest<IEnumerable<ParameterDe
 
             if (request.Id != null)
                 paramDescriptionQuery = paramDescriptionQuery.Where(c => c.Id == request.Id);
-            if (request.Description != null)
-                paramDescriptionQuery = paramDescriptionQuery.Where(c => c.Description == request.Description);
+            if (request.RusDescription != null)
+                paramDescriptionQuery = paramDescriptionQuery.Where(c => c.RusDescription.ToLower() == request.RusDescription.ToLower());
+            if (request.EngDescription != null)
+                paramDescriptionQuery = paramDescriptionQuery.Where(c => c.EngDescription.ToLower() == request.EngDescription.ToLower());
+            if (request.UkrDescription != null)
+                paramDescriptionQuery = paramDescriptionQuery.Where(c => c.UkrDescription.ToLower() == request.UkrDescription.ToLower());
             if (request.ParameterId != null)
                 paramDescriptionQuery = paramDescriptionQuery.Where(c => c.ParameterId == request.ParameterId);
-            if (request.DescriptionsLanguageId != null)
-                paramDescriptionQuery = paramDescriptionQuery.Where(c => c.LanguageId == request.DescriptionsLanguageId);
             if (request.CompanyId != null)
                 paramDescriptionQuery = paramDescriptionQuery.Where(c => c.Parameter.CompanyId == request.CompanyId);
             var paramDescriptions = await paramDescriptionQuery.ToListAsync(cancellationToken);

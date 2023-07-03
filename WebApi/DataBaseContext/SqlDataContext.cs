@@ -76,7 +76,7 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
             
             modelBuilder.Entity<ProcessDescription>()
                 .HasOne(sc => sc.Process)
-                .WithMany(s => s.ProcessDescriptions)
+                .WithMany(s => s.ProcessDescription)
                 .HasForeignKey(v => v.ProcessId)
                 .OnDelete(DeleteBehavior.SetNull);
             
@@ -100,7 +100,7 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
             
             modelBuilder.Entity<ParameterDescription>()
                 .HasOne(sc => sc.Parameter)
-                .WithMany(s => s.ParametersDescriptions)
+                .WithMany(s => s.ParametersDescription)
                 .HasForeignKey(v => v.ParameterId)
                 .OnDelete(DeleteBehavior.SetNull);
             
@@ -149,7 +149,7 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
             
             modelBuilder.Entity<AlarmEventDescription>()
                 .HasOne(sc => sc.AlarmEvent)
-                .WithMany(s => s.AlarmEventDescriptions)
+                .WithMany(s => s.AlarmEventDescription)
                 .HasForeignKey(v => v.AlarmEventId)
                 .OnDelete(DeleteBehavior.SetNull);
             

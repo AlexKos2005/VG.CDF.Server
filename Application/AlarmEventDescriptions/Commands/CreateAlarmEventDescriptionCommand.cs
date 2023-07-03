@@ -13,11 +13,14 @@ namespace VG.CDF.Server.Application.AlarmEventDescriptions.Commands;
 
 public class CreateAlarmEventDescriptionCommand : IRequest<AlarmEventDescriptionDto>
 {
-    public string Description { get; set; } = string.Empty;
+    public string RusDescription { get; set; } = String.Empty;
+        
+    public string EngDescription { get; set; }= String.Empty;
+        
+    public string UkrDescription { get; set; }= String.Empty;
 
     public Guid AlarmEventId { get; set; }
     
-    public Guid DescriptionsLanguageId { get; set; }
 
     public class CreateAlarmEventDescriptionCommandHandler : CreateCommandBase<CreateAlarmEventDescriptionCommand,AlarmEventDescriptionDto, AlarmEventDescription>
     {
@@ -35,13 +38,7 @@ public class CreateAlarmEventDescriptionCommand : IRequest<AlarmEventDescription
                 return await dataContext.Set<AlarmEventDescription>()
                     .Where(c => c.AlarmEventId == command.AlarmEventId).AnyAsync();
             }).WithMessage(command=> $"Аварийного события с Id {command.AlarmEventId} не существует");
-            
-            RuleFor(c => c).MustAsync(async(command,cts) =>
-            {
-                return await dataContext.Set<AlarmEventDescription>()
-                    .Where(c => c.LanguageId == command.DescriptionsLanguageId).AnyAsync();
-            }).WithMessage(command=> $"Языкового описания с Id {command.DescriptionsLanguageId} не существует");
-            
+
         }
     }
 }

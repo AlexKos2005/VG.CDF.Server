@@ -161,7 +161,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AlarmEventDescriptions",
+                name: "AlarmEventDescription",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -396,7 +396,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProcessDescriptions",
+                name: "ProcessDescription",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -447,12 +447,12 @@ namespace VG.CDF.Server.WebApi.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_AlarmEventDescriptions_AlarmEventId",
-                table: "AlarmEventDescriptions",
+                table: "AlarmEventDescription",
                 column: "AlarmEventId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AlarmEventDescriptions_LanguageId",
-                table: "AlarmEventDescriptions",
+                table: "AlarmEventDescription",
                 column: "LanguageId");
 
             migrationBuilder.CreateIndex(
@@ -528,12 +528,12 @@ namespace VG.CDF.Server.WebApi.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProcessDescriptions_LanguageId",
-                table: "ProcessDescriptions",
+                table: "ProcessDescription",
                 column: "LanguageId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProcessDescriptions_ProcessId",
-                table: "ProcessDescriptions",
+                table: "ProcessDescription",
                 column: "ProcessId");
 
             migrationBuilder.CreateIndex(
@@ -571,7 +571,7 @@ namespace VG.CDF.Server.WebApi.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AlarmEventDescriptions");
+                name: "AlarmEventDescription");
 
             migrationBuilder.DropTable(
                 name: "AlarmEventsLive");
@@ -589,7 +589,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                 name: "ParameterValues");
 
             migrationBuilder.DropTable(
-                name: "ProcessDescriptions");
+                name: "ProcessDescription");
 
             migrationBuilder.DropTable(
                 name: "ProjectActionsInfos");

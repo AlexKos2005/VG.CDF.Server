@@ -22,7 +22,7 @@ namespace VG.CDF.Server.Domain.Entities
         public ICollection<AlarmEventLive> AlarmEventLives { get; set; }
 
         public ICollection<ParameterValuesGroup> ParameterValuesGroups { get; set; }
-        public ICollection<ProcessDescription> ProcessDescriptions { get; set; }
+        public ProcessDescription ProcessDescription { get; set; }
 
     }
 }
