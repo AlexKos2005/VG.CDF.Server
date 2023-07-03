@@ -41,11 +41,7 @@ public class UpdateAlarmEventDescriptionCommand : EntityBaseDto,IRequest<AlarmEv
                     .EntityIsExists(command.AlarmEventId);
             }).WithMessage(command=> $"Аварийное событие с Id {command.AlarmEventId} не существует");
             
-            RuleFor(c => c).MustAsync(async(command,cts) =>
-            {
-                return await dataContext.Set<Language>()
-                    .EntityIsExists(command.LanguageId);
-            }).WithMessage(command=> $"Языка с Id {command.LanguageId} не существует");
+           
         }
     }
 }

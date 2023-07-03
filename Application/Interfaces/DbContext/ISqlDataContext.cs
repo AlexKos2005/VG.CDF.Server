@@ -37,11 +37,8 @@ namespace VG.CDF.Server.Application.Interfaces
 
         public DbSet<Parameter> Parameters { get; set; }
         public DbSet<ParameterGroup> ParameterGroups { get; set; }
-
-
+        
         public DbSet<ProcessDescription> ProcessDescriptions { get; set; }
-
-        public DbSet<Language> Languages { get; set; }
         
         
         public DbSet<ParameterReportTask> ParameterReportTasks { get; set; }

@@ -20,8 +20,6 @@ namespace VG.CDF.Server.Domain.Entities
         public Guid ProcessId { get; set; }
         
         public Process Process { get; set; }
-        public Guid LanguageId { get; set; }
-        
-        public Language Language { get; set; }
+
     }
 }

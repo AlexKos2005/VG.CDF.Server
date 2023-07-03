@@ -39,8 +39,7 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
         public DbSet<ParameterGroup> ParameterGroups { get; set; }= null!;
         
         public DbSet<ProcessDescription> ProcessDescriptions { get; set; }= null!;
-
-        public DbSet<Language> Languages { get; set; }= null!;
+        
         public DbSet<ParameterReportTask> ParameterReportTasks { get; set; }= null!;
         public DbSet<WorkEmail> WorkEmails { get; set; }= null!;
         
@@ -74,17 +73,12 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasForeignKey(v => v.ProjectId)
                 .OnDelete(DeleteBehavior.SetNull);
             
-            modelBuilder.Entity<ProcessDescription>()
-                .HasOne(sc => sc.Process)
-                .WithMany(s => s.ProcessDescription)
-                .HasForeignKey(v => v.ProcessId)
+            modelBuilder.Entity<Process>()
+                .HasOne(sc => sc.ProcessDescription)
+                .WithOne(s => s.Process)
+                .HasForeignKey<ProcessDescription>(v => v.ProcessId)
                 .OnDelete(DeleteBehavior.SetNull);
             
-            modelBuilder.Entity<ProcessDescription>()
-                .HasOne(sc => sc.Language)
-                .WithMany(s => s.ProcessDescriptions)
-                .HasForeignKey(v => v.LanguageId)
-                .OnDelete(DeleteBehavior.SetNull);
      
             modelBuilder.Entity<Parameter>()
                 .HasOne(sc => sc.Company)
@@ -98,18 +92,12 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasForeignKey(v => v.ParameterGroupId)
                 .OnDelete(DeleteBehavior.SetNull);
             
-            modelBuilder.Entity<ParameterDescription>()
-                .HasOne(sc => sc.Parameter)
-                .WithMany(s => s.ParametersDescription)
-                .HasForeignKey(v => v.ParameterId)
+            modelBuilder.Entity<Parameter>()
+                .HasOne(sc => sc.ParametersDescription)
+                .WithOne(s => s.Parameter)
+                .HasForeignKey<ParameterDescription>(v => v.ParameterId)
                 .OnDelete(DeleteBehavior.SetNull);
             
-            modelBuilder.Entity<ParameterDescription>()
-                .HasOne(sc => sc.Language)
-                .WithMany(s => s.ParameterDescriptions)
-                .HasForeignKey(v => v.LanguageId)
-                .OnDelete(DeleteBehavior.SetNull);
-
             
             modelBuilder.Entity<ParameterProcess>()
                 .HasOne(sc => sc.Parameter)
@@ -141,24 +129,18 @@ namespace VG.CDF.Server.WebApi.DataBaseContext
                 .HasForeignKey(v => v.CompanyId)
                 .OnDelete(DeleteBehavior.SetNull);
             
+            modelBuilder.Entity<AlarmEvent>()
+                .HasOne(sc => sc.AlarmEventDescription)
+                .WithOne(s => s.AlarmEvent)
+                .HasForeignKey<AlarmEventDescription>(v => v.AlarmEventId)
+                .OnDelete(DeleteBehavior.SetNull);
+            
             modelBuilder.Entity<AlarmEventLive>()
                 .HasOne(sc => sc.Process)
                 .WithMany(s => s.AlarmEventLives)
                 .HasForeignKey(v => v.ProcessId)
                 .OnDelete(DeleteBehavior.SetNull);
-            
-            modelBuilder.Entity<AlarmEventDescription>()
-                .HasOne(sc => sc.AlarmEvent)
-                .WithMany(s => s.AlarmEventDescription)
-                .HasForeignKey(v => v.AlarmEventId)
-                .OnDelete(DeleteBehavior.SetNull);
-            
-            modelBuilder.Entity<AlarmEventDescription>()
-                .HasOne(sc => sc.Language)
-                .WithMany(s => s.AlarmEventDescriptions)
-                .HasForeignKey(v => v.LanguageId)
-                .OnDelete(DeleteBehavior.SetNull);
-            
+
             modelBuilder.Entity<ProjectActionsInfo>()
                 .HasOne(sc => sc.Project)
                 .WithOne(s => s.ProjectActionsInfo)

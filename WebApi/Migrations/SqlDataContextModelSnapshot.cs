@@ -50,19 +50,21 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Property<Guid>("AlarmEventId")
                         .HasColumnType("uuid");
 
+                    b.Property<string>("EngDescription")
+                        .HasColumnType("text");
+
                     b.Property<string>("RusDescription")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("LanguageId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("UkrDescription")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AlarmEventId");
+                    b.HasIndex("AlarmEventId")
+                        .IsUnique();
 
-                    b.HasIndex("LanguageId");
-
-                    b.ToTable("AlarmEventDescription");
+                    b.ToTable("AlarmEventDescriptions");
                 });
 
             modelBuilder.Entity("VG.CDF.Server.Domain.Entities.AlarmEventLive", b =>
@@ -108,23 +110,6 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.ToTable("Company");
                 });
 
-            modelBuilder.Entity("VG.CDF.Server.Domain.Entities.Language", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Acronym")
-                        .HasColumnType("text");
-
-                    b.Property<int>("ExternalId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Languages");
-                });
-
             modelBuilder.Entity("VG.CDF.Server.Domain.Entities.Parameter", b =>
                 {
                     b.Property<Guid>("Id")
@@ -158,20 +143,22 @@ namespace VG.CDF.Server.WebApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("RusDescription")
+                    b.Property<string>("EngDescription")
                         .HasColumnType("text");
-
-                    b.Property<Guid>("LanguageId")
-                        .HasColumnType("uuid");
 
                     b.Property<Guid>("ParameterId")
                         .HasColumnType("uuid");
 
+                    b.Property<string>("RusDescription")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UkrDescription")
+                        .HasColumnType("text");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("LanguageId");
-
-                    b.HasIndex("ParameterId");
+                    b.HasIndex("ParameterId")
+                        .IsUnique();
 
                     b.ToTable("ParameterDescriptions");
                 });
@@ -352,22 +339,24 @@ namespace VG.CDF.Server.WebApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("RusDescription")
+                    b.Property<string>("EngDescription")
                         .HasColumnType("text");
-
-                    b.Property<Guid>("LanguageId")
-                        .HasColumnType("uuid");
 
                     b.Property<Guid>("ProcessId")
                         .HasColumnType("uuid");
 
+                    b.Property<string>("RusDescription")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UkrDescription")
+                        .HasColumnType("text");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("LanguageId");
+                    b.HasIndex("ProcessId")
+                        .IsUnique();
 
-                    b.HasIndex("ProcessId");
-
-                    b.ToTable("ProcessDescription");
+                    b.ToTable("ProcessDescriptions");
                 });
 
             modelBuilder.Entity("VG.CDF.Server.Domain.Entities.Project", b =>
@@ -379,7 +368,7 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Property<Guid>("CompanyId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("RusDescription")
+                    b.Property<string>("Description")
                         .HasColumnType("text");
 
                     b.Property<int>("ExternalId")
@@ -519,20 +508,12 @@ namespace VG.CDF.Server.WebApi.Migrations
             modelBuilder.Entity("VG.CDF.Server.Domain.Entities.AlarmEventDescription", b =>
                 {
                     b.HasOne("VG.CDF.Server.Domain.Entities.AlarmEvent", "AlarmEvent")
-                        .WithMany("AlarmEventDescription")
-                        .HasForeignKey("AlarmEventId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
-
-                    b.HasOne("VG.CDF.Server.Domain.Entities.Language", "Language")
-                        .WithMany("AlarmEventDescription")
-                        .HasForeignKey("LanguageId")
+                        .WithOne("AlarmEventDescription")
+                        .HasForeignKey("VG.CDF.Server.Domain.Entities.AlarmEventDescription", "AlarmEventId")
                         .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
 
                     b.Navigation("AlarmEvent");
-
-                    b.Navigation("Language");
                 });
 
             modelBuilder.Entity("VG.CDF.Server.Domain.Entities.AlarmEventLive", b =>
@@ -567,19 +548,11 @@ namespace VG.CDF.Server.WebApi.Migrations
 
             modelBuilder.Entity("VG.CDF.Server.Domain.Entities.ParameterDescription", b =>
                 {
-                    b.HasOne("VG.CDF.Server.Domain.Entities.Language", "Language")
-                        .WithMany("ParameterDescriptions")
-                        .HasForeignKey("LanguageId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
-
                     b.HasOne("VG.CDF.Server.Domain.Entities.Parameter", "Parameter")
-                        .WithMany("ParametersDescription")
-                        .HasForeignKey("ParameterId")
+                        .WithOne("ParametersDescription")
+                        .HasForeignKey("VG.CDF.Server.Domain.Entities.ParameterDescription", "ParameterId")
                         .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
-
-                    b.Navigation("Language");
 
                     b.Navigation("Parameter");
                 });
@@ -668,19 +641,11 @@ namespace VG.CDF.Server.WebApi.Migrations
 
             modelBuilder.Entity("VG.CDF.Server.Domain.Entities.ProcessDescription", b =>
                 {
-                    b.HasOne("VG.CDF.Server.Domain.Entities.Language", "Language")
-                        .WithMany("ProcessDescription")
-                        .HasForeignKey("LanguageId")
-                        .OnDelete(DeleteBehavior.SetNull)
-                        .IsRequired();
-
                     b.HasOne("VG.CDF.Server.Domain.Entities.Process", "Process")
-                        .WithMany("ProcessDescription")
-                        .HasForeignKey("ProcessId")
+                        .WithOne("ProcessDescription")
+                        .HasForeignKey("VG.CDF.Server.Domain.Entities.ProcessDescription", "ProcessId")
                         .OnDelete(DeleteBehavior.SetNull)
                         .IsRequired();
-
-                    b.Navigation("Language");
 
                     b.Navigation("Process");
                 });
@@ -749,15 +714,6 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Navigation("Parameters");
 
                     b.Navigation("Projects");
-                });
-
-            modelBuilder.Entity("VG.CDF.Server.Domain.Entities.Language", b =>
-                {
-                    b.Navigation("AlarmEventDescription");
-
-                    b.Navigation("ParameterDescriptions");
-
-                    b.Navigation("ProcessDescription");
                 });
 
             modelBuilder.Entity("VG.CDF.Server.Domain.Entities.Parameter", b =>
