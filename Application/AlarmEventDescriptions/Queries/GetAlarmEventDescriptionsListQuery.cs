@@ -17,6 +17,8 @@ public class GetAlarmEventDescriptionsListQuery: IRequest<IEnumerable<AlarmEvent
 {
     
     public Guid? Id { get; set; } = null;
+    
+    public Guid? CompanyId { get; set; } = null;
     public string? RusDescription { get; set; } = null;
         
     public string? EngDescription { get; set; } = null;
@@ -41,6 +43,8 @@ public class GetAlarmEventDescriptionsListQuery: IRequest<IEnumerable<AlarmEvent
 
             if (request.Id != null)
                 alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.Id == request.Id);
+            if (request.CompanyId != null)
+                alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.AlarmEvent.CompanyId == request.CompanyId);
             if (request.RusDescription != null)
                 alarmDescriptionQuery = alarmDescriptionQuery.Where(c => c.RusDescription.ToLower() == request.RusDescription.ToLower());
             if (request.EngDescription != null)
