@@ -18,12 +18,12 @@ namespace VG.CDF.Server.WebApi.Controllers.Authentication
     ///</summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthenticationController : ControllerBase
+    public class SignInController : ControllerBase
     {
         private readonly IMediator _mediator;
         private readonly JwtConfiguration _jwtConfiguration;
         private readonly IJwtService<UserAuthenticationResponseDto> _tokenService;
-        public AuthenticationController(JwtConfiguration jwtConfiguration, IJwtService<UserAuthenticationResponseDto> tokenService, IMediator mediator)
+        public SignInController(JwtConfiguration jwtConfiguration, IJwtService<UserAuthenticationResponseDto> tokenService, IMediator mediator)
         {
             _jwtConfiguration = jwtConfiguration;
             _tokenService = tokenService;

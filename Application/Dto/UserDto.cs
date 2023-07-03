@@ -9,6 +9,6 @@ public class UserDto : EntityBaseDto
 
     public string PasswordHash { get; set; }= string.Empty;
 
-    public int RoleId { get; set; }
+    public Guid RoleId { get; set; }
     
 }

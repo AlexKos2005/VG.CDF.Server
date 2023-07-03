@@ -41,7 +41,7 @@ public class CreateUserCommand : IRequest<UserDto>
             
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
-                return !await dataContext.Set<Role>()
+                return await dataContext.Set<Role>()
                     .Where(c => c.Id == command.RoleId).AnyAsync();
             }).WithMessage(command=> $"Роли с указанным Id {command.RoleId} не существует");
 

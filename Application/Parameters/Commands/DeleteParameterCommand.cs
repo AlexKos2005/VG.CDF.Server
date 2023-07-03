@@ -14,7 +14,7 @@ namespace VG.CDF.Server.Application.Parameters.Commands;
 public class DeleteParameterCommand : EntityBaseDto,IRequest<bool>
 {
     
-    public class DeleteParameterCommandHandler : DeleteCommandBase<DeleteParameterCommand, Language>
+    public class DeleteParameterCommandHandler : DeleteCommandBase<DeleteParameterCommand, Parameter>
     {
         public DeleteParameterCommandHandler(ISqlDataContext dataContext, IMapper mapper, IValidator<DeleteParameterCommand>? validator) : base(dataContext, mapper, validator)
         {

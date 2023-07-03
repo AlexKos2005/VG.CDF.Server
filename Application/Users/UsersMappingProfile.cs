@@ -12,8 +12,8 @@ public class UsersMappingProfile : Profile
     public UsersMappingProfile()
     {
         CreateMap<User, UserDto>().ReverseMap();
-        CreateMap<CreateUserCommand, EntityBase>().ReverseMap();
+        CreateMap<CreateUserCommand, User>().ReverseMap();
         CreateMap<DeleteUserCommand, EntityBase>().ReverseMap();
-        CreateMap<UpdateUserCommand, EntityBase>().ReverseMap();
+        CreateMap<UpdateUserCommand, User>().ReverseMap();
     }
 }

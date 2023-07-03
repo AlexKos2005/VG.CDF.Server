@@ -26,11 +26,11 @@ namespace VG.CDF.Server.WebApi.Controllers.Registration
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
     [ApiController]
-    public class RegistrationController : ControllerBase
+    public class SignUpController : ControllerBase
     {
         private readonly IMediator _mediator;
         
-        public RegistrationController(IMediator mediator)
+        public SignUpController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -40,7 +40,7 @@ namespace VG.CDF.Server.WebApi.Controllers.Registration
         /// </summary>
         /// <param name="userRegistrationRequestDto"></param>
         /// <returns></returns>
-        [HttpPost(nameof(Registrate))]
+        [HttpPost]
         public async Task<ActionResult> Registrate(CreateUserCommand сreateUserCommand)
         {
             RoleDto role;
