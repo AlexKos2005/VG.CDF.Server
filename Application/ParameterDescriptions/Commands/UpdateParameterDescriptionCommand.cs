@@ -15,9 +15,11 @@ namespace VG.CDF.Server.Application.ParameterDescriptions.Commands;
 
 public class UpdateParameterDescriptionCommand : EntityBaseDto,IRequest<ParameterDescriptionDto>
 {
-    public string Description { get; set; } = string.Empty;
-
-    public Guid LanguageId { get; set; }
+    public string RusDescription { get; set; } = String.Empty;
+        
+    public string EngDescription { get; set; }= String.Empty;
+        
+    public string UkrDescription { get; set; }= String.Empty;
 
     public Guid ParameterId { get; set; }
 
@@ -33,19 +35,14 @@ public class UpdateParameterDescriptionCommand : EntityBaseDto,IRequest<Paramete
     {
         public UpdateParameterDescriptionCommandValidator(ISqlDataContext dataContext)
         {
-            RuleFor(c => c.Description).NotEmpty()
-                .WithMessage("Описание параметра не должно быть пустым");
+          
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
                 return await dataContext.Set<Parameter>()
                     .EntityIsExists(command.ParameterId);
             }).WithMessage(command=> $"Параметра с Id {command.ParameterId} не существует");
             
-            RuleFor(c => c).MustAsync(async(command,cts) =>
-            {
-                return await dataContext.Set<Language>()
-                    .EntityIsExists(command.LanguageId);
-            }).WithMessage(command=> $"Языка с Id {command.ParameterId} не существует");
+          
         }
     }
 }

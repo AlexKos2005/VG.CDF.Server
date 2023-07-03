@@ -15,10 +15,11 @@ namespace VG.CDF.Server.Application.ProcessDescriptions.Commands;
 
 public class UpdateProcessDescriptionCommand : EntityBaseDto,IRequest<ProcessDescriptionDto>
 {
-    public string Description { get; set; } = string.Empty;
-
-    public Guid LanguageId { get; set; }
+    public string RusDescription { get; set; } = String.Empty;
         
+    public string EngDescription { get; set; }= String.Empty;
+        
+    public string UkrDescription { get; set; }= String.Empty;
     public Guid ProcessId { get; set; }
 
     public class UpdateAlarmEventDescriptionCommandHandler : UpdateCommandBase<UpdateProcessDescriptionCommand,ProcessDescriptionDto, ProcessDescription>
@@ -33,19 +34,11 @@ public class UpdateProcessDescriptionCommand : EntityBaseDto,IRequest<ProcessDes
     {
         public UpdateProcessDescriptionCommandValidator(ISqlDataContext dataContext)
         {
-            RuleFor(c => c.Description).NotEmpty()
-                .WithMessage("Описание процесса не должно быть пустым");
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
                 return await dataContext.Set<Process>()
                     .EntityIsExists(command.ProcessId);
             }).WithMessage(command=> $"Процесса с Id {command.ProcessId} не существует");
-            
-            RuleFor(c => c).MustAsync(async(command,cts) =>
-            {
-                return await dataContext.Set<Language>()
-                    .EntityIsExists(command.LanguageId);
-            }).WithMessage(command=> $"Языка с Id {command.LanguageId} не существует");
         }
     }
 }
