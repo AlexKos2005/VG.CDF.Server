@@ -15,11 +15,14 @@ namespace VG.CDF.Server.Application.AlarmEventDescriptions.Commands;
 
 public class UpdateAlarmEventDescriptionCommand : EntityBaseDto,IRequest<AlarmEventDescriptionDto>
 {
-    public string Description { get; set; } = string.Empty;
+    public string RusDescription { get; set; } = String.Empty;
+        
+    public string EngDescription { get; set; }= String.Empty;
+        
+    public string UkrDescription { get; set; }= String.Empty;
 
     public Guid AlarmEventId { get; set; }
     
-    public Guid LanguageId { get; set; }
 
     public class UpdateAlarmEventDescriptionCommandHandler : UpdateCommandBase<UpdateAlarmEventDescriptionCommand,AlarmEventDescriptionDto, AlarmEventDescription>
     {
@@ -33,8 +36,7 @@ public class UpdateAlarmEventDescriptionCommand : EntityBaseDto,IRequest<AlarmEv
     {
         public UpdateAlarmEventDescriptionCommandValidator(ISqlDataContext dataContext)
         {
-            RuleFor(c => c.Description).NotEmpty()
-                .WithMessage("Описание параметра не должно быть пустым");
+           
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
                 return await dataContext.Set<AlarmEvent>()

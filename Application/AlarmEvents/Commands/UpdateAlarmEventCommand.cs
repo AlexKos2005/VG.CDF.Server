@@ -40,11 +40,6 @@ public class UpdateAlarmEventCommand : EntityBaseDto,IRequest<AlarmEventDto>
                     .EntityIsExists(command.Id);
             }).WithMessage(command=> $"Компании с Id {command.CompanyId} не существует");
             
-            RuleFor(c => c).MustAsync(async(command,cts) =>
-            {
-                return !await dataContext.Set<Domain.Entities.AlarmEvent>()
-                    .Where(c => c.CompanyId == command.CompanyId && c.ExternalId == command.ExternalId).AnyAsync();
-            }).WithMessage(command=> $"У заданной компании с Id {command.CompanyId} уже существует событие с ExternalId {command.ExternalId}");
         }
     }
 }

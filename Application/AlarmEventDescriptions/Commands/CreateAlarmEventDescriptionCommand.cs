@@ -35,8 +35,8 @@ public class CreateAlarmEventDescriptionCommand : IRequest<AlarmEventDescription
         {
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
-                return await dataContext.Set<AlarmEventDescription>()
-                    .Where(c => c.AlarmEventId == command.AlarmEventId).AnyAsync();
+                return await dataContext.Set<AlarmEvent>()
+                    .Where(c => c.Id == command.AlarmEventId).AnyAsync();
             }).WithMessage(command=> $"Аварийного события с Id {command.AlarmEventId} не существует");
 
         }

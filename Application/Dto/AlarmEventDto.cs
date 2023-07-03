@@ -8,6 +8,6 @@ public class AlarmEventDto : EntityBaseDto
 
     public int ExternalId { get; set; }
 
-    public int CompanyId { get; set; }
+    public Guid CompanyId { get; set; }
 
 }
