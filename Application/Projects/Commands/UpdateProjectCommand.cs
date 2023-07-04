@@ -11,19 +11,22 @@ using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.Projects.Commands;
 
-public class DeleteProjectCommand : EntityBaseDto,IRequest<bool>
+public class UpdateProjectCommand : EntityBaseDto,IRequest<ProjectDto>
 {
-    
-    public class DeleteProjectCommandHandler : DeleteCommandBase<DeleteProjectCommand, Process>
+    public int ExternalId { get; set; }
+    public string Description { get; set; } = string.Empty;
+
+    public class UpdateProjectCommandHandler : UpdateCommandBase<UpdateProjectCommand,ProjectDto, Project>
     {
-        public DeleteProjectCommandHandler(ISqlDataContext dataContext, IMapper mapper, IValidator<DeleteProjectCommand>? validator) : base(dataContext, mapper, validator)
+        public UpdateProjectCommandHandler(ISqlDataContext dataContext, IMapper mapper, IValidator<UpdateProjectCommand>? validator) 
+            : base(dataContext, mapper, validator)
         {
         }
     }
 
-    public class DeleteProjectCommandValidator : AbstractValidator<DeleteProjectCommand>
+    public class UpdateProjectCommandValidator : AbstractValidator<UpdateProjectCommand>
     {
-        public DeleteProjectCommandValidator(ISqlDataContext dataContext)
+        public UpdateProjectCommandValidator(ISqlDataContext dataContext)
         {
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
