@@ -23,7 +23,7 @@ public class GetProcessDescriptionsListQuery: IRequest<IEnumerable<ProcessDescri
         
     public string? UkrDescription { get; set; } = null;
     
-        
+    public Guid? ProjectId { get; set; } = null;
     public Guid? ProcessId { get; set; } = null;
     
     public class GetProcessDescriptionsListQueryHandler : IRequestHandler<GetProcessDescriptionsListQuery,IEnumerable<ProcessDescriptionDto>>
@@ -38,7 +38,7 @@ public class GetProcessDescriptionsListQuery: IRequest<IEnumerable<ProcessDescri
         }
         public async Task<IEnumerable<ProcessDescriptionDto>> Handle(GetProcessDescriptionsListQuery request, CancellationToken cancellationToken)
         {
-            IQueryable<AlarmEventDescription> processDescriptionQuery = _dataContext.Set<AlarmEventDescription>();
+            IQueryable<ProcessDescription> processDescriptionQuery = _dataContext.Set<ProcessDescription>();
 
             if (request.Id != null)
                 processDescriptionQuery = processDescriptionQuery.Where(c => c.Id == request.Id);
@@ -49,7 +49,9 @@ public class GetProcessDescriptionsListQuery: IRequest<IEnumerable<ProcessDescri
             if (request.UkrDescription != null)
                 processDescriptionQuery = processDescriptionQuery.Where(c => c.UkrDescription.ToLower() == request.UkrDescription.ToLower());
             if (request.ProcessId != null)
-                processDescriptionQuery = processDescriptionQuery.Where(c => c.AlarmEventId == request.ProcessId);
+                processDescriptionQuery = processDescriptionQuery.Where(c => c.ProcessId == request.ProcessId);
+            if (request.ProjectId != null)
+                processDescriptionQuery = processDescriptionQuery.Where(c => c.Process.ProjectId == request.ProjectId);
 
             var alarmEventsDescriptions = await processDescriptionQuery.ToListAsync(cancellationToken);
 

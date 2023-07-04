@@ -6,6 +6,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using VG.CDF.Server.Application.CommandBase;
 using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.Extentions;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Domain.Entities;
 
@@ -18,9 +19,7 @@ public class CreateProcessDescriptionCommand : IRequest<ProcessDescriptionDto>
     public string EngDescription { get; set; }= String.Empty;
         
     public string UkrDescription { get; set; }= String.Empty;
-
-    public Guid LanguageId { get; set; }
-        
+    
     public Guid ProcessId { get; set; }
 
     public class CreateAlarmEventDescriptionCommandHandler : CreateCommandBase<CreateProcessDescriptionCommand,ProcessDescriptionDto, ProcessDescription>
@@ -36,8 +35,8 @@ public class CreateProcessDescriptionCommand : IRequest<ProcessDescriptionDto>
         {
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
-                return await dataContext.Set<ProcessDescription>()
-                    .Where(c => c.ProcessId == command.ProcessId).AnyAsync();
+                return await dataContext.Set<Process>()
+                    .EntityIsExists(command.ProcessId);
             }).WithMessage(command=> $"Процесса с Id {command.ProcessId} не существует");
             
             

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using AutoMapper;
 using FluentValidation;
 using MediatR;
@@ -13,7 +14,10 @@ namespace VG.CDF.Server.Application.Processes.Commands;
 
 public class UpdateProcessCommand : EntityBaseDto,IRequest<ProcessDto>
 {
-    public string Name { get; set; } = string.Empty;
+    public int ExternalId { get; set; }
+    public int DeviceCode { get; set; }
+    public string DeviceIp { get; set; } = string.Empty;
+    public Guid ProjectId { get; set; }
 
     public class UpdateProcessCommandHandler : UpdateCommandBase<UpdateProcessCommand,ProcessDto, Process>
     {
@@ -30,6 +34,7 @@ public class UpdateProcessCommand : EntityBaseDto,IRequest<ProcessDto>
             {
                 return await dataContext.Set<Process>()
                     .EntityIsExists(command.Id);
+                
             }).WithMessage(command=> $"Процесс с Id {command.Id} не существует");
             
         }

@@ -24,6 +24,8 @@ public class GetParametersListQuery: IRequest<IEnumerable<ParameterDto>>
 
     public Guid? ParameterGroupId { get; set; } = null;
     
+    public Guid? ProcessId { get; set; } = null;
+    
     public class GetParametersListQueryHandler : IRequestHandler<GetParametersListQuery,IEnumerable<ParameterDto>>
     {
         private readonly ISqlDataContext _dataContext;
@@ -48,6 +50,9 @@ public class GetParametersListQuery: IRequest<IEnumerable<ParameterDto>>
                 parameterQuery = parameterQuery.Where(c => c.CompanyId == request.CompanyId);
             if (request.ParameterGroupId != null)
                 parameterQuery = parameterQuery.Where(c => c.ParameterGroupId == request.ParameterGroupId);
+            if (request.ProcessId != null)
+                parameterQuery = parameterQuery.Where(c => c.ParametersProcesses
+                    .Select(c=>c.ProcessId).Contains(request.ProcessId));
             
             var parameters = await parameterQuery.ToListAsync(cancellationToken);
 
