@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VG.CDF.Server.Application.Companies.Commands;
@@ -26,5 +28,33 @@ public class ProcessController : ControllerBase<GetProcessesListQuery,
 {
     public ProcessController(IMediator mediator) : base(mediator)
     {
+    }
+    
+    
+    /// <summary>
+    /// Добавить параметры в процесс (добавляются только отсутствующие)
+    /// </summary>
+    /// <param name="command"></param>
+    /// <param name="cts"></param>
+    /// <returns></returns>
+    [HttpPost(nameof(AddParametersToProcess))]
+    public async Task<bool> AddParametersToProcess([FromBody]AddParametersToProcessCommand command, CancellationToken cts)
+    {
+        var result = await _mediator.Send(command, cts);
+        return result;
+    }
+    
+    
+    /// <summary>
+    /// Удалить параметры из процесса
+    /// </summary>
+    /// <param name="command"></param>
+    /// <param name="cts"></param>
+    /// <returns></returns>
+    [HttpDelete(nameof(DeleteParameterFromProcess))]
+    public async Task<IActionResult> DeleteParameterFromProcess([FromBody]DeleteParameterFromProcessCommand command, CancellationToken cts)
+    {
+        var result = await _mediator.Send(command, cts);
+        return NoContent();
     }
 }

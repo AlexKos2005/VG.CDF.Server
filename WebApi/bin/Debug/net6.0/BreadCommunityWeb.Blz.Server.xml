@@ -4,6 +4,22 @@
         <name>VG.CDF.Server.WebApi</name>
     </assembly>
     <members>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.Administrator.ProcessController.AddParametersToProcess(VG.CDF.Server.Application.Processes.Commands.AddParametersToProcessCommand,System.Threading.CancellationToken)">
+            <summary>
+            Добавить параметры в процесс (добавляются только отсутствующие)
+            </summary>
+            <param name="command"></param>
+            <param name="cts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.Administrator.ProcessController.DeleteParameterFromProcess(VG.CDF.Server.Application.Processes.Commands.DeleteParameterFromProcessCommand,System.Threading.CancellationToken)">
+            <summary>
+            Удалить параметры из процесса
+            </summary>
+            <param name="command"></param>
+            <param name="cts"></param>
+            <returns></returns>
+        </member>
         <member name="T:VG.CDF.Server.WebApi.Controllers.Authentication.SignInController">
             <summary>
             Авторизация
