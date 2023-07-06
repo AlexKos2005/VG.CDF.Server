@@ -25,6 +25,7 @@ namespace VG.CDF.Server.Domain.Entities
 
         public ParameterValueType ValueType { get; set; }
 
+        public Guid ProcessId { get; set; }
         public long ParameterValuesGroupId { get; set; }
         public ParameterValuesGroup ParameterValuesGroup { get; set; }
     }

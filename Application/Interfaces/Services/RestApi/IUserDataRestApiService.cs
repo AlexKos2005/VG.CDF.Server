@@ -14,16 +14,16 @@ namespace VG.CDF.Server.Application.Interfaces.Services.RestApi
     {
         Task<List<FactoryResponseDto>> GetUserFactories(GetUserFactoriesRequestDto userRequestDto);
 
-        Task<List<DeviceWithDescriptionsDto>> GetUserDevices(int factoryId);
+        Task<List<ProcessWithDescriptionsDto>> GetUserDevices(int factoryId);
 
-        Task<List<TagParamWithDescriptions>> GetTagParamsForDevice(int deviceId);
+        Task<List<ParametersWithDescriptions>> GetTagParamsForDevice(int deviceId);
 
         Task<List<LanguageResponseDto>> GetLanguages();
 
-        Task<HttpResponseMessage> GetTagsReport(TagParamsReportDataInfo reportDataInfo);
+        Task<HttpResponseMessage> GetTagsReport(ProcessParametersReportDataInfo reportDataInfo);
 
         Task<HttpResponseMessage> GetAlarmEventsReport(AlarmEventsReportDataInfo reportDataInfo);
 
-        Task<HttpResponseMessage> GetTagsExcelData(TagParamsReportDataInfo reportDataInfo);
+        Task<HttpResponseMessage> GetTagsExcelData(ProcessParametersReportDataInfo reportDataInfo);
     }
 }

@@ -12,6 +12,7 @@ namespace VG.CDF.Server.Application.Dto
 { 
    public class ParameterValueDto
     {
+        public Guid ProcessId { get; set; }
         public Guid ParameterValuesGroupId { get; set; }
         
         public int ParameterExternalId { get; set; }

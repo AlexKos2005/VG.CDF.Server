@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
 using VG.CDF.Server.Application.Companies.Commands;
 using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.Dto.Client;
 using VG.CDF.Server.Application.Dto.ResponseDto.Authentication;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Application.Interfaces.Services;
@@ -22,6 +23,7 @@ namespace VG.CDF.Server.WebApi.Controllers
             services.AddTransient<ISaveable<AlarmEventDto>, AlarmEventService>();
             services.AddTransient<ISaveable<ParameterValuesGroupDto>, ParameterValuesGroupService>();
             services.AddTransient<IJwtService<UserAuthenticationResponseDto>, JwtService>();
+            services.AddTransient<IReportDataService<ProcessParametersReportDataInfo>, ParameterValueReportDataService>();
             /*services.AddTransient<IUserService, UserService>();
             services.AddTransient<IFactoryService, FactoryService>();
             services.AddTransient<ITagsLiveService, TagsLiveService>();
@@ -39,12 +41,12 @@ namespace VG.CDF.Server.WebApi.Controllers
             services.AddTransient<ITagParamService, TagParamService>();
             services.AddTransient<ITagsGroupService, TagsGroupService>();
             services.AddTransient<ITagsLiveService, TagsLiveService>();
-            services.AddTransient<IReportDataService<TagParamsReportDataInfo>, TagsLiveReportDataService>();
+            services.AddTransient<IReportDataService<ProcessParametersReportDataInfo>, ParameterValueReportDataService>();
             services.AddTransient<IReportDataService<AlarmEventsReportDataInfo>, AlarmEventLiveReportDataService>();
             services.AddTransient<IUserDataService, UserDataService>();
             services.AddTransient<ITagReportTaskService, TagReportTaskService>();
             services.AddSingleton<IWorkEmailService, WorkEmailService>();*/
-            
+
         }
 
         public static void RegistrateValidators(this IServiceCollection services)

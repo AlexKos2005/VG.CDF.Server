@@ -530,7 +530,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:BreadCommunityWeb.Blz.WebApi.Controllers.ReportController.GetTagsLiveReport(BreadCommunityWeb.Blz.Application.Dto.Client.TagParamsReportDataInfo)">
+        <member name="M:BreadCommunityWeb.Blz.WebApi.Controllers.ReportController.GetTagsLiveReport(BreadCommunityWeb.Blz.Application.Dto.Client.ProcessParametersReportDataInfo)">
             <summary>
             Сгенерировать отчет по реал-тайм тегам
             </summary>
@@ -542,7 +542,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:BreadCommunityWeb.Blz.WebApi.Controllers.ReportController.GetTagsLiveExcelData(BreadCommunityWeb.Blz.Application.Dto.Client.TagParamsReportDataInfo)">
+        <member name="M:BreadCommunityWeb.Blz.WebApi.Controllers.ReportController.GetTagsLiveExcelData(BreadCommunityWeb.Blz.Application.Dto.Client.ProcessParametersReportDataInfo)">
             <summary>
             Сгенерировать данные по тегам за период
             </summary>
