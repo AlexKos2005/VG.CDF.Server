@@ -8,6 +8,7 @@ using VG.CDF.Server.Application.CommandBase;
 using VG.CDF.Server.Application.Dto;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Domain.Entities;
+using VG.CDF.Server.Domain.Enums;
 
 namespace VG.CDF.Server.Application.Roles.Commands;
 

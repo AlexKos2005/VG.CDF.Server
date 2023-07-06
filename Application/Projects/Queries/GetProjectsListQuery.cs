@@ -49,7 +49,7 @@ public class GetProjectsListQuery: IRequest<IEnumerable<ProjectDto>>
             if (request.UtcOffset != null)
                 projectQuery = projectQuery.Where(c => c.UtcOffset == request.UtcOffset);
             
-            var processes = await projectQuery.ToListAsync(cancellationToken);
+            var processes = await projectQuery.Include(c=>c.Company).ToListAsync(cancellationToken);
 
             return _mapper.Map<IEnumerable<ProjectDto>>(processes);
 

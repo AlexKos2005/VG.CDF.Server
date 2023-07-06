@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using VG.CDF.Server.Domain.Entities;
+using VG.CDF.Server.Domain.Enums;
 
 namespace VG.CDF.Server.Application.Dto.Client
 {

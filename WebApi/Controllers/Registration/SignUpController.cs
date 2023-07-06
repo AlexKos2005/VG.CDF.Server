@@ -13,6 +13,7 @@ using VG.CDF.Server.Application.Roles.Commands;
 using VG.CDF.Server.Application.Roles.Queries;
 using VG.CDF.Server.Application.Users.Commands;
 using VG.CDF.Server.Domain.Entities;
+using VG.CDF.Server.Domain.Enums;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

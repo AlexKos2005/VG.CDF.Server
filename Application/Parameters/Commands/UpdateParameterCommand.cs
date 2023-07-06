@@ -9,6 +9,7 @@ using VG.CDF.Server.Application.Dto;
 using VG.CDF.Server.Application.Extentions;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Domain.Entities;
+using VG.CDF.Server.Domain.Enums;
 
 namespace VG.CDF.Server.Application.Parameters.Commands;
 

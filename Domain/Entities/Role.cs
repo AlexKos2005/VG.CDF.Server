@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using VG.CDF.Server.Domain.Enums;
 
 
 namespace VG.CDF.Server.Domain.Entities

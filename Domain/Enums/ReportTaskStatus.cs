@@ -1,4 +1,4 @@
-﻿namespace VG.CDF.Server.Domain.Entities;
+﻿namespace VG.CDF.Server.Domain.Enums;
 
 public enum ReportTaskStatus
 {
