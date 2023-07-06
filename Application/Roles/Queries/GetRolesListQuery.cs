@@ -37,7 +37,7 @@ public class GetRolesListQuery: IRequest<IEnumerable<RoleDto>>
 
             if (request.Id != null)
                 roleQuery = roleQuery.Where(c => c.Id == request.Id);
-            if (string.IsNullOrEmpty(request.RoleName))
+            if (!string.IsNullOrEmpty(request.RoleName))
                 roleQuery = roleQuery.Where(c => c.RoleName == request.RoleName);
             if (request.RoleCode != null)
                 roleQuery = roleQuery.Where(c => c.RoleCode == request.RoleCode);

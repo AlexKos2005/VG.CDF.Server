@@ -42,7 +42,7 @@ namespace VG.CDF.Server.WebApi.Controllers.Registration
         /// <param name="userRegistrationRequestDto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult> Registrate(CreateUserCommand сreateUserCommand)
+        public async Task<ActionResult<UserDto>> Registrate(CreateUserCommand сreateUserCommand)
         {
             RoleDto role;
             var initialRoles = await _mediator.Send(new GetRolesListQuery(){RoleCode = RoleCode.None});
@@ -58,9 +58,9 @@ namespace VG.CDF.Server.WebApi.Controllers.Registration
 
             сreateUserCommand.RoleId = role.Id;
 
-            await _mediator.Send(сreateUserCommand);
+            var user = await _mediator.Send(сreateUserCommand);
 
-            return Ok();
+            return new ObjectResult(user);
         }
 
 
