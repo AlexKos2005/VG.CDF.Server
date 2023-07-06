@@ -15,20 +15,20 @@ namespace VG.CDF.Server.WebApi.Controllers.Administrator;
 [ProducesResponseType(StatusCodes.Status200OK)]
 [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
 [ApiController]
-public class ParameterReportController : Controller
+public class AlarmEventReportController : Controller
 {
-    private readonly IReportDataService<ProcessParametersReportDataInfo> _paramReportService;
-    public ParameterReportController(IReportDataService<ProcessParametersReportDataInfo> paramReportService)
+    private readonly IReportDataService<AlarmEventsReportDataInfo> _paramReportService;
+    public AlarmEventReportController(IReportDataService<AlarmEventsReportDataInfo> paramReportService)
     {
         _paramReportService = paramReportService;
     }
     
     /// <summary>
-    /// Сгенерировать отчет по реал-тайм значений параметров
+    /// Сгенерировать отчет по реал-тайм авариям
     /// </summary>
     /// <returns></returns>
-    [HttpPost(nameof(GetParameterValuesReport))]
-    public async Task<FileContentResult> GetParameterValuesReport(ProcessParametersReportDataInfo reportDataInfo)
+    [HttpPost(nameof(GetAlarmEventsLiveReport))]
+    public async Task<FileContentResult> GetAlarmEventsLiveReport(AlarmEventsReportDataInfo reportDataInfo)
     {
         var package = await _paramReportService.GetExcelReportData(reportDataInfo);
 

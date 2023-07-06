@@ -25,6 +25,7 @@ namespace VG.CDF.Server.WebApi.Controllers
             services.AddTransient<ISaveable<ParameterValuesGroupDto>, ParameterValuesGroupService>();
             services.AddTransient<IJwtService<UserAuthenticationResponseDto>, JwtService>();
             services.AddTransient<IReportDataService<ProcessParametersReportDataInfo>, ParameterValueReportDataService>();
+            services.AddTransient<IReportDataService<AlarmEventsReportDataInfo>, AlarmEventLiveReportDataService>();
             /*services.AddTransient<IUserService, UserService>();
             services.AddTransient<IFactoryService, FactoryService>();
             services.AddTransient<ITagsLiveService, TagsLiveService>();

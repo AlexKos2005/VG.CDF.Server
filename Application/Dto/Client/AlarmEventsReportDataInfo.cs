@@ -8,13 +8,13 @@ namespace VG.CDF.Server.Application.Dto.Client
 {
     public class AlarmEventsReportDataInfo
     {
-        public int FactoryId { get; set; }
+        public Guid ProjectId { get; set; }
 
-        public int LanguageExternalId { get; set; }
+        public int LanguageAcronymInt { get; set; }
 
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
 
-        public List<ProcessWithDescriptionsDto> Devices { get; set; } = new List<ProcessWithDescriptionsDto>();
+        public List<ProcessWithDescriptionsDto> Processes { get; set; } = new List<ProcessWithDescriptionsDto>();
     }
 }

@@ -4,14 +4,25 @@
         <name>VG.CDF.Server.WebApi</name>
     </assembly>
     <members>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.Administrator.AlarmEventReportController">
+            <summary>
+            Контроллер генерации отчетов
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.Administrator.AlarmEventReportController.GetAlarmEventsLiveReport(VG.CDF.Server.Application.Dto.Client.AlarmEventsReportDataInfo)">
+            <summary>
+            Сгенерировать отчет по реал-тайм авариям
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:VG.CDF.Server.WebApi.Controllers.Administrator.ParameterReportController">
             <summary>
             Контроллер генерации отчетов
             </summary>
         </member>
-        <member name="M:VG.CDF.Server.WebApi.Controllers.Administrator.ParameterReportController.GetTagsLiveReport(VG.CDF.Server.Application.Dto.Client.ProcessParametersReportDataInfo)">
+        <member name="M:VG.CDF.Server.WebApi.Controllers.Administrator.ParameterReportController.GetParameterValuesReport(VG.CDF.Server.Application.Dto.Client.ProcessParametersReportDataInfo)">
             <summary>
-            Сгенерировать отчет по реал-тайм тегам
+            Сгенерировать отчет по реал-тайм значений параметров
             </summary>
             <returns></returns>
         </member>

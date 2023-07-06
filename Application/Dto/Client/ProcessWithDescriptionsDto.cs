@@ -10,7 +10,6 @@ namespace VG.CDF.Server.Application.Dto.Client
     {
         public Guid Id { get; set; }
         public int ExternalId { get; set; }
-        public Guid ProjectId { get; set; }
         public bool IsEnabled { get; set; }
 
     }

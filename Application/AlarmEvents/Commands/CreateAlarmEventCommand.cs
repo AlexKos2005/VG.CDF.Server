@@ -6,7 +6,9 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using VG.CDF.Server.Application.CommandBase;
 using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.Extentions;
 using VG.CDF.Server.Application.Interfaces;
+using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Application.AlarmEvents.Commands;
 
@@ -29,8 +31,8 @@ public class CreateAlarmEventCommand : IRequest<AlarmEventDto>
         {
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
-                return await dataContext.Set<Domain.Entities.AlarmEvent>()
-                    .Where(c => c.CompanyId == command.CompanyId).AnyAsync();
+                return await dataContext.Set<Company>()
+                    .EntityIsExists(command.CompanyId);
             }).WithMessage(command=> $"Компании с Id {command.CompanyId} не существует");
             
             RuleFor(c => c).MustAsync(async(command,cts) =>
