@@ -165,7 +165,7 @@ namespace VG.CDF.Server.Infrastructure.Services
             
             //проверяем, есть ли теги по нужному устройству и периоду
             var paramsLive = await _sqlDataContext.Set<ParameterValue>()
-                .Where(c => c.ProcessId == processId && c.DateTime >= startReportDate && c.DateTime <= endReportDate)
+                .Where(c => c.ProcessId == processId && c.DateTime >= startReportDate.ToUniversalTime() && c.DateTime <= endReportDate.ToUniversalTime())
                 .ToListAsync();
 
             //если нет, то просто заполняем названия столбцов по входным tagParamExternalId

@@ -15,6 +15,7 @@ namespace VG.CDF.Server.Application.Dto.Client
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
 
-        public List<ProcessParametersResponseDto> ProcessParameters { get; set; }
+        public List<ProcessParametersResponseDto> ProcessParameters { get; set; } =
+            new List<ProcessParametersResponseDto>();
     }
 }

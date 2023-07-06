@@ -4,6 +4,17 @@
         <name>VG.CDF.Server.WebApi</name>
     </assembly>
     <members>
+        <member name="T:VG.CDF.Server.WebApi.Controllers.Administrator.ParameterReportController">
+            <summary>
+            Контроллер генерации отчетов
+            </summary>
+        </member>
+        <member name="M:VG.CDF.Server.WebApi.Controllers.Administrator.ParameterReportController.GetTagsLiveReport(VG.CDF.Server.Application.Dto.Client.ProcessParametersReportDataInfo)">
+            <summary>
+            Сгенерировать отчет по реал-тайм тегам
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:VG.CDF.Server.WebApi.Controllers.Administrator.ProcessController.AddParametersToProcess(VG.CDF.Server.Application.Processes.Commands.AddParametersToProcessCommand,System.Threading.CancellationToken)">
             <summary>
             Добавить параметры в процесс (добавляются только отсутствующие)

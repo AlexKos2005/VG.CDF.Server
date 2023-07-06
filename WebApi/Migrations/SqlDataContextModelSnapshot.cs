@@ -271,6 +271,9 @@ namespace VG.CDF.Server.WebApi.Migrations
                     b.Property<long>("ParameterValuesGroupId")
                         .HasColumnType("bigint");
 
+                    b.Property<Guid>("ProcessId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Value")
                         .HasColumnType("text");
 
