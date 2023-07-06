@@ -1,16 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using NLog;
 using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.Dto.ResponseDto;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Application.Interfaces.Services;
 using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.Infrastructure.Services;
 
-public class AlarmEventService : ISaveable<AlarmEventDto>
+public class AlarmEventService : ISaveable<AlarmEventLiveDto>
 {
     private readonly ISqlDataContext _dataContext;
     private readonly IMapper _mapper;
@@ -22,9 +24,9 @@ public class AlarmEventService : ISaveable<AlarmEventDto>
 
         _logger = LogManager.GetCurrentClassLogger();
     }
-    public async Task<bool> Save(IEnumerable<AlarmEventDto> parameterValuesGroups)
+    public async Task<bool> Save(IEnumerable<AlarmEventLiveDto> parameterValuesGroups)
     {
-        var alarmEvents = _mapper.Map<IEnumerable<AlarmEvent>>(parameterValuesGroups);
+        var alarmEvents = _mapper.Map<List<AlarmEventLive>>(parameterValuesGroups);
 
         if (alarmEvents.Any() == false)
         {
@@ -32,8 +34,9 @@ public class AlarmEventService : ISaveable<AlarmEventDto>
             return false;
         }
 
-        await _dataContext.Set<AlarmEvent>().AddRangeAsync(alarmEvents);
+        await _dataContext.Set<AlarmEventLive>().AddRangeAsync(alarmEvents);
 
+        await _dataContext.SaveChangesAsync(CancellationToken.None);
         return true;
 
     }

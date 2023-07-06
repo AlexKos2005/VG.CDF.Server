@@ -12,6 +12,6 @@ public class ParameterValuesGroupMappingProfile : Profile
 {
     public ParameterValuesGroupMappingProfile()
     {
-        CreateMap<ParameterValuesGroupDto, ParameterValuesGroupDto>().ReverseMap();
+        CreateMap<ParameterValuesGroupDto, ParameterValuesGroup>().ReverseMap();
     }
 }

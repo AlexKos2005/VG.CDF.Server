@@ -3,7 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VG.CDF.Server.Application.Dto;
+using VG.CDF.Server.Application.Dto.ResponseDto;
 using VG.CDF.Server.Application.Interfaces.Services;
+using VG.CDF.Server.Domain.Entities;
 
 namespace VG.CDF.Server.WebApi.Controllers.ExternalService;
 
@@ -13,14 +15,14 @@ namespace VG.CDF.Server.WebApi.Controllers.ExternalService;
 [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
 public class AlarmEventController : Controller
 {
-    private ISaveable<AlarmEventDto> _saveableService;
-    public AlarmEventController(ISaveable<AlarmEventDto> saveableService)
+    private ISaveable<AlarmEventLiveDto> _saveableService;
+    public AlarmEventController(ISaveable<AlarmEventLiveDto> saveableService)
     {
         _saveableService = saveableService;
     }
     
-    [HttpPost("SaveGroups")]
-    public async Task<IActionResult> Create([FromBody] IEnumerable<AlarmEventDto> alarmEvents)
+    [HttpPost("SaveAlarmEvents")]
+    public async Task<IActionResult> Create([FromBody] IEnumerable<AlarmEventLiveDto> alarmEvents)
     {
         await _saveableService.Save(alarmEvents);
 

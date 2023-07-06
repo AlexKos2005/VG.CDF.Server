@@ -6,6 +6,7 @@ using FluentValidation;
 using VG.CDF.Server.Application.Companies.Commands;
 using VG.CDF.Server.Application.Dto;
 using VG.CDF.Server.Application.Dto.Client;
+using VG.CDF.Server.Application.Dto.ResponseDto;
 using VG.CDF.Server.Application.Dto.ResponseDto.Authentication;
 using VG.CDF.Server.Application.Interfaces;
 using VG.CDF.Server.Application.Interfaces.Services;
@@ -20,7 +21,7 @@ namespace VG.CDF.Server.WebApi.Controllers
         public static void RegistrateServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<ISqlDataContext, SqlDataContext>();
-            services.AddTransient<ISaveable<AlarmEventDto>, AlarmEventService>();
+            services.AddTransient<ISaveable<AlarmEventLiveDto>, AlarmEventService>();
             services.AddTransient<ISaveable<ParameterValuesGroupDto>, ParameterValuesGroupService>();
             services.AddTransient<IJwtService<UserAuthenticationResponseDto>, JwtService>();
             services.AddTransient<IReportDataService<ProcessParametersReportDataInfo>, ParameterValueReportDataService>();

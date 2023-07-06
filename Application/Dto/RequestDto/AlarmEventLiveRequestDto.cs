@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace VG.CDF.Server.Application.Dto.RequestDto
 {
     public class AlarmEventLiveRequestDto
-    {
-        public long Id { get; private set; }
+    { public long Id { get; private set; }
 
         public int ExternalId { get; set; }
 
@@ -18,8 +17,6 @@ namespace VG.CDF.Server.Application.Dto.RequestDto
         //Время фиксации в UTC
         public DateTimeOffset DateTimeOffset { get; set; }
 
-        public int FactoryExternalId { get; set; }
-
-        public int DeviceExternalId { get; set; }
+        public Guid ProcessId { get; set; }
     }
 }

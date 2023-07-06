@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using NLog;
@@ -34,6 +35,8 @@ public class ParameterValuesGroupService : ISaveable<ParameterValuesGroupDto>
 
         await _dataContext.Set<ParameterValuesGroup>().AddRangeAsync(groups);
 
+
+        await _dataContext.SaveChangesAsync(CancellationToken.None);
         return true;
 
     }
