@@ -128,42 +128,29 @@ namespace VG.CDF.Server.WebApi
             {
                 app.UseExceptionHandler("/Error");
             }
-            //app.UseCors(builder =>
-            //   builder.WithOrigins()
-            //       .AllowAnyOrigin()
-            //       .AllowAnyHeader()
-            //       .AllowAnyMethod());
 
             app.UseCors("Open");
             app.UseSwagger()
-               .UseSwaggerUI(c =>
-               {
-                   c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                       $"{Assembly.GetExecutingAssembly().GetName().Name}");
-               })
-               .UseStaticFiles()
-               .UseRouting()
-               .UseAuthentication()
-               .UseAuthorization()
+                .UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                        $"{Assembly.GetExecutingAssembly().GetName().Name}");
+                })
+
+                .UseStaticFiles()
+                .UseRouting()
+                .UseAuthentication()
+                .UseAuthorization()
+                .UseProblemDetails()
                 .UseEndpoints(endpoints =>
                 {
                     endpoints.MapDefaultControllerRoute();
                 }).UseProblemDetails();
-
-            //app.UseStaticFiles();
-
-            //app.UseAuthentication();
-            //app.UseAuthorization();
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapBlazorHub();
-            //    endpoints.MapFallbackToPage("/_Host");
-            //});
+            
         }
 
         private void ConfigureProblemDetails(ProblemDetailsOptions options)
         {
-
             options.OnBeforeWriteDetails = (ctx, problem) =>
             {
                 problem.Extensions["traceId"] = ctx.TraceIdentifier;

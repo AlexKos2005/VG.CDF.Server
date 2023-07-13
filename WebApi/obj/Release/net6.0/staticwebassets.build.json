@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "gK028BmSYTPDGxkHyiEIZo1hYswvurDYG+nfb4AkJCU=",
-  "Source": "BreadCommunityWeb.Blz.Server",
-  "BasePath": "_content/BreadCommunityWeb.Blz.Server",
+  "Hash": "dTyXxS7K0AGrs4Eo0gnLPE9i4WbHB5Exth3QSStupjI=",
+  "Source": "VG.CDF.Server.WebApi",
+  "BasePath": "_content/VG.CDF.Server.WebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

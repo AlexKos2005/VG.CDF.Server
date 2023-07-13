@@ -1,6 +1,0 @@
-[2022-02-01 11:04:00.8199] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 
-[2022-02-01 11:04:15.2232] [INFO] [Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000 
-[2022-02-01 11:04:15.2445] [INFO] [Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down. 
-[2022-02-01 11:04:15.2445] [INFO] [Microsoft.Hosting.Lifetime] Hosting environment: Development 
-[2022-02-01 11:04:15.2445] [INFO] [Microsoft.Hosting.Lifetime] Content root path: C:\Prj\Work\BreadCommunityWeb.Blz\Server 
-[2022-02-01 11:08:01.1252] [INFO] [BreadCommunityWeb.Blz.Server.Program] init main 

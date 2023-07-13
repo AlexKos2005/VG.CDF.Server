@@ -54,6 +54,7 @@ namespace VG.CDF.Server.WebApi.Controllers
         public static void RegistrateValidators(this IServiceCollection services)
         {
             services.AddValidatorsFromAssemblyContaining(typeof(CreateCompanyCommand),ServiceLifetime.Transient);
+            
         }
         
         public static void RegistrateAutomapper(this IServiceCollection services)

@@ -11,7 +11,8 @@ namespace VG.CDF.Server.WebApi.Controllers.Administrator;
 [Route("api/admin/[controller]")]
 [Produces("application/json")]
 [ProducesResponseType(StatusCodes.Status200OK)]
-[ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
+[ProducesResponseType( StatusCodes.Status400BadRequest)]
+[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 [ApiController]
 public class CompanyController : ControllerBase<GetCompaniesListQuery,CreateCompanyCommand, UpdateCompanyCommand,DeleteCompanyCommand,CompanyDto>
 {
