@@ -34,12 +34,7 @@ public class UpdateParameterCommand : EntityBaseDto,IRequest<ParameterDto>
     {
         public UpdateParameterCommandValidator(ISqlDataContext dataContext)
         {
-            RuleFor(c => c).MustAsync(async(command,cts) =>
-            {
-                return !await dataContext.Set<Parameter>()
-                    .Where(c => c.ExternalId == command.ExternalId).AnyAsync();
-            }).WithMessage(command=> $"Параметр с внеш. идентификатором уже существует у данной компании");
-            
+
             RuleFor(c => c).MustAsync(async(command,cts) =>
             {
                 return await dataContext.Set<Parameter>()
