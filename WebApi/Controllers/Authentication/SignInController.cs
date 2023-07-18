@@ -2,11 +2,13 @@
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using VG.CDF.Server.Application.Dto;
 using VG.CDF.Server.Application.Dto.ResponseDto.Authentication;
 using VG.CDF.Server.Application.Interfaces.Services;
 using VG.CDF.Server.Application.Users.Queries;
 using VG.CDF.Server.Dto.RequestDto.Authentication;
 using VG.CDF.Server.Infrastructure.Configurations;
+using VG.CDF.Server.Infrastructure.Extentions;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -37,7 +39,12 @@ namespace VG.CDF.Server.WebApi.Controllers.Authentication
             
             if(user.Any() == false)
             {
-                return NoContent();
+                return BadRequest("Неверный логин или пароль!");
+            }
+
+            if (user.First().PasswordHash != userAuthenticationRequestDto.Password.GetHashCodeSHA256())
+            {
+                return BadRequest("Неверный логин или пароль!");
             }
 
             var userAuth = new UserAuthenticationResponseDto()

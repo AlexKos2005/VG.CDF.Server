@@ -37,7 +37,7 @@ public class GetUsersListQuery: IRequest<IEnumerable<UserDto>>
 
             if (request.Id != null)
                 userQuery = userQuery.Where(c => c.Id == request.Id);
-            if (string.IsNullOrEmpty(request.Email))
+            if (string.IsNullOrEmpty(request.Email) == false)
                 userQuery = userQuery.Where(c => c.Email == request.Email);
             if (request.RoleId != null)
                 userQuery = userQuery.Where(c => c.RoleId == request.RoleId);

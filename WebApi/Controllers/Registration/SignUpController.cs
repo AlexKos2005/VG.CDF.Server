@@ -57,6 +57,7 @@ namespace VG.CDF.Server.WebApi.Controllers.Registration
             }
 
             сreateUserCommand.RoleId = role.Id;
+            сreateUserCommand.PasswordHash = сreateUserCommand.PasswordHash.GetHashCodeSHA256();
 
             var user = await _mediator.Send(сreateUserCommand);
 
